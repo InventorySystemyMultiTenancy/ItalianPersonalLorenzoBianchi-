@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Manrope", "Inter", system-ui, sans-serif;
+  color: #f2f2f2;
+  background-color: #090909;
+  --brand-primary: #b5f03c;
+  --brand-secondary: #b5f03c;
+  --brand-soft: #d4f7a0;
+  --brand-highlight: #d9a74a;
+  --brand-neutral: #f2f2f2;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(217, 179, 65, 0.16), transparent 34%),
+    radial-gradient(
+      circle at right bottom,
+      rgba(217, 167, 74, 0.12),
+      transparent 22%
+    ),
+    linear-gradient(180deg, #090909 0%, #111111 100%);
+  color: #f2f2f2;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+select,
+option,
+optgroup {
+  background-color: #090909;
+  color: #f2f2f2;
+}
+
+select:focus,
+option:checked {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+::selection {
+  background: rgba(217, 179, 65, 0.32);
+  color: #ffffff;
+}
+
+/* Fix select and option visibility */
+select {
+  color-scheme: dark;
+  color: #f2f2f2;
+  background-color: #111111;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+select option {
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+}
+
+select option:checked {
+  background: linear-gradient(#b5f03c, #b5f03c);
+  background-color: #b5f03c;
+  color: #090909;
+}
+
+/* Fallback for better contrast */
+input[type="date"],
+input[type="time"],
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+  color-scheme: dark;
+}
+
+@layer components {
+  .select-dark {
+    @apply bg-[#111] text-white border border-white/10;
+  }
+
+  .select-dark option {
+    @apply bg-[#1a1a1a] text-white;
+  }
+}
+
+@layer utilities {
+  .font-title {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-body {
+    font-family: "Manrope", "Inter", sans-serif;
+  }
+}
