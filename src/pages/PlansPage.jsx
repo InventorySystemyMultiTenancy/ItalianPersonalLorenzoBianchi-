@@ -229,7 +229,7 @@ export default function PlansPage({ mode = "public" }) {
 
   const isAdminMode = mode === "admin";
   const recurringPersonalId =
-    user?.personalId || import.meta.env.VITE_PERSONAL_ID || tenantId;
+    user?.personalId || tenantId || import.meta.env.VITE_PERSONAL_ID;
 
   useEffect(() => {
     let cancelled = false;

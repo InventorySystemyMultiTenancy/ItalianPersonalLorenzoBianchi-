@@ -60,7 +60,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
 
   const formPrefix = `mp-card-form-${String(plan?.id || "plano").replace(/[^a-zA-Z0-9_-]/g, "")}`;
   const recurringPersonalId =
-    personalId || user?.personalId || import.meta.env.VITE_PERSONAL_ID || tenantId;
+    personalId || user?.personalId || tenantId || import.meta.env.VITE_PERSONAL_ID;
   const sdkConfigError = !MP_PUBLIC_KEY
     ? "Configure VITE_MERCADO_PAGO_PUBLIC_KEY para habilitar o checkout recorrente."
     : "";
