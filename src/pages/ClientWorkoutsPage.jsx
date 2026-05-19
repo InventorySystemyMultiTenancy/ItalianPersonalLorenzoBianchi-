@@ -65,26 +65,26 @@ function WorkoutExerciseList({ items, planId, notesByPlan, onLoadNoteChange }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={t(
-                      "CLIENT_WORKOUTS_WATCH_VIDEO_THIAGOIAZZETTI",
-                      "Ver video do exercicio",
+                      "CLIENT_WORKOUTS_WATCH_VIDEO",
+                      "Guarda il video dell'esercizio",
                     )}
                     className="flex items-center gap-1 rounded-lg border border-[#b5f03c]/40 px-2 py-1 text-xs text-[#b5f03c] transition hover:bg-[#b5f03c]/10"
                   >
                     <Play size={12} />
-                    {t("CLIENT_WORKOUTS_VIDEO_LABEL_THIAGOIAZZETTI", "Video")}
+                    {t("CLIENT_WORKOUTS_VIDEO_LABEL", "Video")}
                   </a>
                 ) : null}
               </div>
             </div>
             <p className="mt-1 text-white/50">
-              {t("CLIENT_DASH_REST_LABEL_THIAGOIAZZETTI", "Descanso")}:{" "}
+              {t("CLIENT_DASH_REST_LABEL", "Descanso")}:{" "}
               {item.restSeconds
                 ? `${item.restSeconds}s`
-                : t("CLIENT_DASH_REST_FREE_THIAGOIAZZETTI", "livre")}
+                : t("CLIENT_DASH_REST_FREE", "livre")}
             </p>
             <label className="mt-3 block text-xs text-white/55">
               {t(
-                "CLIENT_WORKOUTS_LOAD_NOTES_LABEL_THIAGOIAZZETTI",
+                "CLIENT_WORKOUTS_LOAD_NOTES_LABEL",
                 "Anotacao de cargas",
               )}
               <input
@@ -95,7 +95,7 @@ function WorkoutExerciseList({ items, planId, notesByPlan, onLoadNoteChange }) {
                 }
                 className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white outline-none transition focus:border-[#b5f03c]/50"
                 placeholder={t(
-                  "CLIENT_WORKOUTS_LOAD_NOTES_PLACEHOLDER_THIAGOIAZZETTI",
+                  "CLIENT_WORKOUTS_LOAD_NOTES_PLACEHOLDER",
                   "Ex: 40kg, 35kg, 30kg",
                 )}
               />
@@ -124,15 +124,15 @@ function WorkoutScheduleList({ schedule, referenceNow }) {
     <div className="mt-5 rounded-3xl border border-white/10 bg-white/5 p-4">
       <div className="flex items-center gap-2 text-sm font-semibold text-[#b5f03c]">
         <CalendarDays size={16} />
-        {t("CLIENT_WORKOUTS_UPCOMING_TITLE_THIAGOIAZZETTI", "Proximas sessoes")}
+        {t("CLIENT_WORKOUTS_UPCOMING_TITLE", "Proximas sessoes")}
       </div>
 
       <div className="mt-3 space-y-3">
         {upcomingSessions.length === 0 ? (
           <p className="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-sm text-white/60">
             {t(
-              "CLIENT_WORKOUTS_NO_SESSIONS_THIAGOIAZZETTI",
-              "Nenhuma sessao agendada para este plano no momento.",
+              "CLIENT_WORKOUTS_NO_SESSIONS",
+              "Nessuna sessione programmata per questo piano al momento.",
             )}
           </p>
         ) : (
@@ -261,8 +261,8 @@ export default function ClientWorkoutsPage() {
           setMessage(
             error?.message ||
               t(
-                "CLIENT_WORKOUTS_LOAD_ERROR_THIAGOIAZZETTI",
-                "Nao foi possivel carregar seus treinos.",
+                "CLIENT_WORKOUTS_LOAD_ERROR",
+                "Non e stato possibile caricare i tuoi allenamenti.",
               ),
           );
         }
@@ -296,7 +296,7 @@ export default function ClientWorkoutsPage() {
     if (activeWorkout?.planId && activeWorkout.planId !== plan.id) {
       setMessage(
         t(
-          "CLIENT_WORKOUTS_ONLY_ONE_ACTIVE_THIAGOIAZZETTI",
+          "CLIENT_WORKOUTS_ONLY_ONE_ACTIVE",
           "Finalize o treino em andamento antes de iniciar outro.",
         ),
       );
@@ -319,12 +319,12 @@ export default function ClientWorkoutsPage() {
       setClockTick(Date.now());
       setMessage(
         t(
-          "CLIENT_WORKOUTS_STARTED_THIAGOIAZZETTI",
-          "Treino iniciado. Bom treino!",
+          "CLIENT_WORKOUTS_STARTED",
+          "Allenamento iniziato. Buon allenamento!",
         ),
       );
     } catch (error) {
-      setMessage(error?.message || "Nao foi possivel iniciar o treino.");
+      setMessage(error?.message || "Non e stato possibile avviare l'allenamento.");
     }
   };
 
@@ -378,10 +378,10 @@ export default function ClientWorkoutsPage() {
 
       setActiveWorkout(null);
       setMessage(
-        `${t("CLIENT_WORKOUTS_FINISHED_THIAGOIAZZETTI", "Treino finalizado em")} ${formatDuration(durationMs)}.`,
+        `${t("CLIENT_WORKOUTS_FINISHED", "Allenamento concluso in")} ${formatDuration(durationMs)}.`,
       );
     } catch (error) {
-      setMessage(error?.message || "Nao foi possivel finalizar o treino.");
+      setMessage(error?.message || "Non e stato possibile concludere l'allenamento.");
     }
   };
 
@@ -389,17 +389,17 @@ export default function ClientWorkoutsPage() {
     <main className="space-y-6">
       <section className="rounded-4xl border border-white/10 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.2),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
         <p className="text-xs uppercase tracking-[0.28em] text-white/40">
-          {t("CLIENT_DASH_HEADER_BADGE_THIAGOIAZZETTI", "Area do aluno")}
+          {t("CLIENT_DASH_HEADER_BADGE", "Area do aluno")}
         </p>
         <h1 className="mt-2 font-title text-4xl text-[#d4f7a0]">
           {t(
-            "CLIENT_WORKOUTS_HEADER_TITLE_THIAGOIAZZETTI",
+            "CLIENT_WORKOUTS_HEADER_TITLE",
             "Seus planos e sessoes de treino",
           )}
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-white/68">
           {t(
-            "CLIENT_WORKOUTS_HEADER_SUBTITLE_THIAGOIAZZETTI",
+            "CLIENT_WORKOUTS_HEADER_SUBTITLE",
             "Aqui voce acompanha os planos ativos criados pelo seu personal e as proximas sessoes agendadas para a sua rotina.",
           )}
         </p>
@@ -415,8 +415,8 @@ export default function ClientWorkoutsPage() {
         <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-6 text-sm text-white/65">
           <Loader2 className="animate-spin text-[#b5f03c]" size={18} />
           {t(
-            "CLIENT_WORKOUTS_LOADING_THIAGOIAZZETTI",
-            "Carregando treinos e agenda...",
+            "CLIENT_WORKOUTS_LOADING",
+            "Caricamento allenamenti e agenda...",
           )}
         </div>
       ) : null}
@@ -424,8 +424,8 @@ export default function ClientWorkoutsPage() {
       {!loading && plans.length === 0 ? (
         <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-8 text-sm text-white/65">
           {t(
-            "CLIENT_WORKOUTS_NO_PLANS_THIAGOIAZZETTI",
-            "Nenhum plano de treino encontrado para o seu perfil.",
+            "CLIENT_WORKOUTS_NO_PLANS",
+            "Nessun piano di allenamento trovato per il tuo profilo.",
           )}
         </div>
       ) : null}
@@ -455,8 +455,8 @@ export default function ClientWorkoutsPage() {
                 <div>
                   <p className="text-xs uppercase tracking-[0.24em] text-white/40">
                     {t(
-                      "CLIENT_WORKOUTS_PLAN_BADGE_THIAGOIAZZETTI",
-                      "Plano de treino",
+                      "CLIENT_WORKOUTS_PLAN_BADGE",
+                      "Piano di allenamento",
                     )}
                   </p>
                   <h2 className="mt-2 font-title text-3xl text-[#b5f03c]">
@@ -465,7 +465,7 @@ export default function ClientWorkoutsPage() {
                   <p className="mt-3 text-sm leading-7 text-white/68">
                     {plan.objective ||
                       t(
-                        "CLIENT_DASH_WORKOUT_OBJECTIVE_THIAGOIAZZETTI",
+                        "CLIENT_DASH_WORKOUT_OBJECTIVE",
                         "Objetivo definido pelo personal.",
                       )}
                   </p>
@@ -477,26 +477,26 @@ export default function ClientWorkoutsPage() {
                 <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1">
                   {items.length}{" "}
                   {t(
-                    "CLIENT_WORKOUTS_EXERCISES_LABEL_THIAGOIAZZETTI",
-                    "exercicio(s)",
+                    "CLIENT_WORKOUTS_EXERCISES_LABEL",
+                    "esercizio/i",
                   )}
                 </span>
                 <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1">
                   {schedule.length}{" "}
                   {t(
-                    "CLIENT_WORKOUTS_SESSIONS_LABEL_THIAGOIAZZETTI",
-                    "sessao(oes)",
+                    "CLIENT_WORKOUTS_SESSIONS_LABEL",
+                    "sessione/i",
                   )}
                 </span>
                 <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-emerald-100">
                   {plan.isActive === false
-                    ? t("CLIENT_WORKOUTS_INACTIVE_THIAGOIAZZETTI", "Inativo")
-                    : t("CLIENT_WORKOUTS_ACTIVE_THIAGOIAZZETTI", "Ativo")}
+                    ? t("CLIENT_WORKOUTS_INACTIVE", "Inativo")
+                    : t("CLIENT_WORKOUTS_ACTIVE", "Ativo")}
                 </span>
                 {isRunning ? (
                   <span className="rounded-full border border-[#b5f03c]/30 bg-[#b5f03c]/10 px-3 py-1 text-[#b5f03c]">
                     {t(
-                      "CLIENT_WORKOUTS_RUNNING_THIAGOIAZZETTI",
+                      "CLIENT_WORKOUTS_RUNNING",
                       "Em andamento",
                     )}
                   </span>
@@ -509,11 +509,11 @@ export default function ClientWorkoutsPage() {
                     <Clock3 size={16} className="text-[#b5f03c]" />
                     {isRunning
                       ? t(
-                          "CLIENT_WORKOUTS_ELAPSED_TIME_THIAGOIAZZETTI",
+                          "CLIENT_WORKOUTS_ELAPSED_TIME",
                           "Tempo decorrido",
                         )
                       : t(
-                          "CLIENT_WORKOUTS_LAST_DURATION_THIAGOIAZZETTI",
+                          "CLIENT_WORKOUTS_LAST_DURATION",
                           "Ultima duracao",
                         )}
                     :
@@ -536,7 +536,7 @@ export default function ClientWorkoutsPage() {
                     >
                       <Square size={14} />
                       {t(
-                        "CLIENT_WORKOUTS_FINISH_BTN_THIAGOIAZZETTI",
+                        "CLIENT_WORKOUTS_FINISH_BTN",
                         "Finalizar treino",
                       )}
                     </button>
@@ -548,7 +548,7 @@ export default function ClientWorkoutsPage() {
                     >
                       <Play size={14} />
                       {t(
-                        "CLIENT_WORKOUTS_START_BTN_THIAGOIAZZETTI",
+                        "CLIENT_WORKOUTS_START_BTN",
                         "Iniciar treino",
                       )}
                     </button>

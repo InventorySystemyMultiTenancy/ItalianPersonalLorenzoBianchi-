@@ -47,7 +47,7 @@ function WorkoutCard({ workout }) {
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-xs uppercase tracking-[0.24em] text-white/40">
-            {t("CLIENT_DASH_WORKOUT_LABEL_THIAGOIAZZETTI", "Treino")}
+            {t("CLIENT_DASH_WORKOUT_LABEL", "Allenamento")}
           </p>
           <h3 className="mt-2 font-title text-2xl text-[#b5f03c]">
             {workout.title}
@@ -55,7 +55,7 @@ function WorkoutCard({ workout }) {
           <p className="mt-2 text-sm text-white/62">
             {workout.objective ||
               t(
-                "CLIENT_DASH_WORKOUT_OBJECTIVE_THIAGOIAZZETTI",
+                "CLIENT_DASH_WORKOUT_OBJECTIVE",
                 "Objetivo definido pelo personal.",
               )}
           </p>
@@ -78,10 +78,10 @@ function WorkoutCard({ workout }) {
               </span>
             </div>
             <p className="mt-1 text-white/50">
-              {t("CLIENT_DASH_REST_LABEL_THIAGOIAZZETTI", "Descanso")}:{" "}
+              {t("CLIENT_DASH_REST_LABEL", "Descanso")}:{" "}
               {item.restSeconds
                 ? `${item.restSeconds}s`
-                : t("CLIENT_DASH_REST_FREE_THIAGOIAZZETTI", "livre")}
+                : t("CLIENT_DASH_REST_FREE", "livre")}
             </p>
           </div>
         ))}
@@ -118,8 +118,8 @@ export default function ClientDashboardPage() {
           setMessage(
             error?.message ||
               t(
-                "CLIENT_DASH_LOAD_ERROR_THIAGOIAZZETTI",
-                "Nao foi possivel carregar seu perfil",
+                "CLIENT_DASH_LOAD_ERROR",
+                "Non e stato possibile caricare il tuo profilo",
               ),
           );
         }
@@ -193,17 +193,17 @@ export default function ClientDashboardPage() {
     <main className="space-y-6">
       <section className="rounded-4xl border border-white/10 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.2),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
         <p className="text-xs uppercase tracking-[0.28em] text-white/40">
-          {t("CLIENT_DASH_HEADER_BADGE_THIAGOIAZZETTI", "Area do aluno")}
+          {t("CLIENT_DASH_HEADER_BADGE", "Area do aluno")}
         </p>
         <h1 className="mt-2 font-title text-4xl text-[#d4f7a0]">
           {t(
-            "CLIENT_DASH_HEADER_TITLE_THIAGOIAZZETTI",
+            "CLIENT_DASH_HEADER_TITLE",
             "Seu plano, seus treinos e sua rotina",
           )}
         </h1>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-white/68">
           {t(
-            "CLIENT_DASH_HEADER_SUBTITLE_THIAGOIAZZETTI",
+            "CLIENT_DASH_HEADER_SUBTITLE",
             "Aqui voce acompanha o plano ativo, os treinos liberados pelo personal e uma agenda simples baseada nas rotinas cadastradas.",
           )}
         </p>
@@ -218,7 +218,7 @@ export default function ClientDashboardPage() {
       {loading ? (
         <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-6 text-sm text-white/65">
           <Loader2 className="animate-spin text-[#b5f03c]" size={18} />
-          {t("CLIENT_DASH_LOADING_THIAGOIAZZETTI", "Carregando seu perfil...")}
+          {t("CLIENT_DASH_LOADING", "Caricamento profilo...")}
         </div>
       ) : null}
 
@@ -230,22 +230,22 @@ export default function ClientDashboardPage() {
                 <div>
                   <p className="text-xs uppercase tracking-[0.24em] text-white/40">
                     {t(
-                      "CLIENT_DASH_PLAN_BADGE_THIAGOIAZZETTI",
-                      "Plano contratado",
+                      "CLIENT_DASH_PLAN_BADGE",
+                      "Piano attivo",
                     )}
                   </p>
                   <h2 className="mt-2 font-title text-3xl text-[#b5f03c]">
                     {activePlan?.name ||
                       t(
-                        "CLIENT_DASH_NO_ACTIVE_PLAN_THIAGOIAZZETTI",
-                        "Sem plano ativo",
+                        "CLIENT_DASH_NO_ACTIVE_PLAN",
+                        "Senza piano ativo",
                       )}
                   </h2>
                   <p className="mt-3 max-w-xl text-sm leading-7 text-white/68">
                     {activePlan?.description ||
                       t(
-                        "CLIENT_DASH_NO_PLAN_DESC_THIAGOIAZZETTI",
-                        "Selecione um plano publico para iniciar.",
+                        "CLIENT_DASH_NO_PLAN_DESC",
+                        "Seleziona un piano pubblico per iniziare.",
                       )}
                   </p>
                 </div>
@@ -259,8 +259,8 @@ export default function ClientDashboardPage() {
                   <div>
                     <p className="text-xs uppercase tracking-[0.22em] text-white/45">
                       {t(
-                        "CLIENT_DASH_MONTHLY_LABEL_THIAGOIAZZETTI",
-                        "Mensalidade",
+                        "CLIENT_DASH_MONTHLY_LABEL",
+                        "Mensileidade",
                       )}
                     </p>
                     <p
@@ -285,11 +285,11 @@ export default function ClientDashboardPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-[0.24em] text-white/40">
-                    {t("CLIENT_DASH_SCHEDULE_BADGE_THIAGOIAZZETTI", "Agenda")}
+                    {t("CLIENT_DASH_SCHEDULE_BADGE", "Agenda")}
                   </p>
                   <h2 className="mt-2 font-title text-2xl text-[#b5f03c]">
                     {t(
-                      "CLIENT_DASH_SCHEDULE_TITLE_THIAGOIAZZETTI",
+                      "CLIENT_DASH_SCHEDULE_TITLE",
                       "Proximas rotinas",
                     )}
                   </h2>
@@ -301,8 +301,8 @@ export default function ClientDashboardPage() {
                 {scheduleEntries.length === 0 ? (
                   <p className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 text-sm text-white/65">
                     {t(
-                      "CLIENT_DASH_NO_ROUTINES_THIAGOIAZZETTI",
-                      "Nenhuma rotina liberada ainda.",
+                      "CLIENT_DASH_NO_ROUTINES",
+                      "Nessuna routine disponibile ancora.",
                     )}
                   </p>
                 ) : (
@@ -319,7 +319,7 @@ export default function ClientDashboardPage() {
                       </div>
                       <p className="mt-1 text-white/50">
                         {t(
-                          "CLIENT_DASH_CREATED_AT_THIAGOIAZZETTI",
+                          "CLIENT_DASH_CREATED_AT",
                           "Criado em",
                         )}{" "}
                         {entry.date}
@@ -352,18 +352,18 @@ export default function ClientDashboardPage() {
 
             <article className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
               <p className="text-xs uppercase tracking-[0.2em] text-white/45">
-                {t("CLIENT_DASH_PLAN_LABEL_THIAGOIAZZETTI", "Plano")}
+                {t("CLIENT_DASH_PLAN_LABEL", "Piano")}
               </p>
               <p className="mt-2 font-title text-2xl text-[#b5f03c]">
                 {activePlan?.name ||
-                  t("CLIENT_DASH_NO_PLAN_THIAGOIAZZETTI", "Sem plano")}
+                  t("CLIENT_DASH_NO_PLAN", "Senza piano")}
               </p>
             </article>
 
             <article className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
               <p className="text-xs uppercase tracking-[0.2em] text-white/45">
                 {t(
-                  "CLIENT_DASH_DUE_DATE_LABEL_THIAGOIAZZETTI",
+                  "CLIENT_DASH_DUE_DATE_LABEL",
                   "Vencimento de referencia",
                 )}
               </p>
@@ -371,8 +371,8 @@ export default function ClientDashboardPage() {
                 {profile?.planDueDate
                   ? formatDate(profile.planDueDate)
                   : t(
-                      "CLIENT_DASH_NOT_INFORMED_THIAGOIAZZETTI",
-                      "Nao informado",
+                      "CLIENT_DASH_NOT_INFORMED",
+                      "Non informato",
                     )}
               </p>
             </article>
@@ -382,7 +382,7 @@ export default function ClientDashboardPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.24em] text-white/40">
-                  Eventos
+                  Eventi
                 </p>
                 <h2 className="mt-2 font-title text-2xl text-[#b5f03c]">
                   Convites do personal
@@ -394,7 +394,7 @@ export default function ClientDashboardPage() {
             <div className="mt-5 space-y-3">
               {events.length === 0 ? (
                 <p className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 text-sm text-white/65">
-                  Nenhum evento enviado para voce ainda.
+                  Nessun evento inviato per te ancora.
                 </p>
               ) : (
                 events.map((participant) => {
@@ -421,10 +421,10 @@ export default function ClientDashboardPage() {
                         </div>
                         <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/55">
                           {participant.status === "GOING"
-                            ? "Confirmado"
+                            ? "Confermato"
                             : participant.status === "NOT_GOING"
-                              ? "Nao vai"
-                              : "Pendente"}
+                              ? "Non partecipa"
+                              : "In attesa"}
                         </span>
                       </div>
                       {event.description ? (
@@ -447,7 +447,7 @@ export default function ClientDashboardPage() {
                           }
                           className="rounded-md border border-white/10 px-4 py-2 text-sm font-semibold text-white/70 hover:bg-white/[0.05]"
                         >
-                          Nao vou
+                          Non partecipo
                         </button>
                       </div>
                     </article>
@@ -461,8 +461,8 @@ export default function ClientDashboardPage() {
             {workoutPlans.length === 0 ? (
               <div className="rounded-[1.75rem] border border-white/10 bg-white/5 px-4 py-8 text-sm text-white/65">
                 {t(
-                  "CLIENT_DASH_NO_WORKOUTS_THIAGOIAZZETTI",
-                  "Nenhum treino encontrado para o seu perfil.",
+                  "CLIENT_DASH_NO_WORKOUTS",
+                  "Nessun allenamento trovato per il tuo profilo.",
                 )}
               </div>
             ) : (
@@ -554,13 +554,13 @@ function ClientChatPanel() {
         <div className="flex items-center gap-3">
           <MessageSquare size={16} className="text-[#b5f03c]" />
           <span className="text-sm font-bold text-white/70">
-            {t("CLIENT_CHAT_TITLE_THIAGOIAZZETTI", "Mensagens com o Personal")}
+            {t("CLIENT_CHAT_TITLE", "Mensagens com o Personal")}
           </span>
         </div>
         <span className="text-xs text-white/30">
           {open
-            ? t("CLIENT_CHAT_CLOSE_THIAGOIAZZETTI", "Fechar")
-            : t("CLIENT_CHAT_OPEN_THIAGOIAZZETTI", "Abrir")}
+            ? t("CLIENT_CHAT_CLOSE", "Fechar")
+            : t("CLIENT_CHAT_OPEN", "Abrir")}
         </span>
       </button>
 
@@ -575,8 +575,8 @@ function ClientChatPanel() {
             ) : messages.length === 0 ? (
               <p className="text-center text-xs text-white/25 pt-10">
                 {t(
-                  "CLIENT_CHAT_NO_MESSAGES_THIAGOIAZZETTI",
-                  "Nenhuma mensagem ainda. Mande um oi pro seu personal!",
+                  "CLIENT_CHAT_NO_MESSAGES",
+                  "Nessun messaggio ancora. Scrivi al tuo personal!",
                 )}
               </p>
             ) : (
@@ -602,12 +602,12 @@ function ClientChatPanel() {
                           >
                             {forwarded.kind === "workout"
                               ? t(
-                                  "ADMIN_CHAT_WORKOUT_FORWARDED_THIAGOIAZZETTI",
-                                  "Treino encaminhado",
+                                  "ADMIN_CHAT_WORKOUT_FORWARDED",
+                                  "Allenamento inviato",
                                 )
                               : t(
-                                  "ADMIN_CHAT_DIET_FORWARDED_THIAGOIAZZETTI",
-                                  "Dieta encaminhada",
+                                  "ADMIN_CHAT_DIET_FORWARDED",
+                                  "Dieta inviata",
                                 )}
                           </p>
                           <p className="mt-1 font-semibold">
@@ -653,7 +653,7 @@ function ClientChatPanel() {
                 }
               }}
               placeholder={t(
-                "ADMIN_CHAT_INPUT_PLACEHOLDER_THIAGOIAZZETTI",
+                "ADMIN_CHAT_INPUT_PLACEHOLDER",
                 "Digite uma mensagem...",
               )}
               className="flex-1 resize-none rounded-xl border border-white/10 bg-white/[0.05] px-4 py-2.5 text-sm text-white placeholder-white/25 focus:border-[#b5f03c]/40 focus:outline-none"

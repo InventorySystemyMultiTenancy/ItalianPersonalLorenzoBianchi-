@@ -109,7 +109,7 @@ function getDueFallback(planDueDate) {
   if (days < 0) {
     return {
       key: "overdue",
-      label: "Mensalidade em atraso",
+      label: "Mensileidade em atraso",
       shortLabel: "Em atraso",
       detail: `Venceu em ${formatDate(planDueDate)}`,
       badgeClass: "border-red-500/45 bg-red-500/20 text-red-200",
@@ -132,7 +132,7 @@ function getDueFallback(planDueDate) {
 
   return {
     key: "paid",
-    label: "Mensalidade em dia",
+    label: "Mensileidade em dia",
     shortLabel: "Em dia",
     detail: `Proximo vencimento em ${formatDate(planDueDate)}`,
     badgeClass: "border-emerald-400/45 bg-emerald-400/15 text-emerald-200",
@@ -145,7 +145,7 @@ function buildMappedStatus(key, detail) {
   if (key === "paid") {
     return {
       key,
-      label: "Mensalidade paga",
+      label: "Mensileidade paga",
       shortLabel: "Pago",
       detail,
       badgeClass: "border-emerald-400/45 bg-emerald-400/15 text-emerald-200",
@@ -158,7 +158,7 @@ function buildMappedStatus(key, detail) {
     return {
       key,
       label: "Pagamento pendente",
-      shortLabel: "Pendente",
+      shortLabel: "In attesa",
       detail,
       badgeClass: "border-amber-400/45 bg-amber-400/15 text-amber-200",
       cardClass: "border-amber-400/35 bg-[rgba(120,53,15,0.24)]",
@@ -169,8 +169,8 @@ function buildMappedStatus(key, detail) {
   if (key === "paused") {
     return {
       key,
-      label: "Assinatura pausada",
-      shortLabel: "Pausada",
+      label: "Abbonamento in pausa",
+      shortLabel: "In pausa",
       detail,
       badgeClass: "border-sky-400/35 bg-sky-500/10 text-sky-100",
       cardClass: "border-sky-400/25 bg-[rgba(12,74,110,0.2)]",
@@ -181,8 +181,8 @@ function buildMappedStatus(key, detail) {
   if (key === "canceled") {
     return {
       key,
-      label: "Assinatura cancelada",
-      shortLabel: "Cancelada",
+      label: "Abbonamento annullato",
+      shortLabel: "Annullata",
       detail,
       badgeClass: "border-white/20 bg-white/10 text-white/70",
       cardClass: "border-white/10",
@@ -192,8 +192,8 @@ function buildMappedStatus(key, detail) {
 
   return {
     key: "overdue",
-    label: "Mensalidade nao paga",
-    shortLabel: "Nao pago",
+    label: "Mensileidade nao paga",
+    shortLabel: "Non pagato",
     detail,
     badgeClass: "border-red-500/45 bg-red-500/20 text-red-200",
     cardClass: "border-red-500/35 bg-[rgba(127,29,29,0.24)]",

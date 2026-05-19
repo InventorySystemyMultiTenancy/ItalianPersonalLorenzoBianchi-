@@ -17,11 +17,11 @@ export default function StudentsPage() {
   return (
     <section className="rounded-premium border border-black/10 bg-white p-5 shadow-soft">
       <h1 className="font-title text-3xl text-premium-gold">
-        {t("STUDENTS_TITLE_THIAGOIAZZETTI", "Meus Alunos")}
+        {t("STUDENTS_TITLE", "Meus Studenti")}
       </h1>
       <p className="mt-1 font-body text-sm text-premium-anthracite/70">
         {t(
-          "STUDENTS_SUBTITLE_THIAGOIAZZETTI",
+          "STUDENTS_SUBTITLE",
           "Visao consolidada de objetivos e progresso.",
         )}
       </p>
@@ -36,10 +36,10 @@ export default function StudentsPage() {
               {student.nome}
             </p>
             <p className="font-body text-sm text-premium-anthracite/70">
-              {t("STUDENTS_FOCUS_LABEL_THIAGOIAZZETTI", "Foco")}: {student.foco}
+              {t("STUDENTS_FOCUS_LABEL", "Foco")}: {student.foco}
             </p>
             <p className="font-body text-sm text-premium-anthracite/70">
-              {t("STUDENTS_PROGRESS_LABEL_THIAGOIAZZETTI", "Progresso")}:{" "}
+              {t("STUDENTS_PROGRESS_LABEL", "Progresso")}:{" "}
               {student.progresso}
             </p>
           </article>

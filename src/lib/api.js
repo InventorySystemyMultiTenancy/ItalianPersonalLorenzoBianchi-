@@ -50,7 +50,7 @@ export function clearStoredSession() {
 }
 
 export function formatCurrency(value) {
-  return new Intl.NumberFormat("pt-BR", {
+  return new Intl.NumberFormat("it-IT", {
     style: "currency",
     currency: "BRL",
   }).format(Number(value || 0));
@@ -60,7 +60,7 @@ export function formatDate(value) {
   if (!value) return "-";
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return String(value);
-  return new Intl.DateTimeFormat("pt-BR", {
+  return new Intl.DateTimeFormat("it-IT", {
     dateStyle: "medium",
   }).format(date);
 }
@@ -114,7 +114,7 @@ function normalizeRecurringPlan(plan) {
   return {
     ...plan,
     id: String(id),
-    name: plan.name || plan.title || "Plano mensal",
+    name: plan.name || plan.title || "Piano mensile",
     description: plan.description || "",
     recurringPlanId,
     transactionAmount: Number.isFinite(transactionAmount)
@@ -667,13 +667,13 @@ export async function sendMessage(alunoId, content) {
   return response?.message || response;
 }
 
-// Aluno: list my conversation
+// Studente: list my conversation
 export async function listMyMessages() {
   const response = await request("/messages/me");
   return Array.isArray(response?.messages) ? response.messages : [];
 }
 
-// Aluno: send message to personal
+// Studente: send message to personal
 export async function sendMyMessage(content) {
   const response = await request("/messages/me", {
     method: "POST",

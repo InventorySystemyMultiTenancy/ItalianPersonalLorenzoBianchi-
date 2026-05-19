@@ -45,7 +45,7 @@ const mockStudents = [
     id: "3",
     nome: "Rafael P.",
     foto: "RP",
-    planoStatus: "Pendente",
+    planoStatus: "In attesa",
     inicio: "03/03/2026",
   },
   {
@@ -131,15 +131,15 @@ export default function DashboardPage() {
     <div className="space-y-6">
       <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
         <SummaryCard
-          label={t("DASH_TOTAL_STUDENTS_THIAGOIAZZETTI", "Total de Alunos")}
+          label={t("DASH_TOTAL_STUDENTS", "Totale studenti")}
           value={summary.totalAlunos}
         />
         <SummaryCard
-          label={t("DASH_WORKOUTS_TODAY_THIAGOIAZZETTI", "Treinos Hoje")}
+          label={t("DASH_WORKOUTS_TODAY", "Allenamenti oggi")}
           value={summary.treinosHoje}
         />
         <SummaryCard
-          label={t("DASH_MONTHLY_REVENUE_THIAGOIAZZETTI", "Faturamento Mes")}
+          label={t("DASH_MONTHLY_REVENUE", "Faturamento Mes")}
           value={formattedRevenue}
         />
       </section>
@@ -148,13 +148,13 @@ export default function DashboardPage() {
         <div className="mb-4">
           <h2 className="font-title text-2xl text-premium-gold">
             {t(
-              "DASH_LOAD_EVOLUTION_TITLE_THIAGOIAZZETTI",
+              "DASH_LOAD_EVOLUTION_TITLE",
               "Evolucao de Cargas",
             )}
           </h2>
           <p className="font-body text-sm text-premium-anthracite/70">
             {t(
-              "DASH_LOAD_EVOLUTION_SUBTITLE_THIAGOIAZZETTI",
+              "DASH_LOAD_EVOLUTION_SUBTITLE",
               "Performance media dos alunos nas ultimas semanas.",
             )}
           </p>
@@ -181,15 +181,15 @@ export default function DashboardPage() {
         <div className="mb-4 flex items-center justify-between">
           <h2 className="font-title text-2xl text-premium-gold">
             {t(
-              "DASH_STUDENT_MANAGEMENT_TITLE_THIAGOIAZZETTI",
-              "Gestao de Alunos",
+              "DASH_STUDENT_MANAGEMENT_TITLE",
+              "Gestione studenti",
             )}
           </h2>
           <button
             type="button"
             className="rounded-premium bg-premium-gold px-4 py-2 font-body text-sm font-semibold text-premium-ink shadow-gold hover:brightness-105"
           >
-            {t("DASH_NEW_STUDENT_BUTTON_THIAGOIAZZETTI", "Novo Aluno")}
+            {t("DASH_NEW_STUDENT_BUTTON", "Nuovo studente")}
           </button>
         </div>
 
@@ -198,16 +198,16 @@ export default function DashboardPage() {
             <thead>
               <tr className="font-body text-left text-xs uppercase tracking-[0.14em] text-premium-anthracite/60">
                 <th className="px-3 py-2">
-                  {t("DASH_COL_STUDENT_THIAGOIAZZETTI", "Aluno")}
+                  {t("DASH_COL_STUDENT", "Studente")}
                 </th>
                 <th className="px-3 py-2">
-                  {t("DASH_COL_PLAN_STATUS_THIAGOIAZZETTI", "Status do Plano")}
+                  {t("DASH_COL_PLAN_STATUS", "Stato del piano")}
                 </th>
                 <th className="px-3 py-2">
-                  {t("DASH_COL_START_THIAGOIAZZETTI", "Inicio")}
+                  {t("DASH_COL_START", "Inizio")}
                 </th>
                 <th className="px-3 py-2">
-                  {t("DASH_COL_ACTION_THIAGOIAZZETTI", "Acao")}
+                  {t("DASH_COL_ACTION", "Acao")}
                 </th>
               </tr>
             </thead>
@@ -241,8 +241,8 @@ export default function DashboardPage() {
                       className="rounded-premium border border-premium-gold px-3 py-1.5 font-body text-sm font-semibold text-premium-gold hover:bg-premium-gold hover:text-premium-ink"
                     >
                       {t(
-                        "DASH_PRESCRIBE_WORKOUT_THIAGOIAZZETTI",
-                        "Prescrever Treino",
+                        "DASH_PRESCRIBE_WORKOUT",
+                        "Prescrivi allenamento",
                       )}
                     </button>
                   </td>

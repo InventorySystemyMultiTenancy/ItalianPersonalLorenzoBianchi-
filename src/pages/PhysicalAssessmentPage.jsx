@@ -117,7 +117,7 @@ export default function PhysicalAssessmentPage() {
 
   const profilePhoto = profile?.photo || profile?.photoUrl || null;
   const profileName =
-    profile?.fullName || profile?.name || user?.email || "Aluno";
+    profile?.fullName || profile?.name || user?.email || "Studente";
   const currentProfileDraft = profileDraft || {
     name: profile?.name || profile?.fullName || "",
     birthdate: getDateInputValue(profile?.birthdate || profile?.birthDate),
@@ -400,7 +400,7 @@ export default function PhysicalAssessmentPage() {
       {isPersonal && (
         <div className="mb-4">
           <label className="block text-sm font-medium text-white/70 mb-2">
-            {t("SELECT_STUDENT", "Selecionar aluno")}
+            {t("SELECT_STUDENT", "Seleziona studente")}
           </label>
           <select
             className="rounded-md bg-[#0b0b0b] border border-white/[0.06] px-3 py-2"
@@ -423,7 +423,7 @@ export default function PhysicalAssessmentPage() {
 
       {!selectedStudentId && (
         <p className="text-sm text-white/50">
-          {t("NO_STUDENT_SELECTED", "Nenhum aluno selecionado")}
+          {t("NO_STUDENT_SELECTED", "Nessuno studente selezionato")}
         </p>
       )}
 
@@ -472,7 +472,7 @@ export default function PhysicalAssessmentPage() {
                   >
                     {isEditingProfile
                       ? t("CLOSE", "Fechar")
-                      : t("EDIT_PROFILE", "Editar cadastro")}
+                      : t("EDIT_PROFILE", "Modifica profilo")}
                   </button>
                 )}
               </div>
@@ -483,8 +483,8 @@ export default function PhysicalAssessmentPage() {
             <div className="col-span-1 rounded-lg border border-white/[0.06] bg-white/[0.01] p-4">
               <h2 className="font-semibold mb-3">
                 {profile.profileCompleted
-                  ? t("EDIT_PROFILE", "Editar cadastro")
-                  : t("PROFILE", "Cadastro inicial")}
+                  ? t("EDIT_PROFILE", "Modifica profilo")
+                  : t("PROFILE", "Profilo iniziale")}
               </h2>
               <div className="flex flex-col items-center gap-3">
                 <div className="h-28 w-28 rounded-lg overflow-hidden bg-white/5">
@@ -563,8 +563,8 @@ export default function PhysicalAssessmentPage() {
                   className="mt-2 w-full rounded-md bg-[#b5f03c] px-4 py-2 font-semibold text-black transition hover:brightness-110 disabled:opacity-50"
                 >
                   {savingProfile
-                    ? t("SAVING", "Salvando...")
-                    : t("SAVE_PROFILE", "Salvar cadastro")}
+                    ? t("SAVING", "Salvataggio...")
+                    : t("SAVE_PROFILE", "Salva profilo")}
                 </button>
               </div>
             </div>
@@ -710,7 +710,7 @@ export default function PhysicalAssessmentPage() {
                 disabled={!selectedStudentId || !form.date}
                 className="rounded-md bg-[#b5f03c] px-4 py-2 text-black font-semibold disabled:opacity-40"
               >
-                {t("SAVE", "Salvar")}
+                {t("SAVE", "Salva")}
               </button>
             </div>
 
@@ -719,7 +719,7 @@ export default function PhysicalAssessmentPage() {
             <h3 className="font-semibold mb-2">{t("HISTORY", "Histórico")}</h3>
             {assessments.length === 0 && (
               <p className="text-sm text-white/50">
-                {t("NO_HISTORY", "Nenhuma avaliação registrada")}
+                {t("NO_HISTORY", "Nessuna valutazione registrata")}
               </p>
             )}
 
@@ -788,7 +788,7 @@ export default function PhysicalAssessmentPage() {
                         }}
                         className="text-xs text-red-400"
                       >
-                        {t("DELETE", "Excluir")}
+                        {t("DELETE", "Elimina")}
                       </button>
                     </div>
                   )}
@@ -1036,7 +1036,7 @@ export default function PhysicalAssessmentPage() {
                 </div>
               ) : (
                 <div className="mt-3 rounded-md border border-white/[0.06] bg-white/[0.02] p-4 text-sm text-white/50">
-                  {t("NO_PHOTOS", "Nenhuma foto registrada nesta avaliação.")}
+                  {t("NO_PHOTOS", "Nessuna foto registrata in questa valutazione.")}
                 </div>
               )}
             </div>

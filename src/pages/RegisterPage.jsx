@@ -49,8 +49,8 @@ export default function RegisterPage() {
       setError(
         registerError?.message ||
           t(
-            "REGISTER_ERROR_GENERIC_THIAGOIAZZETTI",
-            "Nao foi possivel cadastrar",
+            "REGISTER_ERROR_GENERIC",
+            "Non e stato possibile registrarsi",
           ),
       );
     } finally {
@@ -74,8 +74,8 @@ export default function RegisterPage() {
               </p>
               <p className="text-xs uppercase tracking-[0.22em] text-white/45">
                 {t(
-                  "REGISTER_BADGE_SUBTITLE_THIAGOIAZZETTI",
-                  "Cadastro de aluno por tenant",
+                  "REGISTER_BADGE_SUBTITLE",
+                  "Registrazione studente per tenant",
                 )}
               </p>
             </div>
@@ -83,13 +83,13 @@ export default function RegisterPage() {
 
           <h1 className="mt-8 font-title text-5xl leading-tight text-[#d4f7a0]">
             {t(
-              "REGISTER_TITLE_THIAGOIAZZETTI",
+              "REGISTER_TITLE",
               "Entre no seu personal e acompanhe seus treinos.",
             )}
           </h1>
           <p className="mt-4 max-w-xl text-base leading-8 text-white/70">
             {t(
-              "REGISTER_SUBTITLE_THIAGOIAZZETTI",
+              "REGISTER_SUBTITLE",
               "O cadastro cria o usuario do aluno e amarra a conta ao tenant informado. Depois do registro, o login vai direto para sua area.",
             )}
           </p>
@@ -98,13 +98,13 @@ export default function RegisterPage() {
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
               <p className="font-semibold text-[#b5f03c]">
                 {t(
-                  "REGISTER_CARD_PLAN_TITLE_THIAGOIAZZETTI",
-                  "Plano contratado",
+                  "REGISTER_CARD_PLAN_TITLE",
+                  "Piano attivo",
                 )}
               </p>
               <p className="mt-1">
                 {t(
-                  "REGISTER_CARD_PLAN_TEXT_THIAGOIAZZETTI",
+                  "REGISTER_CARD_PLAN_TEXT",
                   "Escolha o plano e confirme a adesao.",
                 )}
               </p>
@@ -112,13 +112,13 @@ export default function RegisterPage() {
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
               <p className="font-semibold text-[#b5f03c]">
                 {t(
-                  "REGISTER_CARD_WORKOUT_TITLE_THIAGOIAZZETTI",
-                  "Treinos e agenda",
+                  "REGISTER_CARD_WORKOUT_TITLE",
+                  "Allenamenti e agenda",
                 )}
               </p>
               <p className="mt-1">
                 {t(
-                  "REGISTER_CARD_WORKOUT_TEXT_THIAGOIAZZETTI",
+                  "REGISTER_CARD_WORKOUT_TEXT",
                   "Acompanhe as rotinas liberadas pelo seu personal.",
                 )}
               </p>
@@ -128,15 +128,15 @@ export default function RegisterPage() {
 
         <section className="rounded-4xl border border-[#b5f03c]/20 bg-black/45 p-8 shadow-[0_24px_70px_rgba(0,0,0,0.45)] backdrop-blur">
           <p className="text-xs uppercase tracking-[0.3em] text-white/45">
-            {t("REGISTER_NEW_STUDENT_THIAGOIAZZETTI", "Novo aluno")}
+            {t("REGISTER_NEW_STUDENT", "Nuovo studente")}
           </p>
           <h2 className="mt-3 font-title text-3xl text-[#b5f03c]">
-            {t("REGISTER_HEADING_THIAGOIAZZETTI", "Cadastro")}
+            {t("REGISTER_HEADING", "Cadastro")}
           </h2>
 
           <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
             <label className="block text-sm text-white/70">
-              {t("REGISTER_FULL_NAME_THIAGOIAZZETTI", "Nome completo")}
+              {t("REGISTER_FULL_NAME", "Nome completo")}
               <div className="mt-2 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 focus-within:border-[#b5f03c]/60">
                 <User size={18} className="text-[#b5f03c]" />
                 <input
@@ -145,7 +145,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="w-full bg-transparent text-white outline-none placeholder:text-white/30"
                   placeholder={t(
-                    "REGISTER_FULL_NAME_PLACEHOLDER_THIAGOIAZZETTI",
+                    "REGISTER_FULL_NAME_PLACEHOLDER",
                     "Seu nome",
                   )}
                   required
@@ -154,7 +154,7 @@ export default function RegisterPage() {
             </label>
 
             <label className="block text-sm text-white/70">
-              {t("REGISTER_EMAIL_LABEL_THIAGOIAZZETTI", "Email")}
+              {t("REGISTER_EMAIL_LABEL", "Email")}
               <div className="mt-2 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 focus-within:border-[#b5f03c]/60">
                 <Mail size={18} className="text-[#b5f03c]" />
                 <input
@@ -164,7 +164,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="w-full bg-transparent text-white outline-none placeholder:text-white/30"
                   placeholder={t(
-                    "REGISTER_EMAIL_PLACEHOLDER_THIAGOIAZZETTI",
+                    "REGISTER_EMAIL_PLACEHOLDER",
                     "voce@exemplo.com",
                   )}
                   required
@@ -173,7 +173,7 @@ export default function RegisterPage() {
             </label>
 
             <label className="block text-sm text-white/70">
-              {t("REGISTER_PHONE_LABEL_THIAGOIAZZETTI", "Telefone")}
+              {t("REGISTER_PHONE_LABEL", "Telefone")}
               <div className="mt-2 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 focus-within:border-[#b5f03c]/60">
                 <Phone size={18} className="text-[#b5f03c]" />
                 <input
@@ -182,7 +182,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="w-full bg-transparent text-white outline-none placeholder:text-white/30"
                   placeholder={t(
-                    "REGISTER_PHONE_PLACEHOLDER_THIAGOIAZZETTI",
+                    "REGISTER_PHONE_PLACEHOLDER",
                     "(11) 99999-9999",
                   )}
                 />
@@ -190,7 +190,7 @@ export default function RegisterPage() {
             </label>
 
             <label className="block text-sm text-white/70">
-              {t("REGISTER_PASSWORD_LABEL_THIAGOIAZZETTI", "Senha")}
+              {t("REGISTER_PASSWORD_LABEL", "Senha")}
               <div className="mt-2 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 focus-within:border-[#b5f03c]/60">
                 <ShieldCheck size={18} className="text-[#b5f03c]" />
                 <input
@@ -200,7 +200,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="w-full bg-transparent text-white outline-none placeholder:text-white/30"
                   placeholder={t(
-                    "REGISTER_PASSWORD_PLACEHOLDER_THIAGOIAZZETTI",
+                    "REGISTER_PASSWORD_PLACEHOLDER",
                     "Crie uma senha",
                   )}
                   required
@@ -212,7 +212,7 @@ export default function RegisterPage() {
             {!tenantId ? (
               <label className="block text-sm text-white/70">
                 {t(
-                  "REGISTER_PERSONAL_ID_LABEL_THIAGOIAZZETTI",
+                  "REGISTER_PERSONAL_ID_LABEL",
                   "ID do personal",
                 )}
                 <input
@@ -221,7 +221,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none placeholder:text-white/30 focus:border-[#b5f03c]/60"
                   placeholder={t(
-                    "REGISTER_PERSONAL_ID_PLACEHOLDER_THIAGOIAZZETTI",
+                    "REGISTER_PERSONAL_ID_PLACEHOLDER",
                     "UUID do personal",
                   )}
                   required
@@ -230,8 +230,8 @@ export default function RegisterPage() {
             ) : (
               <p className="mt-3 text-sm text-white/70">
                 {t(
-                  "REGISTER_DETECTED_TENANT_THIAGOIAZZETTI",
-                  "Cadastro vinculado detectado:",
+                  "REGISTER_DETECTED_TENANT",
+                  "Registrazione collegata rilevata:",
                 )}{" "}
                 <strong className="text-[#b5f03c]">{tenantId}</strong>
               </p>
@@ -249,8 +249,8 @@ export default function RegisterPage() {
               className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#b5f03c] px-4 py-3 text-sm font-semibold text-black transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70"
             >
               {loading
-                ? t("REGISTER_BUTTON_LOADING_THIAGOIAZZETTI", "Cadastrando...")
-                : t("REGISTER_BUTTON_SUBMIT_THIAGOIAZZETTI", "Criar conta")}
+                ? t("REGISTER_BUTTON_LOADING", "Cadastrando...")
+                : t("REGISTER_BUTTON_SUBMIT", "Crea account")}
               <ArrowRight size={16} />
             </button>
           </form>
@@ -260,12 +260,12 @@ export default function RegisterPage() {
               to="/login"
               className="text-[#b5f03c] transition hover:text-white"
             >
-              {t("REGISTER_LINK_HAVE_ACCOUNT_THIAGOIAZZETTI", "Ja tenho conta")}
+              {t("REGISTER_LINK_HAVE_ACCOUNT", "Ja tenho conta")}
             </Link>
             <Link to="/" className="transition hover:text-white">
               {t(
-                "REGISTER_LINK_BACK_HOME_THIAGOIAZZETTI",
-                "Voltar para a pagina inicial",
+                "REGISTER_LINK_BACK_HOME",
+                "Torna alla pagina iniziale",
               )}
             </Link>
           </div>
@@ -273,8 +273,8 @@ export default function RegisterPage() {
           {resolvedTenant ? (
             <p className="mt-6 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/60">
               {t(
-                "REGISTER_DETECTED_TENANT_THIAGOIAZZETTI",
-                "Cadastro vinculado detectado:",
+                "REGISTER_DETECTED_TENANT",
+                "Registrazione collegata rilevata:",
               )}{" "}
               {resolvedTenant}
             </p>

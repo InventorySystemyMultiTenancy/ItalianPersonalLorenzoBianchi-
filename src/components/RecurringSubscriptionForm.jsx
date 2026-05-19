@@ -65,7 +65,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
     ? "Configure VITE_MERCADO_PAGO_PUBLIC_KEY para habilitar o checkout recorrente."
     : "";
   const missingRecurringPlanWarning = !plan?.recurringPlanId
-    ? "Este plano nao trouxe preapproval_plan_id. Vamos tentar criar a assinatura usando o identificador interno do plano."
+    ? "Questo piano non include preapproval_plan_id. Proveremo a creare l'abbonamento usando l'identificatore interno del piano."
     : "";
   const shouldShowRecurringPlanWarning =
     MP_DEBUG_ENABLED && Boolean(missingRecurringPlanWarning);
@@ -150,14 +150,14 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
         }
 
         const mp = new MercadoPago(MP_PUBLIC_KEY, {
-          locale: "pt-BR",
+          locale: "it-IT",
         });
 
         mountTimeoutRef.current = window.setTimeout(() => {
           if (!cancelled && sdkStateRef.current === "loading") {
             setSdkState("error");
             setFeedback(
-              "Nao foi possivel inicializar o formulario de pagamento. Tente recarregar a pagina.",
+              "Non e stato possibile inizializzare il modulo di pagamento. Prova a ricaricare la pagina.",
             );
           }
         }, 12000);
@@ -214,7 +214,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
 
               if (error) {
                 setSdkState("error");
-                setFeedback("Nao foi possivel montar o formulario do cartao.");
+                setFeedback("Non e stato possibile montare il modulo della carta.");
                 return;
               }
 
@@ -246,7 +246,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
                 const payload = {
                   card_token_id: token,
                   payer_email: payerEmail,
-                  reason: `Assinatura - ${plan.name}`,
+                  reason: `Abbonamento - ${plan.name}`,
                 };
 
                 if (plan?.recurringPlanId) {
@@ -271,7 +271,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
                 setSdkState("success");
                 setFeedback(
                   result?.message ||
-                    "Assinatura criada com sucesso. Redirecionando para sua area...",
+                    "Abbonamento creato con successo. Reindirizzamento alla tua area...",
                 );
                 onSuccessRef.current?.(result);
                 redirectTimeoutRef.current = window.setTimeout(() => {
@@ -282,7 +282,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
                   setSdkState("error");
                   setFeedback(
                     error?.message ||
-                      "Nao foi possivel criar a assinatura recorrente.",
+                      "Non e stato possibile creare l'abbonamento ricorrente.",
                   );
                 }
               }
@@ -315,7 +315,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
           setSdkState("error");
           setFeedback(
             error?.message ||
-              "Falha ao inicializar o checkout recorrente do Mercado Pago.",
+              "Errore durante l'inizializzazione del checkout ricorrente di Mercado Pago.",
           );
         }
       }
@@ -346,7 +346,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
       <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.28em] text-white/40">
-            Assinatura recorrente
+            Abbonamento ricorrente
           </p>
           <h2 className="mt-2 font-title text-3xl text-[#d4f7a0]">
             Finalizar {plan.name}
@@ -411,7 +411,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
                 defaultValue=""
                 className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
               >
-                <option value="">Selecione</option>
+                <option value="">Seleziona</option>
               </select>
             </label>
 
@@ -422,7 +422,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
                 defaultValue=""
                 className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
               >
-                <option value="">Selecione</option>
+                <option value="">Seleziona</option>
               </select>
             </label>
 
@@ -433,7 +433,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
                 defaultValue=""
                 className="mt-2 w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
               >
-                <option value="">Selecione</option>
+                <option value="">Seleziona</option>
               </select>
             </label>
 
@@ -484,13 +484,13 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
               Fluxo seguro
             </div>
             <p className="mt-2 leading-7">
-              Os dados sensiveis do cartao ficam no iframe do Mercado Pago. O frontend envia apenas o token gerado para o backend concluir a assinatura.
+              I dati sensibili della carta restano nell'iframe di Mercado Pago. Il frontend invia solo il token generato al backend per completare l'abbonamento.
             </p>
           </div>
 
           {!resolvedStudentId ? (
             <div className="rounded-2xl border border-amber-400/25 bg-amber-500/10 p-4 text-sm text-amber-100">
-              Nao foi possivel resolver automaticamente o identificador do aluno. O backend pode rejeitar a assinatura se exigir aluno_id.
+              Non e stato possibile risolvere automaticamente l'identificatore dello studente. Il backend puo rifiutare l'abbonamento se richiede aluno_id.
             </div>
           ) : null}
 
@@ -517,7 +517,7 @@ export default function RecurringSubscriptionForm({ plan, personalId, onSuccess 
           {effectiveState === "loading" ? (
             <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/20 px-4 py-4 text-sm text-white/65">
               <Loader2 className="animate-spin text-[#b5f03c]" size={16} />
-              Carregando formulario seguro do Mercado Pago...
+              Caricamento del modulo sicuro di Mercado Pago...
             </div>
           ) : null}
         </aside>

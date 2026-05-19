@@ -57,7 +57,7 @@ export default function AdminEventsPage() {
       setStudents(Array.isArray(studentRows) ? studentRows : []);
       setEvents(eventRows);
     } catch (error) {
-      setMessage(error?.message || "Nao foi possivel carregar eventos.");
+      setMessage(error?.message || "Non e stato possibile caricare gli eventi.");
     } finally {
       setLoading(false);
     }
@@ -104,7 +104,7 @@ export default function AdminEventsPage() {
     event.preventDefault();
     setMessage("");
     if (!form.title || !form.date || !form.time) {
-      setMessage("Titulo, data e horario sao obrigatorios.");
+      setMessage("Titolo, data e orario sono obbligatori.");
       return;
     }
 
@@ -121,7 +121,7 @@ export default function AdminEventsPage() {
       await loadData();
       setMessage("Evento criado com sucesso.");
     } catch (error) {
-      setMessage(error?.message || "Nao foi possivel criar o evento.");
+      setMessage(error?.message || "Non e stato possibile creare l'evento.");
     }
   };
 
@@ -132,7 +132,7 @@ export default function AdminEventsPage() {
           <CalendarDays className="text-[#b5f03c]" />
           <div>
             <h1 className="text-2xl font-bold text-white">
-              {t("EVENTS_TITLE", "Eventos")}
+              {t("EVENTS_TITLE", "Eventi")}
             </h1>
             <p className="text-sm text-white/50">
               Crie eventos e acompanhe quem confirmou presenca.
@@ -152,7 +152,7 @@ export default function AdminEventsPage() {
           onSubmit={handleSubmit}
           className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5"
         >
-          <h2 className="font-semibold text-white">Novo evento</h2>
+          <h2 className="font-semibold text-white">Nuovo evento</h2>
           <div className="mt-4 grid gap-3">
             <input
               value={form.title}
@@ -199,7 +199,7 @@ export default function AdminEventsPage() {
                   description: e.target.value,
                 }))
               }
-              placeholder="Descricao"
+              placeholder="Descrizione"
               rows={4}
               className="resize-none rounded-md border border-white/[0.06] bg-[#0b0b0b] px-3 py-2 text-white"
             />
@@ -207,7 +207,7 @@ export default function AdminEventsPage() {
 
           <div className="mt-5">
             <div className="mb-3 flex items-center justify-between gap-3">
-              <p className="text-sm font-semibold text-white">Alunos</p>
+              <p className="text-sm font-semibold text-white">Studenti</p>
               <button
                 type="button"
                 onClick={() =>
@@ -242,19 +242,19 @@ export default function AdminEventsPage() {
             type="submit"
             className="mt-5 rounded-md bg-[#b5f03c] px-4 py-2 font-semibold text-black"
           >
-            Criar evento
+            Crea evento
           </button>
         </form>
 
         <section className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5">
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-semibold text-white">Eventos criados</h2>
+            <h2 className="font-semibold text-white">Eventi criados</h2>
             {loading ? <Loader2 className="animate-spin text-[#b5f03c]" /> : null}
           </div>
           <div className="space-y-3">
             {eventStats.length === 0 ? (
               <p className="rounded-md border border-white/[0.06] p-4 text-sm text-white/50">
-                Nenhum evento criado ainda.
+                Nessun evento creato ancora.
               </p>
             ) : (
               eventStats.map((event) => (
@@ -296,7 +296,7 @@ export default function AdminEventsPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-red-300">
-                        Nao vai
+                        Non partecipa
                       </p>
                       <p className="mt-1 text-xs text-white/55">
                         {event.notGoing
@@ -306,7 +306,7 @@ export default function AdminEventsPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-white/40">
-                        Pendente
+                        In attesa
                       </p>
                       <p className="mt-1 text-xs text-white/55">
                         {event.pending

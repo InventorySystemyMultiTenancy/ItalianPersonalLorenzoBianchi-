@@ -32,7 +32,7 @@ export default function LoginPage() {
     } catch (loginError) {
       setError(
         loginError?.message ||
-          t("LOGIN_ERROR_GENERIC_THIAGOIAZZETTI", "Nao foi possivel entrar"),
+          t("LOGIN_ERROR_GENERIC", "Nao foi possivel entrar"),
       );
     } finally {
       setLoading(false);
@@ -69,21 +69,21 @@ export default function LoginPage() {
                 Lorenzo Bianchi
               </p>
               <p className="text-xs uppercase tracking-[0.22em] text-white/45">
-                {t("LOGIN_BADGE_ROLE_THIAGOIAZZETTI", "Personal admin & aluno")}
+                {t("LOGIN_BADGE_ROLE", "Personal admin & aluno")}
               </p>
             </div>
           </div>
 
           <p className="text-xs uppercase tracking-[0.3em] text-white/45">
-            {t("LOGIN_ACCESS_LABEL_THIAGOIAZZETTI", "Acesso")}
+            {t("LOGIN_ACCESS_LABEL", "Acesso")}
           </p>
           <h2 className="mt-3 font-title text-3xl text-white">
-            {t("LOGIN_HEADING_THIAGOIAZZETTI", "Login")}
+            {t("LOGIN_HEADING", "Login")}
           </h2>
 
           <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
             <label className="block text-sm text-white/70">
-              {t("LOGIN_EMAIL_LABEL_THIAGOIAZZETTI", "Email")}
+              {t("LOGIN_EMAIL_LABEL", "Email")}
               <div className="mt-2 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 focus-within:border-[#b5f03c]/60">
                 <Mail size={18} className="text-[#b5f03c]" />
                 <input
@@ -93,7 +93,7 @@ export default function LoginPage() {
                   onChange={handleChange}
                   className="w-full bg-transparent text-white outline-none placeholder:text-white/30"
                   placeholder={t(
-                    "LOGIN_EMAIL_PLACEHOLDER_THIAGOIAZZETTI",
+                    "LOGIN_EMAIL_PLACEHOLDER",
                     "voce@exemplo.com",
                   )}
                   required
@@ -102,7 +102,7 @@ export default function LoginPage() {
             </label>
 
             <label className="block text-sm text-white/70">
-              {t("LOGIN_PASSWORD_LABEL_THIAGOIAZZETTI", "Senha")}
+              {t("LOGIN_PASSWORD_LABEL", "Senha")}
               <div className="mt-2 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 focus-within:border-[#b5f03c]/60">
                 <Lock size={18} className="text-[#b5f03c]" />
                 <input
@@ -129,8 +129,8 @@ export default function LoginPage() {
               className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#b5f03c] px-4 py-3 text-sm font-bold text-black transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70"
             >
               {loading
-                ? t("LOGIN_BUTTON_LOADING_THIAGOIAZZETTI", "Entrando...")
-                : t("LOGIN_BUTTON_SUBMIT_THIAGOIAZZETTI", "Entrar agora")}
+                ? t("LOGIN_BUTTON_LOADING", "Entrando...")
+                : t("LOGIN_BUTTON_SUBMIT", "Entrar agora")}
               <ArrowRight size={16} />
             </button>
           </form>
@@ -141,14 +141,14 @@ export default function LoginPage() {
               className="text-[#b5f03c] transition hover:text-white"
             >
               {t(
-                "LOGIN_LINK_CREATE_ACCOUNT_THIAGOIAZZETTI",
-                "Criar conta de aluno",
+                "LOGIN_LINK_CREATE_ACCOUNT",
+                "Crea account de aluno",
               )}
             </Link>
             <Link to="/" className="transition hover:text-white">
               {t(
-                "LOGIN_LINK_BACK_HOME_THIAGOIAZZETTI",
-                "Voltar para a pagina inicial",
+                "LOGIN_LINK_BACK_HOME",
+                "Torna alla pagina iniziale",
               )}
             </Link>
           </div>

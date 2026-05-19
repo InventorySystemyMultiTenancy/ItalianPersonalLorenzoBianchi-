@@ -27,47 +27,47 @@ export default function AppLayout() {
 
   const adminNavItems = [
     {
-      label: t("NAV_OVERVIEW_THIAGOIAZZETTI", "Visao Geral"),
+      label: t("NAV_OVERVIEW", "Visao Geral"),
       path: "admin",
       icon: BarChart3,
     },
     {
-      label: t("NAV_STUDENTS_THIAGOIAZZETTI", "Alunos"),
+      label: t("NAV_STUDENTS", "Studenti"),
       path: "admin/alunos",
       icon: Users,
     },
     {
-      label: t("NAV_PLANS_THIAGOIAZZETTI", "Planos"),
+      label: t("NAV_PLANS", "Piani"),
       path: "admin/planos",
       icon: Wallet,
     },
     {
-      label: t("NAV_WORKOUTS_THIAGOIAZZETTI", "Treinos"),
+      label: t("NAV_WORKOUTS", "Allenamenti"),
       path: "admin/treinos",
       icon: Dumbbell,
     },
     {
-      label: t("NAV_SCHEDULE_THIAGOIAZZETTI", "Agenda"),
+      label: t("NAV_SCHEDULE", "Agenda"),
       path: "admin/agenda",
       icon: CalendarDays,
     },
     {
-      label: t("NAV_DIETS_THIAGOIAZZETTI", "Dietas"),
+      label: t("NAV_DIETS", "Dietas"),
       path: "admin/dietas",
       icon: Salad,
     },
     {
-      label: t("NAV_COMMUNICATION_THIAGOIAZZETTI", "Comunicacao"),
+      label: t("NAV_COMMUNICATION", "Comunicacao"),
       path: "admin/comunicacao",
       icon: MessageSquare,
     },
     {
-      label: t("NAV_EVENTS_THIAGOIAZZETTI", "Eventos"),
+      label: t("NAV_EVENTS", "Eventi"),
       path: "admin/eventos",
       icon: PartyPopper,
     },
     {
-      label: t("NAV_PHYSICAL_ASSESSMENT_THIAGOIAZZETTI", "Avaliação Física"),
+      label: t("NAV_PHYSICAL_ASSESSMENT", "Avaliação Física"),
       path: "admin/avaliacao-fisica",
       icon: BarChart3,
     },
@@ -75,32 +75,32 @@ export default function AppLayout() {
 
   const clientNavItems = [
     {
-      label: t("NAV_MY_PANEL_THIAGOIAZZETTI", "Meu Painel"),
+      label: t("NAV_MY_PANEL", "Meu Painel"),
       path: "cliente",
       icon: Sparkles,
     },
     {
-      label: t("NAV_PLANS_THIAGOIAZZETTI", "Planos"),
+      label: t("NAV_PLANS", "Piani"),
       path: "cliente/planos",
       icon: Wallet,
     },
     {
-      label: t("NAV_WORKOUTS_THIAGOIAZZETTI", "Treinos"),
+      label: t("NAV_WORKOUTS", "Allenamenti"),
       path: "cliente/treinos",
       icon: Dumbbell,
     },
     {
-      label: t("NAV_SCHEDULE_THIAGOIAZZETTI", "Agenda"),
+      label: t("NAV_SCHEDULE", "Agenda"),
       path: "cliente/agenda",
       icon: CalendarDays,
     },
     {
-      label: t("NAV_COMMUNICATION_THIAGOIAZZETTI", "Comunicacao"),
+      label: t("NAV_COMMUNICATION", "Comunicacao"),
       path: "cliente/comunicacao",
       icon: MessageSquare,
     },
     {
-      label: t("NAV_PHYSICAL_ASSESSMENT_THIAGOIAZZETTI", "Avaliação Física"),
+      label: t("NAV_PHYSICAL_ASSESSMENT", "Avaliação Física"),
       path: "cliente/avaliacao-fisica",
       icon: BarChart3,
     },
@@ -108,8 +108,8 @@ export default function AppLayout() {
 
   const navItems = isPersonal ? adminNavItems : clientNavItems;
   const roleLabel = isPersonal
-    ? t("ROLE_PERSONAL_ADMIN_THIAGOIAZZETTI", "Personal Admin")
-    : t("ROLE_STUDENT_THIAGOIAZZETTI", "Aluno");
+    ? t("ROLE_PERSONAL_ADMIN", "Personal Admin")
+    : t("ROLE_STUDENT", "Studente");
 
   return (
     <div className="min-h-screen bg-[#080808] text-[#f4ead2]">
@@ -139,7 +139,7 @@ export default function AppLayout() {
           {/* Nav */}
           <nav className="flex-1 space-y-0.5">
             <p className="mb-3 px-3 text-[9px] font-bold uppercase tracking-[0.4em] text-white/20">
-              {t("NAV_SECTION_TITLE_THIAGOIAZZETTI", "Navegacao")}
+              {t("NAV_SECTION_TITLE", "Navegacao")}
             </p>
             {navItems.map((item) => (
               <SidebarLink
@@ -174,10 +174,10 @@ export default function AppLayout() {
               <p className="text-sm font-semibold text-white/70">
                 {isPersonal
                   ? t(
-                      "HEADER_PERSONAL_PANEL_THIAGOIAZZETTI",
+                      "HEADER_PERSONAL_PANEL",
                       "Painel do Personal",
                     )
-                  : t("HEADER_MY_AREA_THIAGOIAZZETTI", "Minha Area")}
+                  : t("HEADER_MY_AREA", "Minha Area")}
               </p>
             </div>
             <div className="flex items-center gap-2">
@@ -186,7 +186,7 @@ export default function AppLayout() {
                 className="flex items-center gap-1.5 rounded-lg border border-white/[0.07] bg-white/[0.03] px-3 py-1.5 text-xs text-white/50 transition hover:border-white/15 hover:text-white/80"
               >
                 <Bell size={12} />
-                {t("HEADER_PUBLIC_PAGE_THIAGOIAZZETTI", "Pagina publica")}
+                {t("HEADER_PUBLIC_PAGE", "Pagina publica")}
               </Link>
               <button
                 type="button"
@@ -194,7 +194,7 @@ export default function AppLayout() {
                 className="flex items-center gap-1.5 rounded-lg bg-white/[0.06] border border-white/[0.07] px-3 py-1.5 text-xs text-white/60 transition hover:bg-red-500/10 hover:border-red-500/20 hover:text-red-400"
               >
                 <LogOut size={12} />
-                {t("NAV_SIGN_OUT_THIAGOIAZZETTI", "Sair")}
+                {t("NAV_SIGN_OUT", "Sair")}
               </button>
             </div>
           </header>

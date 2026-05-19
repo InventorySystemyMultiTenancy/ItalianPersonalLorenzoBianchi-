@@ -24,277 +24,285 @@ import { useI18n } from "../contexts/I18nContext.jsx";
 
 const ADMIN_AGENDA_FALLBACKS = {
   "pt-BR": {
-    ADMIN_AGENDA_LABEL_THIAGOIAZZETTI: "Agenda",
-    ADMIN_AGENDA_TITLE_THIAGOIAZZETTI: "Agenda do Personal",
-    ADMIN_AGENDA_SUBTITLE_THIAGOIAZZETTI:
+    ADMIN_AGENDA_LABEL: "Agenda",
+    ADMIN_AGENDA_TITLE: "Agenda do Personal",
+    ADMIN_AGENDA_SUBTITLE:
       "Calendario mensal, recorrencia semanal/mensal e presenca do aluno.",
-    ADMIN_AGENDA_ERROR_LOAD_THIAGOIAZZETTI: "Nao foi possivel carregar agenda",
-    ADMIN_AGENDA_REQUIRED_FIELDS_THIAGOIAZZETTI:
-      "Aluno, titulo e horario inicial sao obrigatorios",
-    ADMIN_AGENDA_EVENT_UPDATED_THIAGOIAZZETTI: "Evento atualizado com sucesso",
-    ADMIN_AGENDA_EVENT_CREATED_THIAGOIAZZETTI: "Evento criado com sucesso",
-    ADMIN_AGENDA_SAVE_ERROR_THIAGOIAZZETTI: "Falha ao salvar evento",
-    ADMIN_AGENDA_CONFIRM_DELETE_THIAGOIAZZETTI:
-      "Excluir este evento da agenda?",
-    ADMIN_AGENDA_EVENT_DELETED_THIAGOIAZZETTI: "Evento removido",
-    ADMIN_AGENDA_DELETE_ERROR_THIAGOIAZZETTI: "Nao foi possivel excluir evento",
-    ADMIN_AGENDA_EDIT_EVENT_TITLE_THIAGOIAZZETTI: "Editar evento",
-    ADMIN_AGENDA_NEW_EVENT_TITLE_THIAGOIAZZETTI: "Novo evento",
-    ADMIN_AGENDA_STUDENT_LABEL_THIAGOIAZZETTI: "Aluno",
-    ADMIN_AGENDA_SELECT_STUDENT_THIAGOIAZZETTI: "Selecione",
-    ADMIN_AGENDA_TYPE_LABEL_THIAGOIAZZETTI: "Tipo",
-    ADMIN_AGENDA_TYPE_WORKOUT_THIAGOIAZZETTI: "Treino",
-    ADMIN_AGENDA_TYPE_DIET_THIAGOIAZZETTI: "Dieta",
-    ADMIN_AGENDA_TYPE_CONSULT_THIAGOIAZZETTI: "Consulta",
-    ADMIN_AGENDA_TYPE_CHECKIN_THIAGOIAZZETTI: "Check-in",
-    ADMIN_AGENDA_TYPE_OTHER_THIAGOIAZZETTI: "Outro",
-    ADMIN_AGENDA_ATTENDANCE_LABEL_THIAGOIAZZETTI: "Presenca",
-    ADMIN_AGENDA_STATUS_PENDING_THIAGOIAZZETTI: "Pendente",
-    ADMIN_AGENDA_STATUS_CONFIRMED_THIAGOIAZZETTI: "Confirmado",
-    ADMIN_AGENDA_STATUS_MISSED_THIAGOIAZZETTI: "Faltou",
-    ADMIN_AGENDA_TITLE_FIELD_THIAGOIAZZETTI: "Titulo",
-    ADMIN_AGENDA_DESCRIPTION_LABEL_THIAGOIAZZETTI: "Descricao",
-    ADMIN_AGENDA_START_LABEL_THIAGOIAZZETTI: "Inicio",
-    ADMIN_AGENDA_END_LABEL_THIAGOIAZZETTI: "Fim",
-    ADMIN_AGENDA_RECURRENCE_LABEL_THIAGOIAZZETTI: "Recorrencia",
-    ADMIN_AGENDA_RECURRENCE_NONE_THIAGOIAZZETTI: "Nao repetir",
-    ADMIN_AGENDA_RECURRENCE_WEEKLY_THIAGOIAZZETTI: "Semanal",
-    ADMIN_AGENDA_RECURRENCE_MONTHLY_THIAGOIAZZETTI: "Mensal",
-    ADMIN_AGENDA_REPEAT_UNTIL_THIAGOIAZZETTI: "Repetir ate",
-    ADMIN_AGENDA_RELATED_WORKOUT_THIAGOIAZZETTI: "Treino relacionado",
-    ADMIN_AGENDA_NO_WORKOUT_THIAGOIAZZETTI: "Sem treino vinculado",
-    ADMIN_AGENDA_DIET_NOTES_LABEL_THIAGOIAZZETTI: "Dieta / orientacoes",
-    ADMIN_AGENDA_SAVE_CHANGES_THIAGOIAZZETTI: "Salvar alteracoes",
-    ADMIN_AGENDA_CREATE_EVENT_THIAGOIAZZETTI: "Criar evento",
-    ADMIN_AGENDA_CANCEL_THIAGOIAZZETTI: "Cancelar",
-    ADMIN_AGENDA_EVENTS_TITLE_THIAGOIAZZETTI: "Eventos",
-    ADMIN_AGENDA_SELECTED_STUDENT_THIAGOIAZZETTI: "Aluno selecionado",
-    ADMIN_AGENDA_GENERAL_SCHEDULE_THIAGOIAZZETTI: "Mostrando agenda geral",
-    ADMIN_AGENDA_LOADING_THIAGOIAZZETTI: "Carregando...",
-    ADMIN_AGENDA_EMPTY_THIAGOIAZZETTI: "Nenhum evento cadastrado.",
-    ADMIN_AGENDA_EDIT_BUTTON_THIAGOIAZZETTI: "Editar",
-    ADMIN_AGENDA_DELETE_BUTTON_THIAGOIAZZETTI: "Excluir",
-    CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI: "eventos",
+    ADMIN_AGENDA_ERROR_LOAD: "Nao foi possivel carregar agenda",
+    ADMIN_AGENDA_REQUIRED_FIELDS:
+      "Studente, titulo e horario inicial sao obrigatorios",
+    ADMIN_AGENDA_EVENT_UPDATED: "Evento atualizado com sucesso",
+    ADMIN_AGENDA_EVENT_CREATED: "Evento criado com sucesso",
+    ADMIN_AGENDA_SAVE_ERROR: "Errore nel salvataggio dell'evento",
+    ADMIN_AGENDA_CONFIRM_DELETE:
+      "Eliminare questo evento dall'agenda?",
+    ADMIN_AGENDA_EVENT_DELETED: "Evento removido",
+    ADMIN_AGENDA_DELETE_ERROR: "Nao foi possivel excluir evento",
+    ADMIN_AGENDA_EDIT_EVENT_TITLE: "Modifica evento",
+    ADMIN_AGENDA_NEW_EVENT_TITLE: "Nuovo evento",
+    ADMIN_AGENDA_STUDENT_LABEL: "Studente",
+    ADMIN_AGENDA_SELECT_STUDENT: "Seleziona",
+    ADMIN_AGENDA_TYPE_LABEL: "Tipo",
+    ADMIN_AGENDA_TYPE_WORKOUT: "Allenamento",
+    ADMIN_AGENDA_TYPE_DIET: "Dieta",
+    ADMIN_AGENDA_TYPE_CONSULT: "Consulta",
+    ADMIN_AGENDA_TYPE_CHECKIN: "Check-in",
+    ADMIN_AGENDA_TYPE_OTHER: "Outro",
+    ADMIN_AGENDA_ATTENDANCE_LABEL: "Presenza",
+    ADMIN_AGENDA_STATUS_PENDING: "In attesa",
+    ADMIN_AGENDA_STATUS_CONFIRMED: "Confermato",
+    ADMIN_AGENDA_STATUS_MISSED: "Faltou",
+    ADMIN_AGENDA_TITLE_FIELD: "Titulo",
+    ADMIN_AGENDA_DESCRIPTION_LABEL: "Descrizione",
+    ADMIN_AGENDA_START_LABEL: "Inizio",
+    ADMIN_AGENDA_END_LABEL: "Fim",
+    ADMIN_AGENDA_RECURRENCE_LABEL: "Ricorrenza",
+    ADMIN_AGENDA_RECURRENCE_NONE: "Nao repetir",
+    ADMIN_AGENDA_RECURRENCE_WEEKLY: "Settimanale",
+    ADMIN_AGENDA_RECURRENCE_MONTHLY: "Mensile",
+    ADMIN_AGENDA_REPEAT_UNTIL: "Repetir ate",
+    ADMIN_AGENDA_RELATED_WORKOUT: "Allenamento collegato",
+    ADMIN_AGENDA_NO_WORKOUT: "Nessun allenamento collegato",
+    ADMIN_AGENDA_DIET_NOTES_LABEL: "Dieta / orientacoes",
+    ADMIN_AGENDA_SAVE_CHANGES: "Salva modifiche",
+    ADMIN_AGENDA_CREATE_EVENT: "Crea evento",
+    ADMIN_AGENDA_CANCEL: "Annulla",
+    ADMIN_AGENDA_EVENTS_TITLE: "Eventi",
+    ADMIN_AGENDA_SELECTED_STUDENT: "Studente selecionado",
+    ADMIN_AGENDA_GENERAL_SCHEDULE: "Mostrando agenda geral",
+    ADMIN_AGENDA_LOADING: "Caricamento...",
+    ADMIN_AGENDA_EMPTY: "Nessun evento registrato.",
+    ADMIN_AGENDA_EDIT_BUTTON: "Modifica",
+    ADMIN_AGENDA_DELETE_BUTTON: "Elimina",
+    CLIENT_AGENDA_EVENTS: "eventos",
   },
   "pt-PT": {
-    ADMIN_AGENDA_LABEL_THIAGOIAZZETTI: "Agenda",
-    ADMIN_AGENDA_TITLE_THIAGOIAZZETTI: "Agenda do Personal",
-    ADMIN_AGENDA_SUBTITLE_THIAGOIAZZETTI:
+    ADMIN_AGENDA_LABEL: "Agenda",
+    ADMIN_AGENDA_TITLE: "Agenda do Personal",
+    ADMIN_AGENDA_SUBTITLE:
       "Calendario mensal, recorrencia semanal/mensal e presenca do aluno.",
-    ADMIN_AGENDA_ERROR_LOAD_THIAGOIAZZETTI:
+    ADMIN_AGENDA_ERROR_LOAD:
       "Nao foi possivel carregar a agenda",
-    ADMIN_AGENDA_REQUIRED_FIELDS_THIAGOIAZZETTI:
-      "Aluno, titulo e horario inicial sao obrigatorios",
-    ADMIN_AGENDA_EVENT_UPDATED_THIAGOIAZZETTI: "Evento atualizado com sucesso",
-    ADMIN_AGENDA_EVENT_CREATED_THIAGOIAZZETTI: "Evento criado com sucesso",
-    ADMIN_AGENDA_SAVE_ERROR_THIAGOIAZZETTI: "Falha ao salvar evento",
-    ADMIN_AGENDA_CONFIRM_DELETE_THIAGOIAZZETTI:
-      "Excluir este evento da agenda?",
-    ADMIN_AGENDA_EVENT_DELETED_THIAGOIAZZETTI: "Evento removido",
-    ADMIN_AGENDA_DELETE_ERROR_THIAGOIAZZETTI: "Nao foi possivel excluir evento",
-    ADMIN_AGENDA_EDIT_EVENT_TITLE_THIAGOIAZZETTI: "Editar evento",
-    ADMIN_AGENDA_NEW_EVENT_TITLE_THIAGOIAZZETTI: "Novo evento",
-    ADMIN_AGENDA_STUDENT_LABEL_THIAGOIAZZETTI: "Aluno",
-    ADMIN_AGENDA_SELECT_STUDENT_THIAGOIAZZETTI: "Selecione",
-    ADMIN_AGENDA_TYPE_LABEL_THIAGOIAZZETTI: "Tipo",
-    ADMIN_AGENDA_TYPE_WORKOUT_THIAGOIAZZETTI: "Treino",
-    ADMIN_AGENDA_TYPE_DIET_THIAGOIAZZETTI: "Dieta",
-    ADMIN_AGENDA_TYPE_CONSULT_THIAGOIAZZETTI: "Consulta",
-    ADMIN_AGENDA_TYPE_CHECKIN_THIAGOIAZZETTI: "Check-in",
-    ADMIN_AGENDA_TYPE_OTHER_THIAGOIAZZETTI: "Outro",
-    ADMIN_AGENDA_ATTENDANCE_LABEL_THIAGOIAZZETTI: "Presenca",
-    ADMIN_AGENDA_STATUS_PENDING_THIAGOIAZZETTI: "Pendente",
-    ADMIN_AGENDA_STATUS_CONFIRMED_THIAGOIAZZETTI: "Confirmado",
-    ADMIN_AGENDA_STATUS_MISSED_THIAGOIAZZETTI: "Faltou",
-    ADMIN_AGENDA_TITLE_FIELD_THIAGOIAZZETTI: "Titulo",
-    ADMIN_AGENDA_DESCRIPTION_LABEL_THIAGOIAZZETTI: "Descricao",
-    ADMIN_AGENDA_START_LABEL_THIAGOIAZZETTI: "Inicio",
-    ADMIN_AGENDA_END_LABEL_THIAGOIAZZETTI: "Fim",
-    ADMIN_AGENDA_RECURRENCE_LABEL_THIAGOIAZZETTI: "Recorrencia",
-    ADMIN_AGENDA_RECURRENCE_NONE_THIAGOIAZZETTI: "Nao repetir",
-    ADMIN_AGENDA_RECURRENCE_WEEKLY_THIAGOIAZZETTI: "Semanal",
-    ADMIN_AGENDA_RECURRENCE_MONTHLY_THIAGOIAZZETTI: "Mensal",
-    ADMIN_AGENDA_REPEAT_UNTIL_THIAGOIAZZETTI: "Repetir ate",
-    ADMIN_AGENDA_RELATED_WORKOUT_THIAGOIAZZETTI: "Treino relacionado",
-    ADMIN_AGENDA_NO_WORKOUT_THIAGOIAZZETTI: "Sem treino vinculado",
-    ADMIN_AGENDA_DIET_NOTES_LABEL_THIAGOIAZZETTI: "Dieta / orientacoes",
-    ADMIN_AGENDA_SAVE_CHANGES_THIAGOIAZZETTI: "Salvar alteracoes",
-    ADMIN_AGENDA_CREATE_EVENT_THIAGOIAZZETTI: "Criar evento",
-    ADMIN_AGENDA_CANCEL_THIAGOIAZZETTI: "Cancelar",
-    ADMIN_AGENDA_EVENTS_TITLE_THIAGOIAZZETTI: "Eventos",
-    ADMIN_AGENDA_SELECTED_STUDENT_THIAGOIAZZETTI: "Aluno selecionado",
-    ADMIN_AGENDA_GENERAL_SCHEDULE_THIAGOIAZZETTI: "Mostrando agenda geral",
-    ADMIN_AGENDA_LOADING_THIAGOIAZZETTI: "A carregar...",
-    ADMIN_AGENDA_EMPTY_THIAGOIAZZETTI: "Nenhum evento cadastrado.",
-    ADMIN_AGENDA_EDIT_BUTTON_THIAGOIAZZETTI: "Editar",
-    ADMIN_AGENDA_DELETE_BUTTON_THIAGOIAZZETTI: "Excluir",
-    CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI: "eventos",
+    ADMIN_AGENDA_REQUIRED_FIELDS:
+      "Studente, titulo e horario inicial sao obrigatorios",
+    ADMIN_AGENDA_EVENT_UPDATED: "Evento atualizado com sucesso",
+    ADMIN_AGENDA_EVENT_CREATED: "Evento criado com sucesso",
+    ADMIN_AGENDA_SAVE_ERROR: "Errore nel salvataggio dell'evento",
+    ADMIN_AGENDA_CONFIRM_DELETE:
+      "Eliminare questo evento dall'agenda?",
+    ADMIN_AGENDA_EVENT_DELETED: "Evento removido",
+    ADMIN_AGENDA_DELETE_ERROR: "Nao foi possivel excluir evento",
+    ADMIN_AGENDA_EDIT_EVENT_TITLE: "Modifica evento",
+    ADMIN_AGENDA_NEW_EVENT_TITLE: "Nuovo evento",
+    ADMIN_AGENDA_STUDENT_LABEL: "Studente",
+    ADMIN_AGENDA_SELECT_STUDENT: "Seleziona",
+    ADMIN_AGENDA_TYPE_LABEL: "Tipo",
+    ADMIN_AGENDA_TYPE_WORKOUT: "Allenamento",
+    ADMIN_AGENDA_TYPE_DIET: "Dieta",
+    ADMIN_AGENDA_TYPE_CONSULT: "Consulta",
+    ADMIN_AGENDA_TYPE_CHECKIN: "Check-in",
+    ADMIN_AGENDA_TYPE_OTHER: "Outro",
+    ADMIN_AGENDA_ATTENDANCE_LABEL: "Presenza",
+    ADMIN_AGENDA_STATUS_PENDING: "In attesa",
+    ADMIN_AGENDA_STATUS_CONFIRMED: "Confermato",
+    ADMIN_AGENDA_STATUS_MISSED: "Faltou",
+    ADMIN_AGENDA_TITLE_FIELD: "Titulo",
+    ADMIN_AGENDA_DESCRIPTION_LABEL: "Descrizione",
+    ADMIN_AGENDA_START_LABEL: "Inizio",
+    ADMIN_AGENDA_END_LABEL: "Fim",
+    ADMIN_AGENDA_RECURRENCE_LABEL: "Ricorrenza",
+    ADMIN_AGENDA_RECURRENCE_NONE: "Nao repetir",
+    ADMIN_AGENDA_RECURRENCE_WEEKLY: "Settimanale",
+    ADMIN_AGENDA_RECURRENCE_MONTHLY: "Mensile",
+    ADMIN_AGENDA_REPEAT_UNTIL: "Repetir ate",
+    ADMIN_AGENDA_RELATED_WORKOUT: "Allenamento collegato",
+    ADMIN_AGENDA_NO_WORKOUT: "Nessun allenamento collegato",
+    ADMIN_AGENDA_DIET_NOTES_LABEL: "Dieta / orientacoes",
+    ADMIN_AGENDA_SAVE_CHANGES: "Salva modifiche",
+    ADMIN_AGENDA_CREATE_EVENT: "Crea evento",
+    ADMIN_AGENDA_CANCEL: "Annulla",
+    ADMIN_AGENDA_EVENTS_TITLE: "Eventi",
+    ADMIN_AGENDA_SELECTED_STUDENT: "Studente selecionado",
+    ADMIN_AGENDA_GENERAL_SCHEDULE: "Mostrando agenda geral",
+    ADMIN_AGENDA_LOADING: "A carregar...",
+    ADMIN_AGENDA_EMPTY: "Nessun evento registrato.",
+    ADMIN_AGENDA_EDIT_BUTTON: "Modifica",
+    ADMIN_AGENDA_DELETE_BUTTON: "Elimina",
+    CLIENT_AGENDA_EVENTS: "eventos",
   },
   "en-US": {
-    ADMIN_AGENDA_LABEL_THIAGOIAZZETTI: "Schedule",
-    ADMIN_AGENDA_TITLE_THIAGOIAZZETTI: "Personal Schedule",
-    ADMIN_AGENDA_SUBTITLE_THIAGOIAZZETTI:
+    ADMIN_AGENDA_LABEL: "Schedule",
+    ADMIN_AGENDA_TITLE: "Personal Schedule",
+    ADMIN_AGENDA_SUBTITLE:
       "Monthly calendar, weekly/monthly recurrence and student attendance.",
-    ADMIN_AGENDA_ERROR_LOAD_THIAGOIAZZETTI: "Could not load schedule",
-    ADMIN_AGENDA_REQUIRED_FIELDS_THIAGOIAZZETTI:
+    ADMIN_AGENDA_ERROR_LOAD: "Could not load schedule",
+    ADMIN_AGENDA_REQUIRED_FIELDS:
       "Student, title and start time are required",
-    ADMIN_AGENDA_EVENT_UPDATED_THIAGOIAZZETTI: "Event updated successfully",
-    ADMIN_AGENDA_EVENT_CREATED_THIAGOIAZZETTI: "Event created successfully",
-    ADMIN_AGENDA_SAVE_ERROR_THIAGOIAZZETTI: "Failed to save event",
-    ADMIN_AGENDA_CONFIRM_DELETE_THIAGOIAZZETTI: "Delete this schedule event?",
-    ADMIN_AGENDA_EVENT_DELETED_THIAGOIAZZETTI: "Event removed",
-    ADMIN_AGENDA_DELETE_ERROR_THIAGOIAZZETTI: "Could not delete event",
-    ADMIN_AGENDA_EDIT_EVENT_TITLE_THIAGOIAZZETTI: "Edit event",
-    ADMIN_AGENDA_NEW_EVENT_TITLE_THIAGOIAZZETTI: "New event",
-    ADMIN_AGENDA_STUDENT_LABEL_THIAGOIAZZETTI: "Student",
-    ADMIN_AGENDA_SELECT_STUDENT_THIAGOIAZZETTI: "Select",
-    ADMIN_AGENDA_TYPE_LABEL_THIAGOIAZZETTI: "Type",
-    ADMIN_AGENDA_TYPE_WORKOUT_THIAGOIAZZETTI: "Workout",
-    ADMIN_AGENDA_TYPE_DIET_THIAGOIAZZETTI: "Diet",
-    ADMIN_AGENDA_TYPE_CONSULT_THIAGOIAZZETTI: "Consultation",
-    ADMIN_AGENDA_TYPE_CHECKIN_THIAGOIAZZETTI: "Check-in",
-    ADMIN_AGENDA_TYPE_OTHER_THIAGOIAZZETTI: "Other",
-    ADMIN_AGENDA_ATTENDANCE_LABEL_THIAGOIAZZETTI: "Attendance",
-    ADMIN_AGENDA_STATUS_PENDING_THIAGOIAZZETTI: "Pending",
-    ADMIN_AGENDA_STATUS_CONFIRMED_THIAGOIAZZETTI: "Confirmed",
-    ADMIN_AGENDA_STATUS_MISSED_THIAGOIAZZETTI: "Missed",
-    ADMIN_AGENDA_TITLE_FIELD_THIAGOIAZZETTI: "Title",
-    ADMIN_AGENDA_DESCRIPTION_LABEL_THIAGOIAZZETTI: "Description",
-    ADMIN_AGENDA_START_LABEL_THIAGOIAZZETTI: "Start",
-    ADMIN_AGENDA_END_LABEL_THIAGOIAZZETTI: "End",
-    ADMIN_AGENDA_RECURRENCE_LABEL_THIAGOIAZZETTI: "Recurrence",
-    ADMIN_AGENDA_RECURRENCE_NONE_THIAGOIAZZETTI: "Do not repeat",
-    ADMIN_AGENDA_RECURRENCE_WEEKLY_THIAGOIAZZETTI: "Weekly",
-    ADMIN_AGENDA_RECURRENCE_MONTHLY_THIAGOIAZZETTI: "Monthly",
-    ADMIN_AGENDA_REPEAT_UNTIL_THIAGOIAZZETTI: "Repeat until",
-    ADMIN_AGENDA_RELATED_WORKOUT_THIAGOIAZZETTI: "Related workout",
-    ADMIN_AGENDA_NO_WORKOUT_THIAGOIAZZETTI: "No linked workout",
-    ADMIN_AGENDA_DIET_NOTES_LABEL_THIAGOIAZZETTI: "Diet / guidance",
-    ADMIN_AGENDA_SAVE_CHANGES_THIAGOIAZZETTI: "Save changes",
-    ADMIN_AGENDA_CREATE_EVENT_THIAGOIAZZETTI: "Create event",
-    ADMIN_AGENDA_CANCEL_THIAGOIAZZETTI: "Cancel",
-    ADMIN_AGENDA_EVENTS_TITLE_THIAGOIAZZETTI: "Events",
-    ADMIN_AGENDA_SELECTED_STUDENT_THIAGOIAZZETTI: "Selected student",
-    ADMIN_AGENDA_GENERAL_SCHEDULE_THIAGOIAZZETTI: "Showing general schedule",
-    ADMIN_AGENDA_LOADING_THIAGOIAZZETTI: "Loading...",
-    ADMIN_AGENDA_EMPTY_THIAGOIAZZETTI: "No events registered.",
-    ADMIN_AGENDA_EDIT_BUTTON_THIAGOIAZZETTI: "Edit",
-    ADMIN_AGENDA_DELETE_BUTTON_THIAGOIAZZETTI: "Delete",
-    CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI: "events",
+    ADMIN_AGENDA_EVENT_UPDATED: "Event updated successfully",
+    ADMIN_AGENDA_EVENT_CREATED: "Event created successfully",
+    ADMIN_AGENDA_SAVE_ERROR: "Failed to save event",
+    ADMIN_AGENDA_CONFIRM_DELETE: "Delete this schedule event?",
+    ADMIN_AGENDA_EVENT_DELETED: "Event removed",
+    ADMIN_AGENDA_DELETE_ERROR: "Could not delete event",
+    ADMIN_AGENDA_EDIT_EVENT_TITLE: "Edit event",
+    ADMIN_AGENDA_NEW_EVENT_TITLE: "New event",
+    ADMIN_AGENDA_STUDENT_LABEL: "Student",
+    ADMIN_AGENDA_SELECT_STUDENT: "Select",
+    ADMIN_AGENDA_TYPE_LABEL: "Type",
+    ADMIN_AGENDA_TYPE_WORKOUT: "Workout",
+    ADMIN_AGENDA_TYPE_DIET: "Diet",
+    ADMIN_AGENDA_TYPE_CONSULT: "Consultation",
+    ADMIN_AGENDA_TYPE_CHECKIN: "Check-in",
+    ADMIN_AGENDA_TYPE_OTHER: "Other",
+    ADMIN_AGENDA_ATTENDANCE_LABEL: "Attendance",
+    ADMIN_AGENDA_STATUS_PENDING: "Pending",
+    ADMIN_AGENDA_STATUS_CONFIRMED: "Confirmed",
+    ADMIN_AGENDA_STATUS_MISSED: "Missed",
+    ADMIN_AGENDA_TITLE_FIELD: "Title",
+    ADMIN_AGENDA_DESCRIPTION_LABEL: "Description",
+    ADMIN_AGENDA_START_LABEL: "Start",
+    ADMIN_AGENDA_END_LABEL: "End",
+    ADMIN_AGENDA_RECURRENCE_LABEL: "Recurrence",
+    ADMIN_AGENDA_RECURRENCE_NONE: "Do not repeat",
+    ADMIN_AGENDA_RECURRENCE_WEEKLY: "Weekly",
+    ADMIN_AGENDA_RECURRENCE_MONTHLY: "Monthly",
+    ADMIN_AGENDA_REPEAT_UNTIL: "Repeat until",
+    ADMIN_AGENDA_RELATED_WORKOUT: "Related workout",
+    ADMIN_AGENDA_NO_WORKOUT: "No linked workout",
+    ADMIN_AGENDA_DIET_NOTES_LABEL: "Diet / guidance",
+    ADMIN_AGENDA_SAVE_CHANGES: "Save changes",
+    ADMIN_AGENDA_CREATE_EVENT: "Create event",
+    ADMIN_AGENDA_CANCEL: "Cancel",
+    ADMIN_AGENDA_EVENTS_TITLE: "Events",
+    ADMIN_AGENDA_SELECTED_STUDENT: "Selected student",
+    ADMIN_AGENDA_GENERAL_SCHEDULE: "Showing general schedule",
+    ADMIN_AGENDA_LOADING: "Loading...",
+    ADMIN_AGENDA_EMPTY: "No events registered.",
+    ADMIN_AGENDA_EDIT_BUTTON: "Edit",
+    ADMIN_AGENDA_DELETE_BUTTON: "Delete",
+    CLIENT_AGENDA_EVENTS: "events",
   },
   "it-IT": {
-    ADMIN_AGENDA_LABEL_THIAGOIAZZETTI: "Agenda",
-    ADMIN_AGENDA_TITLE_THIAGOIAZZETTI: "Agenda del Personal",
-    ADMIN_AGENDA_SUBTITLE_THIAGOIAZZETTI:
+    ADMIN_AGENDA_LABEL: "Agenda",
+    ADMIN_AGENDA_TITLE: "Agenda del Personal",
+    ADMIN_AGENDA_SUBTITLE:
       "Calendario mensile, ricorrenza settimanale/mensile e presenza dello studente.",
-    ADMIN_AGENDA_ERROR_LOAD_THIAGOIAZZETTI: "Impossibile caricare l'agenda",
-    ADMIN_AGENDA_REQUIRED_FIELDS_THIAGOIAZZETTI:
+    ADMIN_AGENDA_ERROR_LOAD: "Impossibile caricare l'agenda",
+    ADMIN_AGENDA_REQUIRED_FIELDS:
       "Studente, titolo e orario di inizio sono obbligatori",
-    ADMIN_AGENDA_EVENT_UPDATED_THIAGOIAZZETTI: "Evento aggiornato con successo",
-    ADMIN_AGENDA_EVENT_CREATED_THIAGOIAZZETTI: "Evento creato con successo",
-    ADMIN_AGENDA_SAVE_ERROR_THIAGOIAZZETTI: "Errore nel salvataggio",
-    ADMIN_AGENDA_CONFIRM_DELETE_THIAGOIAZZETTI:
+    ADMIN_AGENDA_EVENT_UPDATED: "Evento aggiornato con successo",
+    ADMIN_AGENDA_EVENT_CREATED: "Evento creato con successo",
+    ADMIN_AGENDA_SAVE_ERROR: "Errore nel salvataggio",
+    ADMIN_AGENDA_CONFIRM_DELETE:
       "Eliminare questo evento dall'agenda?",
-    ADMIN_AGENDA_EVENT_DELETED_THIAGOIAZZETTI: "Evento rimosso",
-    ADMIN_AGENDA_DELETE_ERROR_THIAGOIAZZETTI: "Impossibile eliminare l'evento",
-    ADMIN_AGENDA_EDIT_EVENT_TITLE_THIAGOIAZZETTI: "Modifica evento",
-    ADMIN_AGENDA_NEW_EVENT_TITLE_THIAGOIAZZETTI: "Nuovo evento",
-    ADMIN_AGENDA_STUDENT_LABEL_THIAGOIAZZETTI: "Studente",
-    ADMIN_AGENDA_SELECT_STUDENT_THIAGOIAZZETTI: "Seleziona",
-    ADMIN_AGENDA_TYPE_LABEL_THIAGOIAZZETTI: "Tipo",
-    ADMIN_AGENDA_TYPE_WORKOUT_THIAGOIAZZETTI: "Allenamento",
-    ADMIN_AGENDA_TYPE_DIET_THIAGOIAZZETTI: "Dieta",
-    ADMIN_AGENDA_TYPE_CONSULT_THIAGOIAZZETTI: "Consulta",
-    ADMIN_AGENDA_TYPE_CHECKIN_THIAGOIAZZETTI: "Check-in",
-    ADMIN_AGENDA_TYPE_OTHER_THIAGOIAZZETTI: "Altro",
-    ADMIN_AGENDA_ATTENDANCE_LABEL_THIAGOIAZZETTI: "Presenza",
-    ADMIN_AGENDA_STATUS_PENDING_THIAGOIAZZETTI: "In attesa",
-    ADMIN_AGENDA_STATUS_CONFIRMED_THIAGOIAZZETTI: "Confermato",
-    ADMIN_AGENDA_STATUS_MISSED_THIAGOIAZZETTI: "Assente",
-    ADMIN_AGENDA_TITLE_FIELD_THIAGOIAZZETTI: "Titolo",
-    ADMIN_AGENDA_DESCRIPTION_LABEL_THIAGOIAZZETTI: "Descrizione",
-    ADMIN_AGENDA_START_LABEL_THIAGOIAZZETTI: "Inizio",
-    ADMIN_AGENDA_END_LABEL_THIAGOIAZZETTI: "Fine",
-    ADMIN_AGENDA_RECURRENCE_LABEL_THIAGOIAZZETTI: "Ricorrenza",
-    ADMIN_AGENDA_RECURRENCE_NONE_THIAGOIAZZETTI: "Non ripetere",
-    ADMIN_AGENDA_RECURRENCE_WEEKLY_THIAGOIAZZETTI: "Settimanale",
-    ADMIN_AGENDA_RECURRENCE_MONTHLY_THIAGOIAZZETTI: "Mensile",
-    ADMIN_AGENDA_REPEAT_UNTIL_THIAGOIAZZETTI: "Ripeti fino a",
-    ADMIN_AGENDA_RELATED_WORKOUT_THIAGOIAZZETTI: "Allenamento correlato",
-    ADMIN_AGENDA_NO_WORKOUT_THIAGOIAZZETTI: "Nessun allenamento collegato",
-    ADMIN_AGENDA_DIET_NOTES_LABEL_THIAGOIAZZETTI: "Dieta / indicazioni",
-    ADMIN_AGENDA_SAVE_CHANGES_THIAGOIAZZETTI: "Salva modifiche",
-    ADMIN_AGENDA_CREATE_EVENT_THIAGOIAZZETTI: "Crea evento",
-    ADMIN_AGENDA_CANCEL_THIAGOIAZZETTI: "Annulla",
-    ADMIN_AGENDA_EVENTS_TITLE_THIAGOIAZZETTI: "Eventi",
-    ADMIN_AGENDA_SELECTED_STUDENT_THIAGOIAZZETTI: "Studente selezionato",
-    ADMIN_AGENDA_GENERAL_SCHEDULE_THIAGOIAZZETTI:
+    ADMIN_AGENDA_EVENT_DELETED: "Evento rimosso",
+    ADMIN_AGENDA_DELETE_ERROR: "Impossibile eliminare l'evento",
+    ADMIN_AGENDA_EDIT_EVENT_TITLE: "Modifica evento",
+    ADMIN_AGENDA_NEW_EVENT_TITLE: "Nuovo evento",
+    ADMIN_AGENDA_STUDENT_LABEL: "Studente",
+    ADMIN_AGENDA_SELECT_STUDENT: "Seleziona",
+    ADMIN_AGENDA_TYPE_LABEL: "Tipo",
+    ADMIN_AGENDA_TYPE_WORKOUT: "Allenamento",
+    ADMIN_AGENDA_TYPE_DIET: "Dieta",
+    ADMIN_AGENDA_TYPE_CONSULT: "Consulta",
+    ADMIN_AGENDA_TYPE_CHECKIN: "Check-in",
+    ADMIN_AGENDA_TYPE_OTHER: "Altro",
+    ADMIN_AGENDA_ATTENDANCE_LABEL: "Presenza",
+    ADMIN_AGENDA_STATUS_PENDING: "In attesa",
+    ADMIN_AGENDA_STATUS_CONFIRMED: "Confermato",
+    ADMIN_AGENDA_STATUS_MISSED: "Assente",
+    ADMIN_AGENDA_TITLE_FIELD: "Titolo",
+    ADMIN_AGENDA_DESCRIPTION_LABEL: "Descrizione",
+    ADMIN_AGENDA_START_LABEL: "Inizio",
+    ADMIN_AGENDA_END_LABEL: "Fine",
+    ADMIN_AGENDA_RECURRENCE_LABEL: "Ricorrenza",
+    ADMIN_AGENDA_RECURRENCE_NONE: "Non ripetere",
+    ADMIN_AGENDA_RECURRENCE_WEEKLY: "Settimanale",
+    ADMIN_AGENDA_RECURRENCE_MONTHLY: "Mensile",
+    ADMIN_AGENDA_REPEAT_UNTIL: "Ripeti fino a",
+    ADMIN_AGENDA_RELATED_WORKOUT: "Allenamento correlato",
+    ADMIN_AGENDA_NO_WORKOUT: "Nessun allenamento collegato",
+    ADMIN_AGENDA_DIET_NOTES_LABEL: "Dieta / indicazioni",
+    ADMIN_AGENDA_SAVE_CHANGES: "Salva modifiche",
+    ADMIN_AGENDA_CREATE_EVENT: "Crea evento",
+    ADMIN_AGENDA_CANCEL: "Annulla",
+    ADMIN_AGENDA_EVENTS_TITLE: "Eventi",
+    ADMIN_AGENDA_SELECTED_STUDENT: "Studente selezionato",
+    ADMIN_AGENDA_GENERAL_SCHEDULE:
       "Visualizzazione agenda generale",
-    ADMIN_AGENDA_LOADING_THIAGOIAZZETTI: "Caricamento...",
-    ADMIN_AGENDA_EMPTY_THIAGOIAZZETTI: "Nessun evento registrato.",
-    ADMIN_AGENDA_EDIT_BUTTON_THIAGOIAZZETTI: "Modifica",
-    ADMIN_AGENDA_DELETE_BUTTON_THIAGOIAZZETTI: "Elimina",
-    CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI: "eventi",
+    ADMIN_AGENDA_LOADING: "Caricamento...",
+    ADMIN_AGENDA_EMPTY: "Nessun evento registrato.",
+    ADMIN_AGENDA_EDIT_BUTTON: "Modifica",
+    ADMIN_AGENDA_DELETE_BUTTON: "Elimina",
+    CLIENT_AGENDA_EVENTS: "eventi",
   },
   "es-ES": {
-    ADMIN_AGENDA_LABEL_THIAGOIAZZETTI: "Agenda",
-    ADMIN_AGENDA_TITLE_THIAGOIAZZETTI: "Agenda del Personal",
-    ADMIN_AGENDA_SUBTITLE_THIAGOIAZZETTI:
+    ADMIN_AGENDA_LABEL: "Agenda",
+    ADMIN_AGENDA_TITLE: "Agenda del Personal",
+    ADMIN_AGENDA_SUBTITLE:
       "Calendario mensual, recurrencia semanal/mensual y asistencia del alumno.",
-    ADMIN_AGENDA_ERROR_LOAD_THIAGOIAZZETTI: "No fue posible cargar la agenda",
-    ADMIN_AGENDA_REQUIRED_FIELDS_THIAGOIAZZETTI:
+    ADMIN_AGENDA_ERROR_LOAD: "No fue posible cargar la agenda",
+    ADMIN_AGENDA_REQUIRED_FIELDS:
       "Alumno, titulo y hora de inicio son obligatorios",
-    ADMIN_AGENDA_EVENT_UPDATED_THIAGOIAZZETTI: "Evento actualizado con exito",
-    ADMIN_AGENDA_EVENT_CREATED_THIAGOIAZZETTI: "Evento creado con exito",
-    ADMIN_AGENDA_SAVE_ERROR_THIAGOIAZZETTI: "Error al guardar evento",
-    ADMIN_AGENDA_CONFIRM_DELETE_THIAGOIAZZETTI:
+    ADMIN_AGENDA_EVENT_UPDATED: "Evento actualizado con exito",
+    ADMIN_AGENDA_EVENT_CREATED: "Evento creado con exito",
+    ADMIN_AGENDA_SAVE_ERROR: "Error al guardar evento",
+    ADMIN_AGENDA_CONFIRM_DELETE:
       "¿Eliminar este evento de la agenda?",
-    ADMIN_AGENDA_EVENT_DELETED_THIAGOIAZZETTI: "Evento eliminado",
-    ADMIN_AGENDA_DELETE_ERROR_THIAGOIAZZETTI: "No fue posible eliminar evento",
-    ADMIN_AGENDA_EDIT_EVENT_TITLE_THIAGOIAZZETTI: "Editar evento",
-    ADMIN_AGENDA_NEW_EVENT_TITLE_THIAGOIAZZETTI: "Nuevo evento",
-    ADMIN_AGENDA_STUDENT_LABEL_THIAGOIAZZETTI: "Alumno",
-    ADMIN_AGENDA_SELECT_STUDENT_THIAGOIAZZETTI: "Seleccionar",
-    ADMIN_AGENDA_TYPE_LABEL_THIAGOIAZZETTI: "Tipo",
-    ADMIN_AGENDA_TYPE_WORKOUT_THIAGOIAZZETTI: "Entrenamiento",
-    ADMIN_AGENDA_TYPE_DIET_THIAGOIAZZETTI: "Dieta",
-    ADMIN_AGENDA_TYPE_CONSULT_THIAGOIAZZETTI: "Consulta",
-    ADMIN_AGENDA_TYPE_CHECKIN_THIAGOIAZZETTI: "Check-in",
-    ADMIN_AGENDA_TYPE_OTHER_THIAGOIAZZETTI: "Otro",
-    ADMIN_AGENDA_ATTENDANCE_LABEL_THIAGOIAZZETTI: "Asistencia",
-    ADMIN_AGENDA_STATUS_PENDING_THIAGOIAZZETTI: "Pendiente",
-    ADMIN_AGENDA_STATUS_CONFIRMED_THIAGOIAZZETTI: "Confirmado",
-    ADMIN_AGENDA_STATUS_MISSED_THIAGOIAZZETTI: "Faltó",
-    ADMIN_AGENDA_TITLE_FIELD_THIAGOIAZZETTI: "Titulo",
-    ADMIN_AGENDA_DESCRIPTION_LABEL_THIAGOIAZZETTI: "Descripcion",
-    ADMIN_AGENDA_START_LABEL_THIAGOIAZZETTI: "Inicio",
-    ADMIN_AGENDA_END_LABEL_THIAGOIAZZETTI: "Fin",
-    ADMIN_AGENDA_RECURRENCE_LABEL_THIAGOIAZZETTI: "Recurrencia",
-    ADMIN_AGENDA_RECURRENCE_NONE_THIAGOIAZZETTI: "No repetir",
-    ADMIN_AGENDA_RECURRENCE_WEEKLY_THIAGOIAZZETTI: "Semanal",
-    ADMIN_AGENDA_RECURRENCE_MONTHLY_THIAGOIAZZETTI: "Mensual",
-    ADMIN_AGENDA_REPEAT_UNTIL_THIAGOIAZZETTI: "Repetir hasta",
-    ADMIN_AGENDA_RELATED_WORKOUT_THIAGOIAZZETTI: "Entrenamiento relacionado",
-    ADMIN_AGENDA_NO_WORKOUT_THIAGOIAZZETTI: "Sin entrenamiento vinculado",
-    ADMIN_AGENDA_DIET_NOTES_LABEL_THIAGOIAZZETTI: "Dieta / orientaciones",
-    ADMIN_AGENDA_SAVE_CHANGES_THIAGOIAZZETTI: "Guardar cambios",
-    ADMIN_AGENDA_CREATE_EVENT_THIAGOIAZZETTI: "Crear evento",
-    ADMIN_AGENDA_CANCEL_THIAGOIAZZETTI: "Cancelar",
-    ADMIN_AGENDA_EVENTS_TITLE_THIAGOIAZZETTI: "Eventos",
-    ADMIN_AGENDA_SELECTED_STUDENT_THIAGOIAZZETTI: "Alumno seleccionado",
-    ADMIN_AGENDA_GENERAL_SCHEDULE_THIAGOIAZZETTI: "Mostrando agenda general",
-    ADMIN_AGENDA_LOADING_THIAGOIAZZETTI: "Cargando...",
-    ADMIN_AGENDA_EMPTY_THIAGOIAZZETTI: "Ningun evento registrado.",
-    ADMIN_AGENDA_EDIT_BUTTON_THIAGOIAZZETTI: "Editar",
-    ADMIN_AGENDA_DELETE_BUTTON_THIAGOIAZZETTI: "Eliminar",
-    CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI: "eventos",
+    ADMIN_AGENDA_EVENT_DELETED: "Evento eliminado",
+    ADMIN_AGENDA_DELETE_ERROR: "No fue posible eliminar evento",
+    ADMIN_AGENDA_EDIT_EVENT_TITLE: "Modifica evento",
+    ADMIN_AGENDA_NEW_EVENT_TITLE: "Nuevo evento",
+    ADMIN_AGENDA_STUDENT_LABEL: "Alumno",
+    ADMIN_AGENDA_SELECT_STUDENT: "Seleccionar",
+    ADMIN_AGENDA_TYPE_LABEL: "Tipo",
+    ADMIN_AGENDA_TYPE_WORKOUT: "Entrenamiento",
+    ADMIN_AGENDA_TYPE_DIET: "Dieta",
+    ADMIN_AGENDA_TYPE_CONSULT: "Consulta",
+    ADMIN_AGENDA_TYPE_CHECKIN: "Check-in",
+    ADMIN_AGENDA_TYPE_OTHER: "Otro",
+    ADMIN_AGENDA_ATTENDANCE_LABEL: "Asistencia",
+    ADMIN_AGENDA_STATUS_PENDING: "Pendiente",
+    ADMIN_AGENDA_STATUS_CONFIRMED: "Confermato",
+    ADMIN_AGENDA_STATUS_MISSED: "Faltó",
+    ADMIN_AGENDA_TITLE_FIELD: "Titulo",
+    ADMIN_AGENDA_DESCRIPTION_LABEL: "Descripcion",
+    ADMIN_AGENDA_START_LABEL: "Inizio",
+    ADMIN_AGENDA_END_LABEL: "Fin",
+    ADMIN_AGENDA_RECURRENCE_LABEL: "Recurrencia",
+    ADMIN_AGENDA_RECURRENCE_NONE: "No repetir",
+    ADMIN_AGENDA_RECURRENCE_WEEKLY: "Settimanale",
+    ADMIN_AGENDA_RECURRENCE_MONTHLY: "Mensual",
+    ADMIN_AGENDA_REPEAT_UNTIL: "Repetir hasta",
+    ADMIN_AGENDA_RELATED_WORKOUT: "Entrenamiento relacionado",
+    ADMIN_AGENDA_NO_WORKOUT: "Sin entrenamiento vinculado",
+    ADMIN_AGENDA_DIET_NOTES_LABEL: "Dieta / orientaciones",
+    ADMIN_AGENDA_SAVE_CHANGES: "Guardar cambios",
+    ADMIN_AGENDA_CREATE_EVENT: "Crear evento",
+    ADMIN_AGENDA_CANCEL: "Annulla",
+    ADMIN_AGENDA_EVENTS_TITLE: "Eventi",
+    ADMIN_AGENDA_SELECTED_STUDENT: "Alumno seleccionado",
+    ADMIN_AGENDA_GENERAL_SCHEDULE: "Mostrando agenda general",
+    ADMIN_AGENDA_LOADING: "Cargando...",
+    ADMIN_AGENDA_EMPTY: "Ningun evento registrado.",
+    ADMIN_AGENDA_EDIT_BUTTON: "Modifica",
+    ADMIN_AGENDA_DELETE_BUTTON: "Eliminar",
+    CLIENT_AGENDA_EVENTS: "eventos",
   },
 };
 
 function translateAdminAgenda(rawT, locale, key, fallback = "") {
   const remoteValue = rawT(key, "");
-  const localValue = ADMIN_AGENDA_FALLBACKS[locale]?.[key];
-  return remoteValue || localValue || fallback || key;
+  const localValue =
+    ADMIN_AGENDA_FALLBACKS[locale]?.[key] ||
+    ADMIN_AGENDA_FALLBACKS[locale?.split("-")[0]]?.[key] ||
+    ADMIN_AGENDA_FALLBACKS["it-IT"]?.[key];
+
+  if (remoteValue && remoteValue !== key) {
+    return remoteValue;
+  }
+
+  return localValue || fallback || key;
 }
 
 function eventTone(type) {
@@ -329,7 +337,7 @@ function formatDateTime(value) {
   if (!value) return "-";
   const d = new Date(value);
   if (Number.isNaN(d.getTime())) return "-";
-  return new Intl.DateTimeFormat("pt-BR", {
+  return new Intl.DateTimeFormat("it-IT", {
     dateStyle: "short",
     timeStyle: "short",
   }).format(d);
@@ -407,7 +415,7 @@ export default function AdminAgendaPage() {
   const [monthCursor, setMonthCursor] = useState(() => new Date());
   const [selectedDay, setSelectedDay] = useState(() => new Date());
   const [creatingGrid, setCreatingGrid] = useState(false);
-  const [eventFilterAlunoId, setEventFilterAlunoId] = useState("");
+  const [eventFilterStudenteId, setEventFilterStudenteId] = useState("");
   const [weeklyGrid, setWeeklyGrid] = useState(() =>
     WEEKDAY_SLOTS.reduce((acc, slot) => {
       acc[slot.key] = {
@@ -440,7 +448,7 @@ export default function AdminAgendaPage() {
 
   const monthLabel = useMemo(
     () =>
-      new Intl.DateTimeFormat(locale || "pt-BR", {
+      new Intl.DateTimeFormat(locale || "it-IT", {
         month: "long",
         year: "numeric",
       }).format(monthCursor),
@@ -594,7 +602,7 @@ export default function AdminAgendaPage() {
           setMessage(
             error?.message ||
               t(
-                "ADMIN_AGENDA_ERROR_LOAD_THIAGOIAZZETTI",
+                "ADMIN_AGENDA_ERROR_LOAD",
                 "Nao foi possivel carregar agenda",
               ),
           );
@@ -716,8 +724,8 @@ export default function AdminAgendaPage() {
     if (!form.alunoId || !form.title.trim() || !form.startsAt) {
       setMessage(
         t(
-          "ADMIN_AGENDA_REQUIRED_FIELDS_THIAGOIAZZETTI",
-          "Aluno, titulo e horario inicial sao obrigatorios",
+          "ADMIN_AGENDA_REQUIRED_FIELDS",
+          "Studente, titulo e horario inicial sao obrigatorios",
         ),
       );
       return;
@@ -729,7 +737,7 @@ export default function AdminAgendaPage() {
         .map((c) => c.aluno?.fullName || c.title)
         .join(", ");
       setMessage(
-        `Conflito de horário! Já existe treino agendado: ${conflictNames}`,
+        `Conflitto di orario. Esiste gia un allenamento programmato: ${conflictNames}`,
       );
       return;
     }
@@ -756,7 +764,7 @@ export default function AdminAgendaPage() {
         );
         setMessage(
           t(
-            "ADMIN_AGENDA_EVENT_UPDATED_THIAGOIAZZETTI",
+            "ADMIN_AGENDA_EVENT_UPDATED",
             "Evento atualizado com sucesso",
           ),
         );
@@ -764,7 +772,7 @@ export default function AdminAgendaPage() {
         await createAgendaEvent(payload, tenantId);
         setMessage(
           t(
-            "ADMIN_AGENDA_EVENT_CREATED_THIAGOIAZZETTI",
+            "ADMIN_AGENDA_EVENT_CREATED",
             "Evento criado com sucesso",
           ),
         );
@@ -775,7 +783,7 @@ export default function AdminAgendaPage() {
     } catch (error) {
       setMessage(
         error?.message ||
-          t("ADMIN_AGENDA_SAVE_ERROR_THIAGOIAZZETTI", "Falha ao salvar evento"),
+          t("ADMIN_AGENDA_SAVE_ERROR", "Errore nel salvataggio dell'evento"),
       );
     }
   };
@@ -792,7 +800,7 @@ export default function AdminAgendaPage() {
 
   const handleCreateMonthlyGrid = async () => {
     if (!form.alunoId || !form.title.trim()) {
-      setMessage("Selecione aluno e título para gerar a grade.");
+      setMessage("Seleziona studente e titolo per generare la griglia.");
       return;
     }
 
@@ -801,13 +809,13 @@ export default function AdminAgendaPage() {
     );
 
     if (enabledSlots.length === 0) {
-      setMessage("Marque pelo menos um dia da semana para gerar a grade.");
+      setMessage("Seleziona almeno un giorno della settimana per generare la griglia.");
       return;
     }
 
     if (hasWeeklyGridConflicts) {
       setMessage(
-        "Nao e possivel criar a grade: ha conflito de horario com outro aluno.",
+        "Non e possibile creare la griglia: c e un conflitto di orario con un altro studente.",
       );
       return;
     }
@@ -868,7 +876,7 @@ export default function AdminAgendaPage() {
     }
 
     if (eventsToCreate.length === 0) {
-      setMessage("Nenhum horário válido encontrado para criar a grade.");
+      setMessage("Nessun orario valido trovato per creare la griglia.");
       return;
     }
 
@@ -893,11 +901,11 @@ export default function AdminAgendaPage() {
       await loadAllEvents();
       await loadSessionsForStudent(form.alunoId);
       setMessage(
-        `Grade criada: ${createdCount} horários adicionados${conflictCount ? `, ${conflictCount} em conflito` : ""}.`,
+        `Griglia creata: ${createdCount} orari aggiunti${conflictCount ? `, ${conflictCount} in conflitto` : ""}.`,
       );
     } catch (error) {
       setMessage(
-        error?.message || "Não foi possível criar a grade de horários.",
+        error?.message || "Non e stato possibile creare la griglia oraria.",
       );
     } finally {
       setCreatingGrid(false);
@@ -937,15 +945,15 @@ export default function AdminAgendaPage() {
         prev.map((ev) => (ev.id === event.id ? updated : ev)),
       );
     } catch (error) {
-      setMessage(error?.message || "Erro ao marcar como concluído.");
+      setMessage(error?.message || "Errore nel segnare come completato.");
     }
   };
 
   const handleDelete = async (eventId) => {
     const ok = window.confirm(
       t(
-        "ADMIN_AGENDA_CONFIRM_DELETE_THIAGOIAZZETTI",
-        "Excluir este evento da agenda?",
+        "ADMIN_AGENDA_CONFIRM_DELETE",
+        "Eliminare questo evento dall'agenda?",
       ),
     );
     if (!ok) return;
@@ -953,13 +961,13 @@ export default function AdminAgendaPage() {
       await deleteAgendaEvent(eventId, tenantId);
       setEvents((prev) => prev.filter((ev) => ev.id !== eventId));
       setMessage(
-        t("ADMIN_AGENDA_EVENT_DELETED_THIAGOIAZZETTI", "Evento removido"),
+        t("ADMIN_AGENDA_EVENT_DELETED", "Evento removido"),
       );
     } catch (error) {
       setMessage(
         error?.message ||
           t(
-            "ADMIN_AGENDA_DELETE_ERROR_THIAGOIAZZETTI",
+            "ADMIN_AGENDA_DELETE_ERROR",
             "Nao foi possivel excluir evento",
           ),
       );
@@ -986,7 +994,7 @@ export default function AdminAgendaPage() {
           : "Solicitacao recusada.",
       );
     } catch (error) {
-      setMessage(error?.message || "Nao foi possivel revisar solicitacao.");
+      setMessage(error?.message || "Non e stato possibile revisionare la richiesta.");
     }
   };
 
@@ -1002,11 +1010,11 @@ export default function AdminAgendaPage() {
   }, [events]);
 
   const filteredEvents = useMemo(() => {
-    if (!eventFilterAlunoId) {
+    if (!eventFilterStudenteId) {
       return events;
     }
-    return events.filter((event) => event.alunoId === eventFilterAlunoId);
-  }, [events, eventFilterAlunoId]);
+    return events.filter((event) => event.alunoId === eventFilterStudenteId);
+  }, [events, eventFilterStudenteId]);
 
   const filteredEventsByDay = useMemo(() => {
     const map = new Map();
@@ -1109,14 +1117,14 @@ export default function AdminAgendaPage() {
         <div className="flex items-center justify-between gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-white/40">
-              {t("ADMIN_AGENDA_LABEL_THIAGOIAZZETTI", "Agenda")}
+              {t("ADMIN_AGENDA_LABEL", "Agenda")}
             </p>
             <h1 className="mt-2 font-title text-4xl text-[#d4f7a0]">
-              {t("ADMIN_AGENDA_TITLE_THIAGOIAZZETTI", "Agenda do Personal")}
+              {t("ADMIN_AGENDA_TITLE", "Agenda do Personal")}
             </h1>
             <p className="mt-3 text-sm text-white/68">
               {t(
-                "ADMIN_AGENDA_SUBTITLE_THIAGOIAZZETTI",
+                "ADMIN_AGENDA_SUBTITLE",
                 "Calendario mensal, recorrencia semanal/mensal e presenca do aluno.",
               )}
             </p>
@@ -1161,13 +1169,13 @@ export default function AdminAgendaPage() {
         </div>
         <div className="grid grid-cols-7 gap-2 text-center text-xs uppercase tracking-[0.08em] text-white/45">
           {[
-            t("WEEKDAY_SUN_THIAGOIAZZETTI", "Dom"),
-            t("WEEKDAY_MON_THIAGOIAZZETTI", "Seg"),
-            t("WEEKDAY_TUE_THIAGOIAZZETTI", "Ter"),
-            t("WEEKDAY_WED_THIAGOIAZZETTI", "Qua"),
-            t("WEEKDAY_THU_THIAGOIAZZETTI", "Qui"),
-            t("WEEKDAY_FRI_THIAGOIAZZETTI", "Sex"),
-            t("WEEKDAY_SAT_THIAGOIAZZETTI", "Sab"),
+            t("WEEKDAY_SUN", "Dom"),
+            t("WEEKDAY_MON", "Seg"),
+            t("WEEKDAY_TUE", "Ter"),
+            t("WEEKDAY_WED", "Qua"),
+            t("WEEKDAY_THU", "Qui"),
+            t("WEEKDAY_FRI", "Sex"),
+            t("WEEKDAY_SAT", "Sab"),
           ].map((d) => (
             <div key={d}>{d}</div>
           ))}
@@ -1203,12 +1211,12 @@ export default function AdminAgendaPage() {
                           handleToggleCompletion(event);
                         }}
                         className="h-3 w-3 cursor-pointer accent-[#b5f03c] mt-0.5 flex-shrink-0"
-                        title="Marcar como concluído"
+                        title="Segna come completato"
                       />
                       <div className="flex-1">
                         <div className="font-semibold">
                           {new Date(event.startsAt).toLocaleTimeString(
-                            locale || "pt-BR",
+                            locale || "it-IT",
                             {
                               hour: "2-digit",
                               minute: "2-digit",
@@ -1218,7 +1226,7 @@ export default function AdminAgendaPage() {
                             <>
                               {" - "}
                               {new Date(event.endsAt).toLocaleTimeString(
-                                locale || "pt-BR",
+                                locale || "it-IT",
                                 {
                                   hour: "2-digit",
                                   minute: "2-digit",
@@ -1229,7 +1237,7 @@ export default function AdminAgendaPage() {
                           {event.title}
                         </div>
                         <div className="text-[9px] text-white/60">
-                          {event.aluno?.fullName || "Aluno"}
+                          {event.aluno?.fullName || "Studente"}
                         </div>
                       </div>
                     </div>
@@ -1237,12 +1245,12 @@ export default function AdminAgendaPage() {
                   {dayEvents.length > 3 ? (
                     <p className="text-[10px] text-white/55">
                       +{dayEvents.length - 3}{" "}
-                      {t("CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI", "eventos")}
+                      {t("CLIENT_AGENDA_EVENTS", "eventos")}
                     </p>
                   ) : null}
                   {daySessions.length > 0 ? (
                     <p className="text-[10px] text-emerald-200">
-                      {daySessions.length} treino(s) concluido(s)
+                      {daySessions.length} allenamento/i completato/i
                     </p>
                   ) : null}
                 </div>
@@ -1254,16 +1262,16 @@ export default function AdminAgendaPage() {
 
       <section className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6">
         <h3 className="font-title text-lg text-[#b5f03c]">
-          Filtrar Calendário por Aluno
+          Filtra calendario per studente
         </h3>
         <div className="mt-4">
           <select
-            value={eventFilterAlunoId}
-            onChange={(e) => setEventFilterAlunoId(e.target.value)}
+            value={eventFilterStudenteId}
+            onChange={(e) => setEventFilterStudenteId(e.target.value)}
             className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
           >
             <option value="">
-              📅 Todos os alunos (mostrar todos os eventos)
+              Tutti gli studenti (mostra tutti gli eventi)
             </option>
             {students.map((student) => (
               <option key={student.id} value={student.id}>
@@ -1279,14 +1287,14 @@ export default function AdminAgendaPage() {
           <h2 className="font-title text-2xl text-[#b5f03c]">
             {editingId
               ? t(
-                  "ADMIN_AGENDA_EDIT_EVENT_TITLE_THIAGOIAZZETTI",
-                  "Editar evento",
+                  "ADMIN_AGENDA_EDIT_EVENT_TITLE",
+                  "Modifica evento",
                 )
-              : t("ADMIN_AGENDA_NEW_EVENT_TITLE_THIAGOIAZZETTI", "Novo evento")}
+              : t("ADMIN_AGENDA_NEW_EVENT_TITLE", "Nuovo evento")}
           </h2>
           <form className="mt-5 space-y-4" onSubmit={handleSave}>
             <label className="block text-sm text-white/70">
-              {t("ADMIN_AGENDA_STUDENT_LABEL_THIAGOIAZZETTI", "Aluno")}
+              {t("ADMIN_AGENDA_STUDENT_LABEL", "Studente")}
               <select
                 value={form.alunoId}
                 onChange={(e) =>
@@ -1295,7 +1303,7 @@ export default function AdminAgendaPage() {
                 className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-white outline-none"
               >
                 <option value="">
-                  {t("ADMIN_AGENDA_SELECT_STUDENT_THIAGOIAZZETTI", "Selecione")}
+                  {t("ADMIN_AGENDA_SELECT_STUDENT", "Seleziona")}
                 </option>
                 {students.map((student) => (
                   <option key={student.id} value={student.id}>
@@ -1306,7 +1314,7 @@ export default function AdminAgendaPage() {
             </label>
             <div className="grid gap-3 md:grid-cols-2">
               <label className="block text-sm text-white/70">
-                {t("ADMIN_AGENDA_TYPE_LABEL_THIAGOIAZZETTI", "Tipo")}
+                {t("ADMIN_AGENDA_TYPE_LABEL", "Tipo")}
                 <select
                   value={form.type}
                   onChange={(e) =>
@@ -1315,24 +1323,24 @@ export default function AdminAgendaPage() {
                   className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-white outline-none"
                 >
                   <option value="TREINO">
-                    {t("ADMIN_AGENDA_TYPE_WORKOUT_THIAGOIAZZETTI", "Treino")}
+                    {t("ADMIN_AGENDA_TYPE_WORKOUT", "Allenamento")}
                   </option>
                   <option value="DIETA">
-                    {t("ADMIN_AGENDA_TYPE_DIET_THIAGOIAZZETTI", "Dieta")}
+                    {t("ADMIN_AGENDA_TYPE_DIET", "Dieta")}
                   </option>
                   <option value="CONSULTA">
-                    {t("ADMIN_AGENDA_TYPE_CONSULT_THIAGOIAZZETTI", "Consulta")}
+                    {t("ADMIN_AGENDA_TYPE_CONSULT", "Consulta")}
                   </option>
                   <option value="CHECKIN">
-                    {t("ADMIN_AGENDA_TYPE_CHECKIN_THIAGOIAZZETTI", "Check-in")}
+                    {t("ADMIN_AGENDA_TYPE_CHECKIN", "Check-in")}
                   </option>
                   <option value="OUTRO">
-                    {t("ADMIN_AGENDA_TYPE_OTHER_THIAGOIAZZETTI", "Outro")}
+                    {t("ADMIN_AGENDA_TYPE_OTHER", "Outro")}
                   </option>
                 </select>
               </label>
               <label className="block text-sm text-white/70">
-                {t("ADMIN_AGENDA_ATTENDANCE_LABEL_THIAGOIAZZETTI", "Presenca")}
+                {t("ADMIN_AGENDA_ATTENDANCE_LABEL", "Presenza")}
                 <select
                   value={form.attendanceStatus}
                   onChange={(e) =>
@@ -1345,24 +1353,24 @@ export default function AdminAgendaPage() {
                 >
                   <option value="PENDENTE">
                     {t(
-                      "ADMIN_AGENDA_STATUS_PENDING_THIAGOIAZZETTI",
-                      "Pendente",
+                      "ADMIN_AGENDA_STATUS_PENDING",
+                      "In attesa",
                     )}
                   </option>
                   <option value="CONFIRMADO">
                     {t(
-                      "ADMIN_AGENDA_STATUS_CONFIRMED_THIAGOIAZZETTI",
-                      "Confirmado",
+                      "ADMIN_AGENDA_STATUS_CONFIRMED",
+                      "Confermato",
                     )}
                   </option>
                   <option value="FALTOU">
-                    {t("ADMIN_AGENDA_STATUS_MISSED_THIAGOIAZZETTI", "Faltou")}
+                    {t("ADMIN_AGENDA_STATUS_MISSED", "Faltou")}
                   </option>
                 </select>
               </label>
             </div>
             <label className="block text-sm text-white/70">
-              {t("ADMIN_AGENDA_TITLE_FIELD_THIAGOIAZZETTI", "Titulo")}
+              {t("ADMIN_AGENDA_TITLE_FIELD", "Titulo")}
               <input
                 value={form.title}
                 onChange={(e) =>
@@ -1372,7 +1380,7 @@ export default function AdminAgendaPage() {
               />
             </label>
             <label className="block text-sm text-white/70">
-              {t("ADMIN_AGENDA_DESCRIPTION_LABEL_THIAGOIAZZETTI", "Descricao")}
+              {t("ADMIN_AGENDA_DESCRIPTION_LABEL", "Descrizione")}
               <textarea
                 rows={3}
                 value={form.description}
@@ -1386,7 +1394,7 @@ export default function AdminAgendaPage() {
             {form.recurrence === "NONE" && (
               <div className="grid gap-3 md:grid-cols-2">
                 <label className="block text-sm text-white/70">
-                  {t("ADMIN_AGENDA_START_LABEL_THIAGOIAZZETTI", "Inicio")}
+                  {t("ADMIN_AGENDA_START_LABEL", "Inizio")}
                   <input
                     type="datetime-local"
                     value={form.startsAt}
@@ -1397,7 +1405,7 @@ export default function AdminAgendaPage() {
                   />
                 </label>
                 <label className="block text-sm text-white/70">
-                  {t("ADMIN_AGENDA_END_LABEL_THIAGOIAZZETTI", "Fim")}
+                  {t("ADMIN_AGENDA_END_LABEL", "Fim")}
                   <input
                     type="datetime-local"
                     value={form.endsAt}
@@ -1413,8 +1421,8 @@ export default function AdminAgendaPage() {
             <div className="grid gap-3 md:grid-cols-2">
               <label className="block text-sm text-white/70">
                 {t(
-                  "ADMIN_AGENDA_RECURRENCE_LABEL_THIAGOIAZZETTI",
-                  "Recorrencia",
+                  "ADMIN_AGENDA_RECURRENCE_LABEL",
+                  "Ricorrenza",
                 )}
                 <select
                   value={form.recurrence}
@@ -1425,26 +1433,26 @@ export default function AdminAgendaPage() {
                 >
                   <option value="NONE">
                     {t(
-                      "ADMIN_AGENDA_RECURRENCE_NONE_THIAGOIAZZETTI",
+                      "ADMIN_AGENDA_RECURRENCE_NONE",
                       "Nao repetir",
                     )}
                   </option>
                   <option value="WEEKLY">
                     {t(
-                      "ADMIN_AGENDA_RECURRENCE_WEEKLY_THIAGOIAZZETTI",
-                      "Semanal",
+                      "ADMIN_AGENDA_RECURRENCE_WEEKLY",
+                      "Settimanale",
                     )}
                   </option>
                   <option value="MONTHLY">
                     {t(
-                      "ADMIN_AGENDA_RECURRENCE_MONTHLY_THIAGOIAZZETTI",
-                      "Mensal",
+                      "ADMIN_AGENDA_RECURRENCE_MONTHLY",
+                      "Mensile",
                     )}
                   </option>
                 </select>
               </label>
               <label className="block text-sm text-white/70">
-                {t("ADMIN_AGENDA_REPEAT_UNTIL_THIAGOIAZZETTI", "Repetir ate")}
+                {t("ADMIN_AGENDA_REPEAT_UNTIL", "Repetir ate")}
                 <input
                   type="datetime-local"
                   value={form.recurrenceUntil}
@@ -1465,10 +1473,10 @@ export default function AdminAgendaPage() {
                 <div className="flex items-center justify-between gap-3">
                   <div>
                     <p className="text-sm font-semibold text-white">
-                      Grade semanal de horários
+                      Griglia settimanale degli orari
                     </p>
                     <p className="text-xs text-white/55">
-                      Marque os dias e horários para gerar a grade do mês
+                      Seleziona giorni e orari per generare la griglia del mese
                       selecionado.
                     </p>
                   </div>
@@ -1478,7 +1486,7 @@ export default function AdminAgendaPage() {
                     disabled={creatingGrid || hasWeeklyGridConflicts}
                     className="rounded-xl border border-[#b5f03c]/50 bg-[#b5f03c]/10 px-4 py-2 text-sm font-semibold text-[#b5f03c] transition hover:bg-[#b5f03c]/20 disabled:opacity-50"
                   >
-                    {creatingGrid ? "Gerando..." : "Criar grade do mês"}
+                    {creatingGrid ? "Generazione..." : "Crea griglia del mese"}
                   </button>
                 </div>
 
@@ -1546,7 +1554,7 @@ export default function AdminAgendaPage() {
 
                         {hasConflict ? (
                           <p className="col-span-3 text-xs text-red-300">
-                            Conflito: ja existe horario com{" "}
+                            Conflitto: esiste gia un orario con{" "}
                             {slotConflict.names.join(", ")}.
                           </p>
                         ) : null}
@@ -1559,8 +1567,8 @@ export default function AdminAgendaPage() {
 
             <label className="block text-sm text-white/70">
               {t(
-                "ADMIN_AGENDA_RELATED_WORKOUT_THIAGOIAZZETTI",
-                "Treino relacionado",
+                "ADMIN_AGENDA_RELATED_WORKOUT",
+                "Allenamento collegato",
               )}
               <select
                 value={form.workoutPlanId}
@@ -1574,8 +1582,8 @@ export default function AdminAgendaPage() {
               >
                 <option value="">
                   {t(
-                    "ADMIN_AGENDA_NO_WORKOUT_THIAGOIAZZETTI",
-                    "Sem treino vinculado",
+                    "ADMIN_AGENDA_NO_WORKOUT",
+                    "Nessun allenamento collegato",
                   )}
                 </option>
                 {workouts.map((workout) => (
@@ -1587,7 +1595,7 @@ export default function AdminAgendaPage() {
             </label>
             <label className="block text-sm text-white/70">
               {t(
-                "ADMIN_AGENDA_DIET_NOTES_LABEL_THIAGOIAZZETTI",
+                "ADMIN_AGENDA_DIET_NOTES_LABEL",
                 "Dieta / orientacoes",
               )}
               <textarea
@@ -1607,12 +1615,12 @@ export default function AdminAgendaPage() {
                 <Save size={16} />
                 {editingId
                   ? t(
-                      "ADMIN_AGENDA_SAVE_CHANGES_THIAGOIAZZETTI",
-                      "Salvar alteracoes",
+                      "ADMIN_AGENDA_SAVE_CHANGES",
+                      "Salva modifiche",
                     )
                   : t(
-                      "ADMIN_AGENDA_CREATE_EVENT_THIAGOIAZZETTI",
-                      "Criar evento",
+                      "ADMIN_AGENDA_CREATE_EVENT",
+                      "Crea evento",
                     )}
               </button>
               {editingId ? (
@@ -1621,7 +1629,7 @@ export default function AdminAgendaPage() {
                   onClick={resetForm}
                   className="rounded-xl border border-white/15 px-5 py-3 text-sm text-white/70"
                 >
-                  {t("ADMIN_AGENDA_CANCEL_THIAGOIAZZETTI", "Cancelar")}
+                  {t("ADMIN_AGENDA_CANCEL", "Annulla")}
                 </button>
               ) : null}
             </div>
@@ -1630,13 +1638,13 @@ export default function AdminAgendaPage() {
 
         <article className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6">
           <h2 className="font-title text-2xl text-[#b5f03c]">
-            Historico de treino do dia (
-            {selectedDay.toLocaleDateString("pt-BR")})
+            Storico allenamento do dia (
+            {selectedDay.toLocaleDateString(locale || "it-IT")})
           </h2>
           <div className="mt-4 space-y-3">
             {selectedDaySessions.length === 0 ? (
               <p className="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-sm text-white/60">
-                Nenhum treino finalizado neste dia.
+                Nessun allenamento completato in questo giorno.
               </p>
             ) : (
               selectedDaySessions.map((session) => (
@@ -1645,13 +1653,13 @@ export default function AdminAgendaPage() {
                   className="rounded-2xl border border-white/10 bg-black/30 p-4"
                 >
                   <p className="font-semibold text-white">
-                    {session.workoutPlan?.title || "Treino"}
+                    {session.workoutPlan?.title || "Allenamento"}
                   </p>
                   <p className="mt-1 text-sm text-white/60">
                     Duracao: {formatDurationSeconds(session.durationSeconds)}
                   </p>
                   <p className="text-xs text-white/45">
-                    Inicio: {formatDateTime(session.startedAt)}
+                    Inizio: {formatDateTime(session.startedAt)}
                   </p>
                   <div className="mt-3 space-y-2 border-t border-white/10 pt-3">
                     {(session.items || []).map((item) => (
@@ -1676,19 +1684,19 @@ export default function AdminAgendaPage() {
 
         <article className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6">
           <h2 className="font-title text-2xl text-[#b5f03c]">
-            {t("ADMIN_AGENDA_EVENTS_TITLE_THIAGOIAZZETTI", "Eventos")} (
+            {t("ADMIN_AGENDA_EVENTS_TITLE", "Eventi")} (
             {filteredEvents.length})
           </h2>
           <div className="mt-5 space-y-3">
             {loading ? (
               <p className="text-sm text-white/60">
-                {t("ADMIN_AGENDA_LOADING_THIAGOIAZZETTI", "Carregando...")}
+                {t("ADMIN_AGENDA_LOADING", "Caricamento...")}
               </p>
             ) : filteredEvents.length === 0 ? (
               <p className="rounded-2xl border border-white/10 bg-black/30 px-4 py-5 text-sm text-white/65">
                 {t(
-                  "ADMIN_AGENDA_EMPTY_THIAGOIAZZETTI",
-                  "Nenhum evento cadastrado.",
+                  "ADMIN_AGENDA_EMPTY",
+                  "Nessun evento registrato.",
                 )}
               </p>
             ) : (
@@ -1705,7 +1713,7 @@ export default function AdminAgendaPage() {
                           checked={event.attendanceStatus === "CONFIRMADO"}
                           onChange={() => handleToggleCompletion(event)}
                           className="h-5 w-5 cursor-pointer accent-[#b5f03c]"
-                          title="Marcar como concluído"
+                          title="Segna come completato"
                         />
                         <span
                           className={`rounded-full border px-3 py-1 text-xs font-semibold ${eventTone(event.type)}`}
@@ -1723,7 +1731,7 @@ export default function AdminAgendaPage() {
                       </div>
                       <p className="text-xs text-white/50 flex items-center gap-1">
                         <User size={12} className="text-white/30" />
-                        {event.aluno?.fullName || "Aluno desconhecido"}
+                        {event.aluno?.fullName || "Studente sconosciuto"}
                       </p>
                     </div>
                     <div className="flex items-center gap-2">
@@ -1732,7 +1740,7 @@ export default function AdminAgendaPage() {
                         onClick={() => handleEdit(event)}
                         className="rounded-lg border border-white/10 px-3 py-1 text-xs text-white/70 hover:text-white"
                       >
-                        {t("ADMIN_AGENDA_EDIT_BUTTON_THIAGOIAZZETTI", "Editar")}
+                        {t("ADMIN_AGENDA_EDIT_BUTTON", "Modifica")}
                       </button>
                       <button
                         type="button"
@@ -1740,8 +1748,8 @@ export default function AdminAgendaPage() {
                         className="rounded-lg border border-red-400/30 px-3 py-1 text-xs text-red-200"
                       >
                         {t(
-                          "ADMIN_AGENDA_DELETE_BUTTON_THIAGOIAZZETTI",
-                          "Excluir",
+                          "ADMIN_AGENDA_DELETE_BUTTON",
+                          "Elimina",
                         )}
                       </button>
                     </div>
@@ -1749,7 +1757,7 @@ export default function AdminAgendaPage() {
                   <div className="mt-3 grid gap-2 text-sm md:grid-cols-2">
                     <div className="flex items-center gap-2 text-white/75">
                       <User size={14} className="text-white/45" />
-                      <span>{event.aluno?.fullName || "Aluno"}</span>
+                      <span>{event.aluno?.fullName || "Studente"}</span>
                     </div>
                     <div className="flex items-center gap-2 text-white/75">
                       <Clock3 size={14} className="text-white/45" />
@@ -1788,7 +1796,7 @@ export default function AdminAgendaPage() {
                       </p>
                       {event.proposedStartsAt ? (
                         <p className="mt-1 text-xs text-amber-100/85">
-                          Novo horario proposto:{" "}
+                          Nuovo orario proposto:{" "}
                           {formatDateTime(event.proposedStartsAt)}
                         </p>
                       ) : null}

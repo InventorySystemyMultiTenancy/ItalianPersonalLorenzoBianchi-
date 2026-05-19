@@ -21,16 +21,16 @@ export default function LandingPage() {
   const [plansLoading, setPlansLoading] = useState(false);
   const plansRef = useRef(null);
   const marqueeItems = [
-    t("HOME_MARQUEE_MUSCULATION_THIAGOIAZZETTI", "Musculacao"),
-    t("HOME_MARQUEE_WEIGHT_LOSS_THIAGOIAZZETTI", "Emagrecimento"),
-    t("HOME_MARQUEE_MASS_GAIN_THIAGOIAZZETTI", "Ganho de Massa"),
-    t("HOME_MARQUEE_HYPERTROPHY_THIAGOIAZZETTI", "Hipertrofia"),
-    t("HOME_MARQUEE_CONDITIONING_THIAGOIAZZETTI", "Condicionamento"),
-    t("HOME_MARQUEE_FUNCTIONAL_THIAGOIAZZETTI", "Treino Funcional"),
-    t("HOME_MARQUEE_HIIT_THIAGOIAZZETTI", "HIIT"),
-    t("HOME_MARQUEE_MOBILITY_THIAGOIAZZETTI", "Mobilidade"),
-    t("HOME_MARQUEE_STRENGTH_THIAGOIAZZETTI", "Forca"),
-    t("HOME_MARQUEE_ENDURANCE_THIAGOIAZZETTI", "Resistencia"),
+    t("HOME_MARQUEE_MUSCULATION", "Musculacao"),
+    t("HOME_MARQUEE_WEIGHT_LOSS", "Emagrecimento"),
+    t("HOME_MARQUEE_MASS_GAIN", "Ganho de Massa"),
+    t("HOME_MARQUEE_HYPERTROPHY", "Hipertrofia"),
+    t("HOME_MARQUEE_CONDITIONING", "Condicionamento"),
+    t("HOME_MARQUEE_FUNCTIONAL", "Allenamento funzionale"),
+    t("HOME_MARQUEE_HIIT", "HIIT"),
+    t("HOME_MARQUEE_MOBILITY", "Mobilidade"),
+    t("HOME_MARQUEE_STRENGTH", "Forca"),
+    t("HOME_MARQUEE_ENDURANCE", "Resistencia"),
   ];
 
   useEffect(() => {
@@ -102,14 +102,14 @@ export default function LandingPage() {
 
           <div className="hidden items-center gap-8 text-sm font-medium text-white/70 md:flex">
             <a href="#" className="transition hover:text-white">
-              {t("NAV_HOME_THIAGOIAZZETTI", "Home")}
+              {t("NAV_HOME", "Home")}
             </a>
             <button
               type="button"
               onClick={() => setShowPlans((v) => !v)}
               className="flex items-center gap-1 transition hover:text-white"
             >
-              {t("NAV_PLANS_THIAGOIAZZETTI", "Planos")}
+              {t("NAV_PLANS", "Piani")}
               <ChevronDown
                 size={14}
                 className={`transition-transform duration-200 ${showPlans ? "rotate-180" : ""}`}
@@ -124,7 +124,7 @@ export default function LandingPage() {
               rel="noopener noreferrer"
               className="rounded-full bg-[#b5f03c] px-5 py-2 text-sm font-bold text-black transition hover:brightness-110"
             >
-              {t("NAV_CONTACT_THIAGOIAZZETTI", "Entre em contato")}
+              {t("NAV_CONTACT", "Entre em contato")}
             </a>
           </div>
         </nav>
@@ -139,7 +139,7 @@ export default function LandingPage() {
                 <span className="font-semibold">4.8/5.0</span>
                 <span className="text-white/50">
                   {t(
-                    "HOME_REVIEWS_VERIFIED_THIAGOIAZZETTI",
+                    "HOME_REVIEWS_VERIFIED",
                     "reviews verificados",
                   )}
                 </span>
@@ -149,18 +149,18 @@ export default function LandingPage() {
                 className="max-w-2xl font-black uppercase leading-[0.92] tracking-tight text-[#b5f03c]"
                 style={{ fontSize: "clamp(2.4rem, 6vw, 5.5rem)" }}
               >
-                {t("HOME_HERO_LINE_1_THIAGOIAZZETTI", "Transforme")}
+                {t("HOME_HERO_LINE_1", "Transforme")}
                 <br />
-                {t("HOME_HERO_LINE_2_THIAGOIAZZETTI", "sua jornada")}
+                {t("HOME_HERO_LINE_2", "sua jornada")}
                 <br />
                 <span className="text-white">
-                  {t("HOME_HERO_LINE_3_THIAGOIAZZETTI", "hoje")}
+                  {t("HOME_HERO_LINE_3", "hoje")}
                 </span>
               </h1>
 
               <p className="mt-4 max-w-lg text-sm leading-6 text-white/60">
                 {t(
-                  "HOME_HERO_DESCRIPTION_THIAGOIAZZETTI",
+                  "HOME_HERO_DESCRIPTION",
                   "Libere seu potencial com planos de treino personalizados, especialmente para voce.",
                 )}
               </p>
@@ -170,7 +170,7 @@ export default function LandingPage() {
                   to="/login"
                   className="inline-flex items-center gap-2 rounded-full bg-[#b5f03c] px-7 py-3.5 text-sm font-bold text-black transition hover:brightness-110"
                 >
-                  {t("HOME_JOIN_US_THIAGOIAZZETTI", "Junte-se a nos")}
+                  {t("HOME_JOIN_US", "Junte-se a nos")}
                   <ArrowRight size={16} />
                 </Link>
                 <button
@@ -181,7 +181,7 @@ export default function LandingPage() {
                   <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 transition group-hover:border-[#b5f03c]/50 group-hover:bg-[#b5f03c]/10">
                     <Play size={14} fill="currentColor" />
                   </span>
-                  {t("HOME_VIEW_PLANS_THIAGOIAZZETTI", "Ver planos")}
+                  {t("HOME_VIEW_PLANS", "Ver planos")}
                 </button>
               </div>
             </div>
@@ -199,13 +199,13 @@ export default function LandingPage() {
                 </div>
                 <span className="text-sm text-white/60">
                   <strong className="text-white">4k+</strong>{" "}
-                  {t("HOME_MEMBERS_THIAGOIAZZETTI", "membros")}
+                  {t("HOME_MEMBERS", "membros")}
                 </span>
               </div>
 
               <p className="text-sm leading-6 text-white/60">
                 {t(
-                  "HOME_STATS_DESCRIPTION_THIAGOIAZZETTI",
+                  "HOME_STATS_DESCRIPTION",
                   "Libere seu potencial com planos de treino personalizados, especialmente para voce.",
                 )}
               </p>
@@ -214,14 +214,14 @@ export default function LandingPage() {
                 to={tenantFromHost ? "/login" : "/cadastro"}
                 className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#b5f03c] py-3 text-sm font-bold text-black transition hover:brightness-110"
               >
-                {t("HOME_JOIN_US_THIAGOIAZZETTI", "Junte-se a nos")}
+                {t("HOME_JOIN_US", "Junte-se a nos")}
                 <ArrowRight size={15} />
               </Link>
 
               {tenantFromHost && (
                 <p className="mt-3 text-center text-xs text-white/40">
                   {t(
-                    "HOME_WELCOME_PLATFORM_THIAGOIAZZETTI",
+                    "HOME_WELCOME_PLATFORM",
                     "Bem-vindo! Acesse a plataforma de",
                   )}{" "}
                   <span className="text-[#b5f03c]">{tenantFromHost}</span>
@@ -237,10 +237,10 @@ export default function LandingPage() {
             <div className="mb-8 flex items-center justify-between">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.35em] text-white/30">
-                  {t("HOME_AVAILABLE_THIAGOIAZZETTI", "Disponiveis")}
+                  {t("HOME_AVAILABLE", "Disponiveis")}
                 </p>
                 <h2 className="mt-1 text-3xl font-black text-white">
-                  {t("HOME_OUR_PLANS_THIAGOIAZZETTI", "Nossos Planos")}
+                  {t("HOME_OUR_PLANS", "Nossos Piani")}
                 </h2>
               </div>
               <button
@@ -260,8 +260,8 @@ export default function LandingPage() {
               <div className="rounded-3xl border border-white/10 bg-white/5 py-16 text-center">
                 <p className="text-white/40">
                   {t(
-                    "HOME_NO_PLANS_THIAGOIAZZETTI",
-                    "Nenhum plano disponivel no momento.",
+                    "HOME_NO_PLANS",
+                    "Nessun piano disponibile al momento.",
                   )}
                 </p>
                 <a
@@ -270,7 +270,7 @@ export default function LandingPage() {
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#b5f03c] px-6 py-2.5 text-sm font-bold text-black"
                 >
-                  {t("HOME_TALK_TO_US_THIAGOIAZZETTI", "Fale conosco")}
+                  {t("HOME_TALK_TO_US", "Fale conosco")}
                 </a>
               </div>
             ) : (
@@ -282,7 +282,7 @@ export default function LandingPage() {
                   >
                     <div className="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[#b5f03c]/10 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/30">
-                      {t("HOME_PLAN_LABEL_THIAGOIAZZETTI", "Plano")}
+                      {t("HOME_PLAN_LABEL", "Piano")}
                     </p>
                     <h3 className="mt-2 text-xl font-black text-white">
                       {plan.name}
@@ -295,7 +295,7 @@ export default function LandingPage() {
                     <p className="mt-5 text-4xl font-black text-[#b5f03c] leading-none">
                       {formatCurrency((plan.monthlyPriceCents || 0) / 100)}
                       <span className="text-sm font-normal text-white/35">
-                        {t("HOME_PER_MONTH_THIAGOIAZZETTI", "/mes")}
+                        {t("HOME_PER_MONTH", "/mes")}
                       </span>
                     </p>
                     <a
@@ -305,7 +305,7 @@ export default function LandingPage() {
                       className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#b5f03c] py-3 text-sm font-bold text-black transition hover:brightness-110"
                     >
                       {t(
-                        "HOME_I_WANT_THIS_PLAN_THIAGOIAZZETTI",
+                        "HOME_I_WANT_THIS_PLAN",
                         "Quero este plano",
                       )}
                       <ArrowRight size={15} />
@@ -358,7 +358,7 @@ export default function LandingPage() {
             </div>
             <p className="text-sm text-white/50">
               {t(
-                "FOOTER_BRAND_DESCRIPTION_THIAGOIAZZETTI",
+                "FOOTER_BRAND_DESCRIPTION",
                 "Personal trainer especializado em musculacao e transformacao corporal.",
               )}
             </p>
@@ -367,12 +367,12 @@ export default function LandingPage() {
           {/* Links */}
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest text-white/80 mb-3">
-              {t("FOOTER_LINKS_TITLE_THIAGOIAZZETTI", "Links")}
+              {t("FOOTER_LINKS_TITLE", "Links")}
             </h4>
             <ul className="space-y-2 text-sm text-white/50">
               <li>
                 <a href="#" className="transition hover:text-[#b5f03c]">
-                  {t("NAV_HOME_THIAGOIAZZETTI", "Home")}
+                  {t("NAV_HOME", "Home")}
                 </a>
               </li>
               <li>
@@ -381,7 +381,7 @@ export default function LandingPage() {
                   onClick={() => setShowPlans((v) => !v)}
                   className="transition hover:text-[#b5f03c]"
                 >
-                  {t("NAV_PLANS_THIAGOIAZZETTI", "Planos")}
+                  {t("NAV_PLANS", "Piani")}
                 </button>
               </li>
               <li>
@@ -391,7 +391,7 @@ export default function LandingPage() {
                   rel="noopener noreferrer"
                   className="transition hover:text-[#b5f03c]"
                 >
-                  {t("NAV_CONTACT_THIAGOIAZZETTI", "Contato")}
+                  {t("NAV_CONTACT", "Contato")}
                 </a>
               </li>
             </ul>
@@ -400,7 +400,7 @@ export default function LandingPage() {
           {/* Contact */}
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest text-white/80 mb-3">
-              {t("FOOTER_CONTACT_TITLE_THIAGOIAZZETTI", "Contato")}
+              {t("FOOTER_CONTACT_TITLE", "Contato")}
             </h4>
             <a
               href={whatsappLink()}
@@ -409,7 +409,7 @@ export default function LandingPage() {
               className="inline-flex items-center gap-2 rounded-full bg-[#b5f03c]/10 border border-[#b5f03c]/30 px-4 py-2 text-sm font-semibold text-[#b5f03c] transition hover:bg-[#b5f03c]/20"
             >
               {t(
-                "FOOTER_WHATSAPP_CTA_THIAGOIAZZETTI",
+                "FOOTER_WHATSAPP_CTA",
                 "Fale conosco no WhatsApp",
               )}
             </a>
@@ -421,7 +421,7 @@ export default function LandingPage() {
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()}{" "}
             {t(
-              "FOOTER_COPYRIGHT_TEXT_THIAGOIAZZETTI",
+              "FOOTER_COPYRIGHT_TEXT",
               "Lorenzo Bianchi. Tutti i diritti riservati.",
             )}
           </p>

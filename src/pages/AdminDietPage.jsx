@@ -39,22 +39,22 @@ export default function AdminDietPage() {
   const { t } = useI18n();
 
   const WEEKDAYS = [
-    { value: "MONDAY", label: t("DIET_WEEKDAY_MON_THIAGOIAZZETTI", "Segunda") },
-    { value: "TUESDAY", label: t("DIET_WEEKDAY_TUE_THIAGOIAZZETTI", "Terca") },
+    { value: "MONDAY", label: t("DIET_WEEKDAY_MON", "Segunda") },
+    { value: "TUESDAY", label: t("DIET_WEEKDAY_TUE", "Terca") },
     {
       value: "WEDNESDAY",
-      label: t("DIET_WEEKDAY_WED_THIAGOIAZZETTI", "Quarta"),
+      label: t("DIET_WEEKDAY_WED", "Quarta"),
     },
     {
       value: "THURSDAY",
-      label: t("DIET_WEEKDAY_THU_THIAGOIAZZETTI", "Quinta"),
+      label: t("DIET_WEEKDAY_THU", "Quinta"),
     },
-    { value: "FRIDAY", label: t("DIET_WEEKDAY_FRI_THIAGOIAZZETTI", "Sexta") },
+    { value: "FRIDAY", label: t("DIET_WEEKDAY_FRI", "Sexta") },
     {
       value: "SATURDAY",
-      label: t("DIET_WEEKDAY_SAT_THIAGOIAZZETTI", "Sabado"),
+      label: t("DIET_WEEKDAY_SAT", "Sabado"),
     },
-    { value: "SUNDAY", label: t("DIET_WEEKDAY_SUN_THIAGOIAZZETTI", "Domingo") },
+    { value: "SUNDAY", label: t("DIET_WEEKDAY_SUN", "Domingo") },
   ];
 
   const weekdayLabel = (value) =>
@@ -101,8 +101,8 @@ export default function AdminDietPage() {
           setMessage(
             error?.message ||
               t(
-                "DIET_LOAD_ERROR_THIAGOIAZZETTI",
-                "Nao foi possivel carregar dietas",
+                "DIET_LOAD_ERROR",
+                "Non e stato possibile caricare le diete",
               ),
           );
         }
@@ -167,8 +167,8 @@ export default function AdminDietPage() {
     if (!form.alunoId || !form.title.trim() || !form.mealPlan.trim()) {
       setMessage(
         t(
-          "DIET_REQUIRED_FIELDS_THIAGOIAZZETTI",
-          "Aluno, titulo e cardapio sao obrigatorios",
+          "DIET_REQUIRED_FIELDS",
+          "Studente, titolo e piano alimentare sono obbligatori",
         ),
       );
       return;
@@ -177,8 +177,8 @@ export default function AdminDietPage() {
     if (form.weekdays.length === 0) {
       setMessage(
         t(
-          "DIET_SELECT_WEEKDAY_THIAGOIAZZETTI",
-          "Selecione pelo menos um dia da semana",
+          "DIET_SELECT_WEEKDAY",
+          "Seleziona almeno un giorno della settimana",
         ),
       );
       return;
@@ -199,14 +199,14 @@ export default function AdminDietPage() {
       });
       setMessage(
         editingId
-          ? t("DIET_UPDATED_THIAGOIAZZETTI", "Dieta atualizada")
-          : t("DIET_CREATED_THIAGOIAZZETTI", "Dieta criada"),
+          ? t("DIET_UPDATED", "Dieta aggiornata")
+          : t("DIET_CREATED", "Dieta creata"),
       );
       resetForm();
     } catch (error) {
       setMessage(
         error?.message ||
-          t("DIET_SAVE_ERROR_THIAGOIAZZETTI", "Nao foi possivel salvar dieta"),
+          t("DIET_SAVE_ERROR", "Non e stato possibile salvare la dieta"),
       );
     } finally {
       setSaving(false);
@@ -233,13 +233,13 @@ export default function AdminDietPage() {
       if (editingId === dietId) {
         resetForm();
       }
-      setMessage(t("DIET_DELETED_THIAGOIAZZETTI", "Dieta removida"));
+      setMessage(t("DIET_DELETED", "Dieta rimossa"));
     } catch (error) {
       setMessage(
         error?.message ||
           t(
-            "DIET_DELETE_ERROR_THIAGOIAZZETTI",
-            "Nao foi possivel remover dieta",
+            "DIET_DELETE_ERROR",
+            "Non e stato possibile rimuovere la dieta",
           ),
       );
     }
@@ -252,18 +252,18 @@ export default function AdminDietPage() {
 
     doc.setFont("helvetica", "bold");
     doc.setFontSize(18);
-    doc.text("Plano de Dieta", marginX, y);
+    doc.text("Piano alimentare", marginX, y);
 
     y += 24;
     doc.setFont("helvetica", "normal");
     doc.setFontSize(12);
-    doc.text(`Aluno: ${diet?.aluno?.fullName || "Aluno"}`, marginX, y);
+    doc.text(`Studente: ${diet?.aluno?.fullName || "Studente"}`, marginX, y);
     y += 18;
     doc.text(`Titulo: ${diet.title}`, marginX, y);
 
     if (diet.description) {
       y += 18;
-      const split = doc.splitTextToSize(`Descricao: ${diet.description}`, 500);
+      const split = doc.splitTextToSize(`Descrizione: ${diet.description}`, 500);
       doc.text(split, marginX, y);
       y += split.length * 14;
     }
@@ -301,18 +301,18 @@ export default function AdminDietPage() {
       <header className="rounded-4xl border border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(115,180,100,0.25),rgba(10,10,10,0.9)_45%),linear-gradient(180deg,#0f0f0f,#080808)] p-6">
         <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs uppercase tracking-[0.18em] text-white/65">
           <Salad size={12} />
-          {t("DIET_HEADER_BADGE_THIAGOIAZZETTI", "Dietas Semanais")}
+          {t("DIET_HEADER_BADGE", "Diete settimanali")}
         </p>
         <h1 className="mt-4 font-title text-4xl text-[#b5f03c]">
           {t(
-            "DIET_HEADER_TITLE_THIAGOIAZZETTI",
-            "Cadastro de dietas por dia da semana",
+            "DIET_HEADER_TITLE",
+            "Gestione diete per giorno della settimana",
           )}
         </h1>
         <p className="mt-3 max-w-3xl text-white/65">
           {t(
-            "DIET_HEADER_SUBTITLE_THIAGOIAZZETTI",
-            "Crie um plano de dieta, vincule a um aluno e selecione um ou varios dias da semana. Cada plano fica isolado.",
+            "DIET_HEADER_SUBTITLE",
+            "Crea un piano alimentare, collegalo a uno studente e seleziona uno o piu giorni della settimana. Ogni piano resta separato.",
           )}
         </p>
       </header>
@@ -327,13 +327,13 @@ export default function AdminDietPage() {
         <article className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6">
           <h2 className="font-title text-2xl text-[#b5f03c]">
             {editingId
-              ? t("DIET_FORM_EDIT_TITLE_THIAGOIAZZETTI", "Editar dieta")
-              : t("DIET_FORM_NEW_TITLE_THIAGOIAZZETTI", "Nova dieta")}
+              ? t("DIET_FORM_EDIT_TITLE", "Modifica dieta")
+              : t("DIET_FORM_NEW_TITLE", "Nuova dieta")}
           </h2>
 
           <form onSubmit={handleSubmit} className="mt-5 space-y-4">
             <label className="block text-sm text-white/70">
-              {t("DIET_FORM_STUDENT_LABEL_THIAGOIAZZETTI", "Aluno")}
+              {t("DIET_FORM_STUDENT_LABEL", "Studente")}
               <select
                 value={form.alunoId}
                 onChange={(e) =>
@@ -343,8 +343,8 @@ export default function AdminDietPage() {
               >
                 <option value="">
                   {t(
-                    "DIET_FORM_SELECT_STUDENT_THIAGOIAZZETTI",
-                    "Selecione um aluno",
+                    "DIET_FORM_SELECT_STUDENT",
+                    "Seleziona uno studente",
                   )}
                 </option>
                 {students.map((student) => (
@@ -356,30 +356,30 @@ export default function AdminDietPage() {
             </label>
 
             <label className="block text-sm text-white/70">
-              {t("DIET_FORM_TITLE_LABEL_THIAGOIAZZETTI", "Titulo")}
+              {t("DIET_FORM_TITLE_LABEL", "Titulo")}
               <input
                 value={form.title}
                 onChange={(e) =>
                   setForm((prev) => ({ ...prev, title: e.target.value }))
                 }
                 placeholder={t(
-                  "DIET_FORM_TITLE_PLACEHOLDER_THIAGOIAZZETTI",
-                  "Ex: Dieta de definicao",
+                  "DIET_FORM_TITLE_PLACEHOLDER",
+                  "Es: Dieta di definizione",
                 )}
                 className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-white outline-none"
               />
             </label>
 
             <label className="block text-sm text-white/70">
-              {t("DIET_FORM_DESC_LABEL_THIAGOIAZZETTI", "Descricao (opcional)")}
+              {t("DIET_FORM_DESC_LABEL", "Descrizione (opcional)")}
               <input
                 value={form.description}
                 onChange={(e) =>
                   setForm((prev) => ({ ...prev, description: e.target.value }))
                 }
                 placeholder={t(
-                  "DIET_FORM_DESC_PLACEHOLDER_THIAGOIAZZETTI",
-                  "Objetivo da dieta",
+                  "DIET_FORM_DESC_PLACEHOLDER",
+                  "Obiettivo della dieta",
                 )}
                 className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-white outline-none"
               />
@@ -388,7 +388,7 @@ export default function AdminDietPage() {
             <fieldset>
               <legend className="text-sm text-white/70">
                 {t(
-                  "DIET_FORM_WEEKDAYS_LEGEND_THIAGOIAZZETTI",
+                  "DIET_FORM_WEEKDAYS_LEGEND",
                   "Dias da semana",
                 )}
               </legend>
@@ -411,7 +411,7 @@ export default function AdminDietPage() {
 
             <label className="block text-sm text-white/70">
               {t(
-                "DIET_FORM_MEALPLAN_LABEL_THIAGOIAZZETTI",
+                "DIET_FORM_MEALPLAN_LABEL",
                 "Cardapio para os dias selecionados",
               )}
               <textarea
@@ -421,7 +421,7 @@ export default function AdminDietPage() {
                   setForm((prev) => ({ ...prev, mealPlan: e.target.value }))
                 }
                 placeholder={t(
-                  "DIET_FORM_MEALPLAN_PLACEHOLDER_THIAGOIAZZETTI",
+                  "DIET_FORM_MEALPLAN_PLACEHOLDER",
                   "Ex: Cafe da manha: ovos e aveia...",
                 )}
                 className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-white outline-none"
@@ -436,13 +436,13 @@ export default function AdminDietPage() {
               >
                 <Save size={16} />
                 {saving
-                  ? t("DIET_FORM_SAVING_THIAGOIAZZETTI", "Salvando...")
+                  ? t("DIET_FORM_SAVING", "Salvataggio...")
                   : editingId
                     ? t(
-                        "DIET_FORM_SAVE_CHANGES_THIAGOIAZZETTI",
-                        "Salvar alteracoes",
+                        "DIET_FORM_SAVE_CHANGES",
+                        "Salva modifiche",
                       )
-                    : t("DIET_FORM_CREATE_THIAGOIAZZETTI", "Criar dieta")}
+                    : t("DIET_FORM_CREATE", "Crea dieta")}
               </button>
 
               {editingId ? (
@@ -451,7 +451,7 @@ export default function AdminDietPage() {
                   onClick={resetForm}
                   className="rounded-xl border border-white/15 px-5 py-2.5 text-sm text-white/70"
                 >
-                  {t("DIET_FORM_CANCEL_THIAGOIAZZETTI", "Cancelar")}
+                  {t("DIET_FORM_CANCEL", "Annulla")}
                 </button>
               ) : null}
             </div>
@@ -459,8 +459,8 @@ export default function AdminDietPage() {
             {selectedStudent ? (
               <p className="text-xs text-white/50">
                 {t(
-                  "DIET_FORM_ASSOC_STUDENT_THIAGOIAZZETTI",
-                  "Plano sera associado ao aluno",
+                  "DIET_FORM_ASSOC_STUDENT",
+                  "Il piano sara associato allo studente",
                 )}
                 : {selectedStudent.fullName}
               </p>
@@ -470,20 +470,20 @@ export default function AdminDietPage() {
 
         <article className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-6">
           <h2 className="font-title text-2xl text-[#b5f03c]">
-            {t("DIET_LIST_TITLE_THIAGOIAZZETTI", "Dietas cadastradas")} (
+            {t("DIET_LIST_TITLE", "Diete registrate")} (
             {diets.length})
           </h2>
 
           <div className="mt-4 space-y-3">
             {loading ? (
               <p className="text-sm text-white/60">
-                {t("DIET_LIST_LOADING_THIAGOIAZZETTI", "Carregando...")}
+                {t("DIET_LIST_LOADING", "Caricamento...")}
               </p>
             ) : diets.length === 0 ? (
               <p className="rounded-xl border border-white/10 bg-black/25 px-4 py-4 text-sm text-white/60">
                 {t(
-                  "DIET_LIST_EMPTY_THIAGOIAZZETTI",
-                  "Nenhuma dieta cadastrada ainda.",
+                  "DIET_LIST_EMPTY",
+                  "Nessuna dieta registrata ancora.",
                 )}
               </p>
             ) : (
@@ -496,11 +496,11 @@ export default function AdminDietPage() {
                     <div>
                       <p className="font-semibold text-white">{diet.title}</p>
                       <p className="text-sm text-white/60">
-                        {t("DIET_LIST_STUDENT_LABEL_THIAGOIAZZETTI", "Aluno")}:{" "}
+                        {t("DIET_LIST_STUDENT_LABEL", "Studente")}:{" "}
                         {diet?.aluno?.fullName ||
                           t(
-                            "DIET_LIST_STUDENT_DEFAULT_THIAGOIAZZETTI",
-                            "Aluno",
+                            "DIET_LIST_STUDENT_DEFAULT",
+                            "Studente",
                           )}
                       </p>
                       {diet.description ? (
@@ -523,7 +523,7 @@ export default function AdminDietPage() {
                         onClick={() => handleEdit(diet)}
                         className="rounded-lg border border-white/20 px-3 py-1 text-xs text-white/80"
                       >
-                        {t("DIET_LIST_EDIT_BUTTON_THIAGOIAZZETTI", "Editar")}
+                        {t("DIET_LIST_EDIT_BUTTON", "Modifica")}
                       </button>
                       <button
                         type="button"
@@ -531,7 +531,7 @@ export default function AdminDietPage() {
                         className="inline-flex items-center gap-1 rounded-lg border border-red-400/35 px-3 py-1 text-xs text-red-200"
                       >
                         <Trash2 size={13} />{" "}
-                        {t("DIET_LIST_DELETE_BUTTON_THIAGOIAZZETTI", "Excluir")}
+                        {t("DIET_LIST_DELETE_BUTTON", "Elimina")}
                       </button>
                     </div>
                   </div>

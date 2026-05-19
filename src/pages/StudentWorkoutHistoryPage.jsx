@@ -37,7 +37,7 @@ export default function StudentWorkoutHistoryPage() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [studentName, setStudentName] = useState(
-    location.state?.studentName || "Aluno",
+    location.state?.studentName || "Studente",
   );
   const [sessions, setSessions] = useState([]);
   const [monthCursor, setMonthCursor] = useState(() => new Date());
@@ -126,7 +126,7 @@ export default function StudentWorkoutHistoryPage() {
         if (!cancelled) {
           setSessions([]);
           setMessage(
-            error?.message || "Nao foi possivel carregar historico de treinos.",
+            error?.message || "Non e stato possibile caricare lo storico degli allenamenti.",
           );
         }
       } finally {
@@ -171,17 +171,17 @@ export default function StudentWorkoutHistoryPage() {
           className="mb-4 inline-flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 text-sm text-white/70 transition hover:border-white/20"
         >
           <ChevronLeft size={14} />
-          Voltar para alunos
+          Torna agli studenti
         </button>
         <p className="text-xs uppercase tracking-[0.28em] text-white/40">
-          Historico de treino
+          Storico allenamento
         </p>
         <h1 className="mt-2 font-title text-4xl text-[#d4f7a0]">
           {studentName}
         </h1>
         <p className="mt-3 text-sm text-white/68">
           Calendario com sessoes finalizadas, tempo gasto e cargas por
-          exercicio.
+          esercizio.
         </p>
       </section>
 
@@ -254,7 +254,7 @@ export default function StudentWorkoutHistoryPage() {
                       className="rounded-md border border-white/10 bg-white/5 px-1.5 py-1 text-[10px] text-white/80"
                     >
                       <p className="font-semibold">
-                        {session.workoutPlan?.title || "Treino"}
+                        {session.workoutPlan?.title || "Allenamento"}
                       </p>
                       <p className="text-white/60">
                         {formatDuration(session.durationSeconds)}
@@ -284,10 +284,10 @@ export default function StudentWorkoutHistoryPage() {
         </h2>
 
         {loading ? (
-          <p className="mt-4 text-sm text-white/60">Carregando...</p>
+          <p className="mt-4 text-sm text-white/60">Caricamento...</p>
         ) : selectedDaySessions.length === 0 ? (
           <p className="mt-4 rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-sm text-white/60">
-            Nenhum treino finalizado neste dia.
+            Nessun allenamento completato in questo giorno.
           </p>
         ) : (
           <div className="mt-4 space-y-3">
@@ -298,7 +298,7 @@ export default function StudentWorkoutHistoryPage() {
               >
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <p className="font-semibold text-white">
-                    {session.workoutPlan?.title || "Treino"}
+                    {session.workoutPlan?.title || "Allenamento"}
                   </p>
                   <span className="rounded-full border border-[#b5f03c]/30 bg-[#b5f03c]/10 px-3 py-1 text-xs font-semibold text-[#b5f03c]">
                     {formatDuration(session.durationSeconds)}
@@ -308,7 +308,7 @@ export default function StudentWorkoutHistoryPage() {
                 <div className="mt-2 grid gap-2 text-sm md:grid-cols-2">
                   <p className="flex items-center gap-2 text-white/65">
                     <Clock3 size={14} className="text-white/45" />
-                    Inicio: {formatDateTime(session.startedAt)}
+                    Inizio: {formatDateTime(session.startedAt)}
                   </p>
                   <p className="flex items-center gap-2 text-white/65">
                     <CalendarDays size={14} className="text-white/45" />
@@ -319,7 +319,7 @@ export default function StudentWorkoutHistoryPage() {
                 <div className="mt-3 space-y-2 border-t border-white/10 pt-3">
                   {(session.items || []).length === 0 ? (
                     <p className="text-sm text-white/55">
-                      Sem exercicios registrados nesta sessao.
+                      Nessun esercizio registrato in questa sessione.
                     </p>
                   ) : (
                     (session.items || []).map((item) => (

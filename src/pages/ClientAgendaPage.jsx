@@ -21,76 +21,81 @@ import { useI18n } from "../contexts/I18nContext.jsx";
 
 const CLIENT_AGENDA_FALLBACKS = {
   "en-US": {
-    CLIENT_AGENDA_LABEL_THIAGOIAZZETTI: "Student schedule",
-    CLIENT_AGENDA_TITLE_THIAGOIAZZETTI: "Your schedule and guidance",
-    CLIENT_AGENDA_SUBTITLE_THIAGOIAZZETTI:
+    CLIENT_AGENDA_LABEL: "Student schedule",
+    CLIENT_AGENDA_TITLE: "Your schedule and guidance",
+    CLIENT_AGENDA_SUBTITLE:
       "Here you can see the appointments your personal trainer registered for you, including workout and diet.",
-    CLIENT_AGENDA_LOADING_THIAGOIAZZETTI: "Loading schedule...",
-    CLIENT_AGENDA_EMPTY_THIAGOIAZZETTI: "No events in schedule yet.",
-    CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI: "events",
-    CLIENT_AGENDA_ERROR_LOAD_THIAGOIAZZETTI: "Could not load schedule",
-    CLIENT_AGENDA_ATTENDANCE_UPDATED_THIAGOIAZZETTI: "Attendance updated",
-    CLIENT_AGENDA_ATTENDANCE_ERROR_THIAGOIAZZETTI:
+    CLIENT_AGENDA_LOADING: "Loading schedule...",
+    CLIENT_AGENDA_EMPTY: "No events in schedule yet.",
+    CLIENT_AGENDA_EVENTS: "events",
+    CLIENT_AGENDA_ERROR_LOAD: "Could not load schedule",
+    CLIENT_AGENDA_ATTENDANCE_UPDATED: "Attendance updated",
+    CLIENT_AGENDA_ATTENDANCE_ERROR:
       "Could not confirm attendance",
-    CLIENT_AGENDA_CONFIRM_ATTENDANCE_THIAGOIAZZETTI: "Confirm attendance",
-    WEEKDAY_SUN_THIAGOIAZZETTI: "Sun",
-    WEEKDAY_MON_THIAGOIAZZETTI: "Mon",
-    WEEKDAY_TUE_THIAGOIAZZETTI: "Tue",
-    WEEKDAY_WED_THIAGOIAZZETTI: "Wed",
-    WEEKDAY_THU_THIAGOIAZZETTI: "Thu",
-    WEEKDAY_FRI_THIAGOIAZZETTI: "Fri",
-    WEEKDAY_SAT_THIAGOIAZZETTI: "Sat",
+    CLIENT_AGENDA_CONFIRM_ATTENDANCE: "Confirm attendance",
+    WEEKDAY_SUN: "Sun",
+    WEEKDAY_MON: "Mon",
+    WEEKDAY_TUE: "Tue",
+    WEEKDAY_WED: "Wed",
+    WEEKDAY_THU: "Thu",
+    WEEKDAY_FRI: "Fri",
+    WEEKDAY_SAT: "Sat",
   },
   "it-IT": {
-    CLIENT_AGENDA_LABEL_THIAGOIAZZETTI: "Agenda studente",
-    CLIENT_AGENDA_TITLE_THIAGOIAZZETTI: "I tuoi orari e indicazioni",
-    CLIENT_AGENDA_SUBTITLE_THIAGOIAZZETTI:
+    CLIENT_AGENDA_LABEL: "Agenda studente",
+    CLIENT_AGENDA_TITLE: "I tuoi orari e indicazioni",
+    CLIENT_AGENDA_SUBTITLE:
       "Qui compaiono gli impegni registrati dal tuo personal trainer, inclusi allenamento e dieta.",
-    CLIENT_AGENDA_LOADING_THIAGOIAZZETTI: "Caricamento agenda...",
-    CLIENT_AGENDA_EMPTY_THIAGOIAZZETTI: "Nessun evento in agenda per ora.",
-    CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI: "eventi",
-    CLIENT_AGENDA_ERROR_LOAD_THIAGOIAZZETTI: "Impossibile caricare agenda",
-    CLIENT_AGENDA_ATTENDANCE_UPDATED_THIAGOIAZZETTI: "Presenza aggiornata",
-    CLIENT_AGENDA_ATTENDANCE_ERROR_THIAGOIAZZETTI:
+    CLIENT_AGENDA_LOADING: "Caricamento agenda...",
+    CLIENT_AGENDA_EMPTY: "Nessun evento in agenda per ora.",
+    CLIENT_AGENDA_EVENTS: "eventi",
+    CLIENT_AGENDA_ERROR_LOAD: "Impossibile caricare agenda",
+    CLIENT_AGENDA_ATTENDANCE_UPDATED: "Presenza aggiornata",
+    CLIENT_AGENDA_ATTENDANCE_ERROR:
       "Impossibile confermare la presenza",
-    CLIENT_AGENDA_CONFIRM_ATTENDANCE_THIAGOIAZZETTI: "Conferma presenza",
-    WEEKDAY_SUN_THIAGOIAZZETTI: "Dom",
-    WEEKDAY_MON_THIAGOIAZZETTI: "Lun",
-    WEEKDAY_TUE_THIAGOIAZZETTI: "Mar",
-    WEEKDAY_WED_THIAGOIAZZETTI: "Mer",
-    WEEKDAY_THU_THIAGOIAZZETTI: "Gio",
-    WEEKDAY_FRI_THIAGOIAZZETTI: "Ven",
-    WEEKDAY_SAT_THIAGOIAZZETTI: "Sab",
+    CLIENT_AGENDA_CONFIRM_ATTENDANCE: "Conferma presenza",
+    WEEKDAY_SUN: "Dom",
+    WEEKDAY_MON: "Lun",
+    WEEKDAY_TUE: "Mar",
+    WEEKDAY_WED: "Mer",
+    WEEKDAY_THU: "Gio",
+    WEEKDAY_FRI: "Ven",
+    WEEKDAY_SAT: "Sab",
   },
   "es-ES": {
-    CLIENT_AGENDA_LABEL_THIAGOIAZZETTI: "Agenda del alumno",
-    CLIENT_AGENDA_TITLE_THIAGOIAZZETTI: "Tus horarios y orientaciones",
-    CLIENT_AGENDA_SUBTITLE_THIAGOIAZZETTI:
+    CLIENT_AGENDA_LABEL: "Agenda del alumno",
+    CLIENT_AGENDA_TITLE: "Tus horarios y orientaciones",
+    CLIENT_AGENDA_SUBTITLE:
       "Aqui aparecen los compromisos que tu personal trainer registró para ti, incluyendo entrenamiento y dieta.",
-    CLIENT_AGENDA_LOADING_THIAGOIAZZETTI: "Cargando agenda...",
-    CLIENT_AGENDA_EMPTY_THIAGOIAZZETTI:
+    CLIENT_AGENDA_LOADING: "Cargando agenda...",
+    CLIENT_AGENDA_EMPTY:
       "No hay eventos en la agenda por ahora.",
-    CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI: "eventos",
-    CLIENT_AGENDA_ERROR_LOAD_THIAGOIAZZETTI: "No fue posible cargar agenda",
-    CLIENT_AGENDA_ATTENDANCE_UPDATED_THIAGOIAZZETTI: "Asistencia actualizada",
-    CLIENT_AGENDA_ATTENDANCE_ERROR_THIAGOIAZZETTI:
+    CLIENT_AGENDA_EVENTS: "eventos",
+    CLIENT_AGENDA_ERROR_LOAD: "No fue posible cargar agenda",
+    CLIENT_AGENDA_ATTENDANCE_UPDATED: "Asistencia actualizada",
+    CLIENT_AGENDA_ATTENDANCE_ERROR:
       "No fue posible confirmar asistencia",
-    CLIENT_AGENDA_CONFIRM_ATTENDANCE_THIAGOIAZZETTI: "Confirmar asistencia",
-    WEEKDAY_SUN_THIAGOIAZZETTI: "Dom",
-    WEEKDAY_MON_THIAGOIAZZETTI: "Lun",
-    WEEKDAY_TUE_THIAGOIAZZETTI: "Mar",
-    WEEKDAY_WED_THIAGOIAZZETTI: "Mié",
-    WEEKDAY_THU_THIAGOIAZZETTI: "Jue",
-    WEEKDAY_FRI_THIAGOIAZZETTI: "Vie",
-    WEEKDAY_SAT_THIAGOIAZZETTI: "Sáb",
+    CLIENT_AGENDA_CONFIRM_ATTENDANCE: "Confirmar asistencia",
+    WEEKDAY_SUN: "Dom",
+    WEEKDAY_MON: "Lun",
+    WEEKDAY_TUE: "Mar",
+    WEEKDAY_WED: "Mié",
+    WEEKDAY_THU: "Jue",
+    WEEKDAY_FRI: "Vie",
+    WEEKDAY_SAT: "Sáb",
   },
 };
 
 function translateClientAgenda(rawT, locale, key, fallback = "") {
   const remoteValue = rawT(key, "");
-  const localValue = CLIENT_AGENDA_FALLBACKS[locale]?.[key];
+  const localValue =
+    CLIENT_AGENDA_FALLBACKS[locale]?.[key] ||
+    CLIENT_AGENDA_FALLBACKS[locale?.split("-")[0]]?.[key] ||
+    CLIENT_AGENDA_FALLBACKS["it-IT"]?.[key];
   const isLikelyUntranslated =
-    locale !== "pt-BR" && locale !== "pt-PT" && remoteValue === fallback;
+    locale !== "pt-BR" &&
+    locale !== "pt-PT" &&
+    (remoteValue === fallback || remoteValue === key);
 
   if (isLikelyUntranslated && localValue) {
     return localValue;
@@ -115,7 +120,7 @@ function formatDateTime(value) {
   if (!value) return "-";
   const d = new Date(value);
   if (Number.isNaN(d.getTime())) return "-";
-  return new Intl.DateTimeFormat("pt-BR", {
+  return new Intl.DateTimeFormat("it-IT", {
     dateStyle: "short",
     timeStyle: "short",
   }).format(d);
@@ -177,7 +182,7 @@ export default function ClientAgendaPage() {
 
   const monthLabel = useMemo(
     () =>
-      new Intl.DateTimeFormat(locale || "pt-BR", {
+      new Intl.DateTimeFormat(locale || "it-IT", {
         month: "long",
         year: "numeric",
       }).format(monthCursor),
@@ -212,7 +217,7 @@ export default function ClientAgendaPage() {
           setMessage(
             error?.message ||
               t(
-                "CLIENT_AGENDA_ERROR_LOAD_THIAGOIAZZETTI",
+                "CLIENT_AGENDA_ERROR_LOAD",
                 "Nao foi possivel carregar agenda",
               ),
           );
@@ -252,7 +257,7 @@ export default function ClientAgendaPage() {
       map.get(key).push(event);
     });
     return Array.from(map.entries()).map(([key, items]) => ({
-      dayLabel: new Intl.DateTimeFormat(locale || "pt-BR", {
+      dayLabel: new Intl.DateTimeFormat(locale || "it-IT", {
         weekday: "long",
         day: "2-digit",
         month: "2-digit",
@@ -267,15 +272,15 @@ export default function ClientAgendaPage() {
       setEvents((prev) => prev.map((ev) => (ev.id === eventId ? updated : ev)));
       setMessage(
         t(
-          "CLIENT_AGENDA_ATTENDANCE_UPDATED_THIAGOIAZZETTI",
-          "Presenca atualizada",
+          "CLIENT_AGENDA_ATTENDANCE_UPDATED",
+          "Presenza atualizada",
         ),
       );
     } catch (error) {
       setMessage(
         error?.message ||
           t(
-            "CLIENT_AGENDA_ATTENDANCE_ERROR_THIAGOIAZZETTI",
+            "CLIENT_AGENDA_ATTENDANCE_ERROR",
             "Nao foi possivel confirmar presenca",
           ),
       );
@@ -310,7 +315,7 @@ export default function ClientAgendaPage() {
         "Solicitacao de cancelamento enviada para aprovacao do personal.",
       );
     } catch (error) {
-      setMessage(error?.message || "Nao foi possivel solicitar cancelamento.");
+      setMessage(error?.message || "Non e stato possibile richiedere la cancellazione.");
     }
   };
 
@@ -329,7 +334,7 @@ export default function ClientAgendaPage() {
 
     const nextStart = new Date(rescheduleStartsAt);
     if (!rescheduleStartsAt || Number.isNaN(nextStart.getTime())) {
-      setMessage("Informe um novo horario valido para remarcacao.");
+      setMessage("Inserisci un nuovo orario valido per la riprogrammazione.");
       return;
     }
 
@@ -362,7 +367,7 @@ export default function ClientAgendaPage() {
         "Solicitacao de remarcacao enviada para aprovacao do personal.",
       );
     } catch (error) {
-      setMessage(error?.message || "Nao foi possivel solicitar remarcacao.");
+      setMessage(error?.message || "Non e stato possibile richiedere la riprogrammazione.");
     }
   };
 
@@ -372,17 +377,17 @@ export default function ClientAgendaPage() {
         <div className="flex items-center justify-between gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-white/40">
-              {t("CLIENT_AGENDA_LABEL_THIAGOIAZZETTI", "Agenda do aluno")}
+              {t("CLIENT_AGENDA_LABEL", "Agenda do aluno")}
             </p>
             <h1 className="mt-2 font-title text-4xl text-[#d4f7a0]">
               {t(
-                "CLIENT_AGENDA_TITLE_THIAGOIAZZETTI",
-                "Seus horarios e orientacoes",
+                "CLIENT_AGENDA_TITLE",
+                "I tuoi orari e indicazioni",
               )}
             </h1>
             <p className="mt-3 text-sm text-white/68">
               {t(
-                "CLIENT_AGENDA_SUBTITLE_THIAGOIAZZETTI",
+                "CLIENT_AGENDA_SUBTITLE",
                 "Aqui aparecem os compromissos que seu personal cadastrou para voce, incluindo treino e dieta.",
               )}
             </p>
@@ -399,13 +404,13 @@ export default function ClientAgendaPage() {
 
       {loading ? (
         <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 text-sm text-white/65">
-          {t("CLIENT_AGENDA_LOADING_THIAGOIAZZETTI", "Carregando agenda...")}
+          {t("CLIENT_AGENDA_LOADING", "Caricamento agenda...")}
         </div>
       ) : grouped.length === 0 ? (
         <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 text-sm text-white/65">
           {t(
-            "CLIENT_AGENDA_EMPTY_THIAGOIAZZETTI",
-            "Nenhum evento na agenda por enquanto.",
+            "CLIENT_AGENDA_EMPTY",
+            "Nessun evento in agenda per ora.",
           )}
         </div>
       ) : (
@@ -442,13 +447,13 @@ export default function ClientAgendaPage() {
             </div>
             <div className="grid grid-cols-7 gap-2 text-center text-xs uppercase tracking-[0.08em] text-white/45">
               {[
-                t("WEEKDAY_SUN_THIAGOIAZZETTI", "Dom"),
-                t("WEEKDAY_MON_THIAGOIAZZETTI", "Seg"),
-                t("WEEKDAY_TUE_THIAGOIAZZETTI", "Ter"),
-                t("WEEKDAY_WED_THIAGOIAZZETTI", "Qua"),
-                t("WEEKDAY_THU_THIAGOIAZZETTI", "Qui"),
-                t("WEEKDAY_FRI_THIAGOIAZZETTI", "Sex"),
-                t("WEEKDAY_SAT_THIAGOIAZZETTI", "Sab"),
+                t("WEEKDAY_SUN", "Dom"),
+                t("WEEKDAY_MON", "Seg"),
+                t("WEEKDAY_TUE", "Ter"),
+                t("WEEKDAY_WED", "Qua"),
+                t("WEEKDAY_THU", "Qui"),
+                t("WEEKDAY_FRI", "Sex"),
+                t("WEEKDAY_SAT", "Sab"),
               ].map((d) => (
                 <div key={d}>{d}</div>
               ))}
@@ -475,7 +480,7 @@ export default function ClientAgendaPage() {
                           className="rounded-md border border-white/10 bg-white/5 px-1.5 py-1 text-[10px] text-white/80"
                         >
                           {new Date(event.startsAt).toLocaleTimeString(
-                            locale || "pt-BR",
+                            locale || "it-IT",
                             { hour: "2-digit", minute: "2-digit" },
                           )}{" "}
                           {event.title}
@@ -484,7 +489,7 @@ export default function ClientAgendaPage() {
                       {dayEvents.length > 3 ? (
                         <p className="text-[10px] text-white/55">
                           +{dayEvents.length - 3}{" "}
-                          {t("CLIENT_AGENDA_EVENTS_THIAGOIAZZETTI", "eventos")}
+                          {t("CLIENT_AGENDA_EVENTS", "eventos")}
                         </p>
                       ) : null}
                     </div>
@@ -565,7 +570,7 @@ export default function ClientAgendaPage() {
                       >
                         <CheckCircle2 size={13} />
                         {t(
-                          "CLIENT_AGENDA_CONFIRM_ATTENDANCE_THIAGOIAZZETTI",
+                          "CLIENT_AGENDA_CONFIRM_ATTENDANCE",
                           "Confirmar presenca",
                         )}
                       </button>
@@ -577,7 +582,7 @@ export default function ClientAgendaPage() {
                             className="inline-flex items-center gap-2 rounded-lg border border-red-400/35 px-3 py-1.5 text-xs text-red-200"
                           >
                             <XCircle size={13} />
-                            Cancelar aula
+                            Annulla aula
                           </button>
                           <button
                             type="button"
@@ -593,7 +598,7 @@ export default function ClientAgendaPage() {
                     {rescheduleEventId === event.id ? (
                       <div className="mt-3 rounded-xl border border-white/10 bg-white/5 p-3">
                         <label className="text-xs text-white/70">
-                          Novo horario (mesma semana)
+                          Nuovo orario (stessa settimana)
                           <input
                             type="datetime-local"
                             value={rescheduleStartsAt}
