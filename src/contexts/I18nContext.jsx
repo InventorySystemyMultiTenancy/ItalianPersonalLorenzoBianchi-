@@ -298,7 +298,7 @@ const ITALIAN_TRANSLATIONS = {
   PLANS_CANCEL_EDIT: "Annulla modifica",
   PLANS_NAME_LABEL: "Nome del piano",
   PLANS_NAME_PLACEHOLDER: "Es: Piano Premium",
-  PLANS_PRICE_LABEL: "Prezzo mensile (R$)",
+  PLANS_PRICE_LABEL: "Prezzo mensile (€)",
   PLANS_DESCRIPTION_LABEL: "Descrizione",
   PLANS_DESCRIPTION_PLACEHOLDER:
     "Descrivi cosa include il piano",

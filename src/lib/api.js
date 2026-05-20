@@ -52,7 +52,7 @@ export function clearStoredSession() {
 export function formatCurrency(value) {
   return new Intl.NumberFormat("it-IT", {
     style: "currency",
-    currency: "BRL",
+    currency: "EUR",
   }).format(Number(value || 0));
 }
 

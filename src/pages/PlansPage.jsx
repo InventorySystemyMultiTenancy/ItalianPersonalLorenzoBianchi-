@@ -23,7 +23,7 @@ const PLANS_PAGE_FALLBACKS = {
     PLANS_LINK_CONTINUE: "Continue",
     PLANS_NEW_TITLE: "New plan",
     PLANS_NAME_LABEL: "Plan name",
-    PLANS_PRICE_LABEL: "Monthly price (R$)",
+    PLANS_PRICE_LABEL: "Monthly price (€)",
     PLANS_DESCRIPTION_LABEL: "Description",
     PLANS_DESCRIPTION_PLACEHOLDER:
       "Describe what is included in the plan",
@@ -53,7 +53,7 @@ const PLANS_PAGE_FALLBACKS = {
     PLANS_LINK_CONTINUE: "Continua",
     PLANS_NEW_TITLE: "Nuovo piano",
     PLANS_NAME_LABEL: "Nome del piano",
-    PLANS_PRICE_LABEL: "Prezzo mensile (R$)",
+    PLANS_PRICE_LABEL: "Prezzo mensile (€)",
     PLANS_DESCRIPTION_LABEL: "Descrizione",
     PLANS_DESCRIPTION_PLACEHOLDER:
       "Descrivi cosa include il piano",
@@ -83,7 +83,7 @@ const PLANS_PAGE_FALLBACKS = {
     PLANS_LINK_CONTINUE: "Continuar",
     PLANS_NEW_TITLE: "Nuevo plan",
     PLANS_NAME_LABEL: "Nombre del plan",
-    PLANS_PRICE_LABEL: "Precio mensual (R$)",
+    PLANS_PRICE_LABEL: "Precio mensual (€)",
     PLANS_DESCRIPTION_LABEL: "Descripcion",
     PLANS_DESCRIPTION_PLACEHOLDER:
       "Describe lo que incluye el plan",
@@ -350,7 +350,7 @@ export default function PlansPage({ mode = "public" }) {
       setMessage(
         t(
           "PLANS_MESSAGE_INVALID_PRICE",
-          "Preco mensal invalido",
+          "Prezzo mensile non valido",
         ),
       );
       return;
@@ -523,7 +523,7 @@ export default function PlansPage({ mode = "public" }) {
             </label>
 
             <label className="text-sm text-white/70 md:col-span-1">
-              {t("PLANS_PRICE_LABEL", "Preco mensal (R$)")}
+              {t("PLANS_PRICE_LABEL", "Prezzo mensile (€)")}
               <input
                 type="number"
                 min="0"

@@ -120,9 +120,9 @@ export default function DashboardPage() {
 
   const formattedRevenue = useMemo(
     () =>
-      new Intl.NumberFormat("pt-BR", {
+      new Intl.NumberFormat("it-IT", {
         style: "currency",
-        currency: "BRL",
+        currency: "EUR",
       }).format(summary.faturamentoMes || 0),
     [summary.faturamentoMes],
   );

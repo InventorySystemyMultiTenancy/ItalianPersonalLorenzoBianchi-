@@ -1914,7 +1914,7 @@ export default function AdminDashboardPage() {
                 <label className="block text-[10px] font-bold uppercase tracking-[0.25em] text-white/30">
                   {t(
                     "ADMIN_DASH_PLAN_PRICE_LABEL",
-                    "Preço mensal (R$)",
+                    "Prezzo mensile (€)",
                   )}
                   <input
                     type="number"
