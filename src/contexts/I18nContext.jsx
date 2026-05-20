@@ -262,6 +262,32 @@ const ITALIAN_TRANSLATIONS = {
   FOOTER_WHATSAPP_CTA: "Scrivimi su WhatsApp",
   FOOTER_COPYRIGHT_TEXT:
     "Lorenzo Bianchi. Tutti i diritti riservati.",
+  WORKOUT_MODAL_REPLACE_SCHEDULE:
+    "Sostituisci l'agenda esistente di questo piano",
+  WORKOUT_MODAL_SESSION_LABEL: "Sessione",
+  WORKOUT_MODAL_SESSION_DAY_LABEL: "Giorno",
+  WORKOUT_MODAL_SESSION_END_LABEL: "Fine",
+  WORKOUT_MODAL_SESSION_UNTIL_LABEL: "Ripeti fino a",
+  WORKOUT_MODAL_SCHEDULING: "Programmazione...",
+  WORKOUT_BUILDER_OBJECTIVE_LABEL: "Obiettivo",
+  WORKOUT_BUILDER_OBJECTIVE_PLACEHOLDER: "Es: Forza e ipertrofia",
+  WORKOUT_BUILDER_TITLE_PLACEHOLDER: "Es: Petto e schiena",
+  WORKOUT_BUILDER_PHASE_HYPERTROPHY: "Ipertrofia",
+  WORKOUT_BUILDER_PHASE_STRENGTH: "Forza",
+  WORKOUT_BUILDER_PHASE_CUTTING: "Definizione",
+  WORKOUT_BUILDER_PHASE_ENDURANCE: "Resistenza",
+  WORKOUT_BUILDER_EXERCISES_HEADER: "Esercizi",
+  WORKOUT_BUILDER_SELECT_STUDENT_ERROR:
+    "Seleziona uno studente da collegare all'allenamento",
+  WORKOUT_BUILDER_CUSTOM_EXERCISES_TITLE:
+    "Esercizi personalizzati",
+  WORKOUT_BUILDER_TEMPLATES_TITLE: "Modelli di allenamento",
+  WORKOUT_BUILDER_TEMPLATES_SUBTITLE:
+    "Usa i modelli salvati come base e personalizzali secondo necessita",
+  WORKOUT_BUILDER_EXERCISES_COUNT: "esercizi",
+  WORKOUT_BUILDER_USE_TEMPLATE: "Usa modello",
+  WORKOUT_BUILDER_NO_TEMPLATES:
+    "Nessun modello creato ancora. Seleziona l'opzione 'Salva come modello' quando crei un allenamento.",
   PLANS_TITLE: "Piani pubblici",
   PLANS_SUBTITLE:
     "Qui puoi vedere i piani creati dal personal trainer e scegliere l'opzione ideale quando accedi come studente.",

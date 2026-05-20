@@ -35,9 +35,9 @@ import { useTenant } from "../contexts/TenantContext.jsx";
 import { useI18n } from "../contexts/I18nContext.jsx";
 
 const recurrenceOptions = [
-  { label: "Sem recorrencia", value: "NONE" },
+  { label: "Senza ricorrenza", value: "NONE" },
   { label: "Settimanale", value: "WEEKLY" },
-  { label: "Quinzenal", value: "BIWEEKLY" },
+  { label: "Quindicinale", value: "BIWEEKLY" },
   { label: "Mensile", value: "MONTHLY" },
 ];
 
@@ -412,84 +412,48 @@ function ScheduleSessionModal({
 
 // Biblioteca de exercícios por grupo muscular
 const exerciseLibrary = {
-  Peito: [
-    { name: "Supino reto", equipment: "Barra" },
-    { name: "Supino inclinado", equipment: "Halteres" },
-    { name: "Crucifixo na máquina", equipment: "Máquina" },
-    { name: "Flexão com peso", equipment: "Disco" },
-    { name: "Rosca na máquina (peck-deck)", equipment: "Máquina" },
+  Petto: [
+    { name: "Panca piana", equipment: "Bilanciere" },
+    { name: "Panca inclinata", equipment: "Manubri" },
+    { name: "Croci alla macchina", equipment: "Macchina" },
+    { name: "Piegamenti zavorrati", equipment: "Disco" },
+    { name: "Peck deck", equipment: "Macchina" },
   ],
-  Costas: [
-    { name: "Barra fixa", equipment: "Barra" },
-    { name: "Remada alta", equipment: "Barra" },
-    { name: "Remada curvada", equipment: "Halteres" },
-    { name: "Puxada na máquina", equipment: "Máquina" },
-    { name: "Remada sentado", equipment: "Máquina" },
+  Schiena: [
+    { name: "Trazioni alla sbarra", equipment: "Sbarra" },
+    { name: "Rematore alto", equipment: "Bilanciere" },
+    { name: "Rematore con manubri", equipment: "Manubri" },
+    { name: "Lat machine", equipment: "Macchina" },
+    { name: "Rematore seduto", equipment: "Macchina" },
   ],
-  Pernas: [
-    { name: "Agachamento livre", equipment: "Barra" },
-    { name: "Leg press", equipment: "Máquina" },
-    { name: "Rosca de perna", equipment: "Máquina" },
-    { name: "Extensora de perna", equipment: "Máquina" },
-    { name: "Adução (máquina)", equipment: "Máquina" },
+  Gambe: [
+    { name: "Squat libero", equipment: "Bilanciere" },
+    { name: "Leg press", equipment: "Macchina" },
+    { name: "Leg curl", equipment: "Macchina" },
+    { name: "Leg extension", equipment: "Macchina" },
+    { name: "Adduttori alla macchina", equipment: "Macchina" },
   ],
-  Ombros: [
-    { name: "Desenvolvimento com halteres", equipment: "Halteres" },
-    { name: "Elevação lateral", equipment: "Halteres" },
-    { name: "Encolhimento com halteres", equipment: "Halteres" },
-    { name: "Desenvolvimento na máquina", equipment: "Máquina" },
-    { name: "Puxada alta reversa", equipment: "Máquina" },
+  Spalle: [
+    { name: "Shoulder press con manubri", equipment: "Manubri" },
+    { name: "Alzate laterali", equipment: "Manubri" },
+    { name: "Scrollate con manubri", equipment: "Manubri" },
+    { name: "Shoulder press alla macchina", equipment: "Macchina" },
+    { name: "Reverse fly alla macchina", equipment: "Macchina" },
   ],
-  Braços: [
-    { name: "Rosca direta", equipment: "Barra" },
-    { name: "Rosca com halteres", equipment: "Halteres" },
-    { name: "Tríceps na máquina", equipment: "Máquina" },
-    { name: "Tríceps com corda", equipment: "Corda" },
-    { name: "Rosca concentrada", equipment: "Halteres" },
+  Braccia: [
+    { name: "Curl con bilanciere", equipment: "Bilanciere" },
+    { name: "Curl con manubri", equipment: "Manubri" },
+    { name: "Tricipiti alla macchina", equipment: "Macchina" },
+    { name: "Pushdown tricipiti con corda", equipment: "Corda" },
+    { name: "Curl concentrato", equipment: "Manubri" },
   ],
   Core: [
-    { name: "Abdominal na máquina", equipment: "Máquina" },
-    { name: "Prancha", equipment: "Corpo" },
-    { name: "Abdominal declinado", equipment: "Banco" },
-    { name: "Abdominal na bola", equipment: "Bola" },
+    { name: "Crunch alla macchina", equipment: "Macchina" },
+    { name: "Plank", equipment: "Corpo libero" },
+    { name: "Crunch su panca declinata", equipment: "Panca" },
+    { name: "Crunch su fitball", equipment: "Fitball" },
   ],
 };
-
-// Templates de treino pré-definidos
-const trainingTemplates = [
-  {
-    name: "Full Body A",
-    description: "Allenamento completo focado em força",
-    exercises: [
-      { exerciseName: "Agachamento livre", sets: 4, reps: 6, restSeconds: 120 },
-      { exerciseName: "Supino reto", sets: 4, reps: 6, restSeconds: 120 },
-      { exerciseName: "Barra fixa", sets: 3, reps: 8, restSeconds: 90 },
-    ],
-  },
-  {
-    name: "Full Body B",
-    description: "Allenamento completo focalizzato sull'ipertrofia",
-    exercises: [
-      { exerciseName: "Leg press", sets: 4, reps: 8, restSeconds: 90 },
-      { exerciseName: "Supino inclinado", sets: 4, reps: 8, restSeconds: 90 },
-      { exerciseName: "Remada curvada", sets: 4, reps: 8, restSeconds: 90 },
-    ],
-  },
-  {
-    name: "Upper Body",
-    description: "Focado em tronco e braços",
-    exercises: [
-      { exerciseName: "Supino reto", sets: 4, reps: 6, restSeconds: 120 },
-      { exerciseName: "Remada alta", sets: 4, reps: 8, restSeconds: 90 },
-      {
-        exerciseName: "Desenvolvimento com halteres",
-        sets: 3,
-        reps: 8,
-        restSeconds: 90,
-      },
-    ],
-  },
-];
 
 function ExerciseSelector({
   onAdd,
@@ -501,7 +465,7 @@ function ExerciseSelector({
   isEditing,
 }) {
   const { t } = useI18n();
-  const [selectedGroup, setSelectedGroup] = useState("Peito");
+  const [selectedGroup, setSelectedGroup] = useState("Petto");
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [formData, setFormData] = useState({
@@ -734,7 +698,7 @@ function ExerciseSelector({
                   type="text"
                   placeholder={t(
                     "WORKOUT_MODAL_EQUIPMENT_PLACEHOLDER",
-                    "Ex: Barra, Halteres, Máquina",
+                  "Es: Bilanciere, Manubri, Macchina",
                   )}
                   value={formData.equipment}
                   onChange={(e) =>
@@ -1164,20 +1128,6 @@ export default function WorkoutBuilderPage() {
     if (editingWorkoutExerciseId === id) {
       setEditingWorkoutExerciseId("");
     }
-  };
-
-  const handleApplyTemplate = (template) => {
-    setEditingWorkoutId("");
-    setWorkoutForm({
-      title: template.name,
-      objective: template.description,
-      phase: "Hipertrofia",
-    });
-    const exercisesWithIds = template.exercises.map((ex) => ({
-      ...ex,
-      id: Math.random().toString(36).substr(2, 9),
-    }));
-    setCurrentWorkoutExercises(exercisesWithIds);
   };
 
   const handleSaveWorkout = async (e) => {
@@ -2120,7 +2070,7 @@ export default function WorkoutBuilderPage() {
                             handleDeleteCustomExercise(exercise.id)
                           }
                           className="rounded-lg border border-white/10 p-2 text-white/60 transition hover:text-red-400"
-                          title="Deletar exercício"
+                          title="Elimina esercizio"
                         >
                           <Trash2 size={16} />
                         </button>
@@ -2132,52 +2082,6 @@ export default function WorkoutBuilderPage() {
             )}
           </div>
         )}
-      </article>
-
-      <article className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6">
-        <h2 className="font-title text-2xl text-[#b5f03c]">
-          {t(
-            "WORKOUT_BUILDER_TEMPLATES_TITLE",
-            "Modelli di allenamento",
-          )}
-        </h2>
-        <p className="mt-2 text-sm text-white/60">
-          {t(
-            "WORKOUT_BUILDER_TEMPLATES_SUBTITLE",
-            "Usa modelli predefiniti come base e personalizza secondo necessita",
-          )}
-        </p>
-
-        <div className="mt-5 space-y-3">
-          {trainingTemplates.map((template) => (
-            <div
-              key={template.name}
-              className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-black/30 px-4 py-4 md:flex-row md:items-center md:justify-between"
-            >
-              <div>
-                <p className="font-semibold text-white">{template.name}</p>
-                <p className="text-sm text-white/55">{template.description}</p>
-                <p className="mt-1 text-xs text-white/40">
-                  {template.exercises.length}{" "}
-                  {t(
-                    "WORKOUT_BUILDER_EXERCISES_COUNT",
-                    "esercizi",
-                  )}
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => handleApplyTemplate(template)}
-                className="rounded-lg border border-[#b5f03c]/50 bg-[#b5f03c]/10 px-4 py-2 text-sm font-medium text-[#b5f03c] transition hover:bg-[#b5f03c]/20"
-              >
-                {t(
-                  "WORKOUT_BUILDER_USE_TEMPLATE",
-                  "Usa modello",
-                )}
-              </button>
-            </div>
-          ))}
-        </div>
       </article>
 
       <article className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6">
