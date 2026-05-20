@@ -19,6 +19,7 @@ import {
 import {
   createStudent,
   createStudentPlan,
+  deleteStudent,
   formatCurrency,
   formatDate,
   listAgendaEvents,
@@ -261,6 +262,7 @@ export default function AdminDashboardPage() {
   const [studentFormErrors, setStudentFormErrors] = useState({});
   const [activeTab, setActiveTab] = useState("visao-geral");
   const [editingStudentId, setEditingStudentId] = useState("");
+  const [deletingStudentId, setDeletingStudentId] = useState("");
   const [editStudentForm, setEditStudentForm] = useState({
     fullName: "",
     email: "",
@@ -793,6 +795,46 @@ export default function AdminDashboardPage() {
             "Non e stato possibile aggiornare lo studente",
           ),
       );
+    }
+  };
+
+  const handleDeleteStudent = async (student) => {
+    const studentName =
+      student.fullName ||
+      student.email ||
+      t("ADMIN_DASH_STUDENT_FALLBACK", "questo studente");
+
+    const confirmed = window.confirm(
+      `${t(
+        "ADMIN_DASH_DELETE_STUDENT_CONFIRM",
+        "Sei sicuro di voler eliminare questo studente?",
+      )}\n\n${studentName}`,
+    );
+
+    if (!confirmed) return;
+
+    setDeletingStudentId(student.id);
+    try {
+      await deleteStudent(student.id, tenantId);
+      setStudents((current) =>
+        current.filter((item) => item.id !== student.id),
+      );
+      if (editingStudentId === student.id) {
+        setEditingStudentId("");
+      }
+      setMessage(
+        `${t("ADMIN_DASH_STUDENT_DELETED", "Studente eliminato")}: ${studentName}`,
+      );
+    } catch (error) {
+      setMessage(
+        error?.message ||
+          t(
+            "ADMIN_DASH_STUDENT_DELETE_ERROR",
+            "Non e stato possibile eliminare lo studente",
+          ),
+      );
+    } finally {
+      setDeletingStudentId("");
     }
   };
 
@@ -1665,9 +1707,33 @@ export default function AdminDashboardPage() {
                               event.stopPropagation();
                               startEditStudent(student);
                             }}
+                            disabled={deletingStudentId === student.id}
                             className="rounded-lg border border-white/[0.07] p-1.5 text-white/35 transition hover:border-[#b5f03c]/30 hover:text-[#b5f03c]"
+                            title={t(
+                              "ADMIN_DASH_EDIT_STUDENT",
+                              "Modifica studente",
+                            )}
                           >
                             <Edit2 size={13} />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              handleDeleteStudent(student);
+                            }}
+                            disabled={deletingStudentId === student.id}
+                            className="rounded-lg border border-white/[0.07] p-1.5 text-white/35 transition hover:border-red-400/30 hover:text-red-300 disabled:cursor-not-allowed disabled:opacity-50"
+                            title={t(
+                              "ADMIN_DASH_DELETE_STUDENT",
+                              "Elimina studente",
+                            )}
+                          >
+                            {deletingStudentId === student.id ? (
+                              <Loader2 size={13} className="animate-spin" />
+                            ) : (
+                              <Trash2 size={13} />
+                            )}
                           </button>
                         </div>
                       </div>
